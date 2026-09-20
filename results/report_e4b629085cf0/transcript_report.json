@@ -1,0 +1,2108 @@
+{
+  "created_at": "2026-09-20T19:14:15.588427+00:00",
+  "metadata": {
+    "requested_model": "jev-1.13.0",
+    "dataset_manifest": {
+      "format_version": 1,
+      "source": "microsoft/SYNUR",
+      "revision": "c7f79af4dcc8e5fb175c40cef0592d85a76bf11c",
+      "files": [
+        {
+          "filename": "mediqa_synur_train-00000-of-00001.jsonl",
+          "source_url": "https://huggingface.co/datasets/microsoft/SYNUR/resolve/c7f79af4dcc8e5fb175c40cef0592d85a76bf11c/data/mediqa_synur_train-00000-of-00001.jsonl",
+          "sha256": "33e2fbaf501058438a37571dfa180f3e5367e77f15a2cd84bc691e25e522f41f",
+          "byte_count": 344057,
+          "row_count": 122
+        },
+        {
+          "filename": "mediqa_synur_dev-00000-of-00001.jsonl",
+          "source_url": "https://huggingface.co/datasets/microsoft/SYNUR/resolve/c7f79af4dcc8e5fb175c40cef0592d85a76bf11c/data/mediqa_synur_dev-00000-of-00001.jsonl",
+          "sha256": "801e7fbdaf0055709fb73be7ed8acf3745754ea45b856407e1088749ae5b2299",
+          "byte_count": 276130,
+          "row_count": 101
+        },
+        {
+          "filename": "mediqa_synur_test-00000-of-00001.jsonl",
+          "source_url": "https://huggingface.co/datasets/microsoft/SYNUR/resolve/c7f79af4dcc8e5fb175c40cef0592d85a76bf11c/data/mediqa_synur_test-00000-of-00001.jsonl",
+          "sha256": "458242abaf7f583b4205253d908ba0338406aebbb75da32b48ed435b25734120",
+          "byte_count": 529196,
+          "row_count": 199
+        },
+        {
+          "filename": "original-00000-of-00001.jsonl",
+          "source_url": "https://huggingface.co/datasets/microsoft/SYNUR/resolve/c7f79af4dcc8e5fb175c40cef0592d85a76bf11c/data/original-00000-of-00001.jsonl",
+          "sha256": "1de4c754e9b0cf9aad2874051c90677c2253473da3f67f236cadfd2b5c02ab49",
+          "byte_count": 620187,
+          "row_count": 223
+        },
+        {
+          "filename": "synur_schema.json",
+          "source_url": "https://huggingface.co/datasets/microsoft/SYNUR/resolve/c7f79af4dcc8e5fb175c40cef0592d85a76bf11c/synur_schema.json",
+          "sha256": "db5667b5510f1eb02c808aad93e23f99015b0491215c083c29a0ad56cb5d56bb",
+          "byte_count": 38544,
+          "row_count": 193
+        },
+        {
+          "filename": "README.md",
+          "source_url": "https://huggingface.co/datasets/microsoft/SYNUR/resolve/c7f79af4dcc8e5fb175c40cef0592d85a76bf11c/README.md",
+          "sha256": "bb5e4682b786429c678b2451f913f6eb3b61264e4ec479a6311f4c9c051a096f",
+          "byte_count": 4110,
+          "row_count": null
+        }
+      ]
+    }
+  },
+  "format_version": 3,
+  "reference_view": "normalized",
+  "enabled_value_types": [
+    "SINGLE_SELECT",
+    "MULTI_SELECT",
+    "NUMERIC"
+  ],
+  "excluded_value_types": [
+    "STRING"
+  ],
+  "error_types": {
+    "COR": "Exact valid observation match.",
+    "DEL": "Expected observation without a matching prediction.",
+    "INS": "Extra predicted observation without an expected label.",
+    "SUB": "Same concept ID, but a different value or invalid observation.",
+    "SKIP": "Reference type is disabled; retained for context but excluded from scoring."
+  },
+  "transcripts": [
+    {
+      "id": "152",
+      "split": "mediqa_synur_dev",
+      "transcript": "[Clinician] Patient is a 72-year-old female, um, with a history of moderate cognitive decline. She presents as alert, but, uh, there's general confusion and forgetfulness noted. She—she's frequently forgetting to hydrate, which is a bit concerning.\n\n[Clinician] Upon examination, her skin turgor is tented, um, which suggests reduced fluid volume status. Her nailbeds, they're appearing, uh, pale, which might indicate possible hypovolemia. I took her temperature using the, um, tympanic method, and she reports, uh, persistent dry mouth. Physically, her oral mucosa is, um, dry as well.\n\n[Clinician] Uh, urine output is low, recorded at just 150 cc. The urine is, um, dark and cloudy, and it has a foul odor. She reports experiencing urinary symptoms, specifically, um, difficulty urinating and urgency.\n\n[Clinician] There's, uh, generalized weakness noted in her motor strength during the physical exam. This could, uh, further point to her state of dehydration.\n\n[Clinician] We've initiated intravenous therapy to, uh, restore her fluid levels. Uh, we'll be closely monitoring her urine output and cognitive status to assess her response to the treatment.",
+      "prediction_status": "complete",
+      "available": true,
+      "unavailable_reason": null,
+      "expected_observations": [
+        {
+          "observation": {
+            "id": "112",
+            "value_type": "SINGLE_SELECT",
+            "name": "Skin turgor",
+            "value": "Tented"
+          },
+          "error_type": "COR",
+          "comparison_index": 0
+        },
+        {
+          "observation": {
+            "id": "94",
+            "value_type": "SINGLE_SELECT",
+            "name": "Nailbed color",
+            "value": "pale"
+          },
+          "error_type": "COR",
+          "comparison_index": 1
+        },
+        {
+          "observation": {
+            "id": "24",
+            "value_type": "SINGLE_SELECT",
+            "name": "Temperature source",
+            "value": "tympanic"
+          },
+          "error_type": "COR",
+          "comparison_index": 2
+        },
+        {
+          "observation": {
+            "id": "37",
+            "value_type": "SINGLE_SELECT",
+            "name": "Motor strength",
+            "value": "Generalized weakness"
+          },
+          "error_type": "COR",
+          "comparison_index": 3
+        },
+        {
+          "observation": {
+            "id": "73",
+            "value_type": "NUMERIC",
+            "name": "Urine output",
+            "value": 150
+          },
+          "error_type": "COR",
+          "comparison_index": 4
+        },
+        {
+          "observation": {
+            "id": "130",
+            "value_type": "SINGLE_SELECT",
+            "name": "Cognitive status",
+            "value": "Alert with general confusion and forgetfulness"
+          },
+          "error_type": "COR",
+          "comparison_index": 5
+        },
+        {
+          "observation": {
+            "id": "177",
+            "value_type": "MULTI_SELECT",
+            "name": "Urinary symptoms",
+            "value": [
+              "urgency",
+              "difficulty urinating"
+            ]
+          },
+          "error_type": "COR",
+          "comparison_index": 6
+        },
+        {
+          "observation": {
+            "id": "98",
+            "value_type": "SINGLE_SELECT",
+            "name": "Intravenous therapy",
+            "value": "Yes"
+          },
+          "error_type": "COR",
+          "comparison_index": 7
+        },
+        {
+          "observation": {
+            "id": "99",
+            "value_type": "SINGLE_SELECT",
+            "name": "Urine odor",
+            "value": "foul"
+          },
+          "error_type": "COR",
+          "comparison_index": 8
+        },
+        {
+          "observation": {
+            "id": "7",
+            "value_type": "SINGLE_SELECT",
+            "name": "Oral mucosa status",
+            "value": "Dry"
+          },
+          "error_type": "COR",
+          "comparison_index": 9
+        },
+        {
+          "observation": {
+            "id": "183",
+            "value_type": "SINGLE_SELECT",
+            "name": "Urine output unit",
+            "value": "cc"
+          },
+          "error_type": "DEL",
+          "comparison_index": 10
+        },
+        {
+          "observation": {
+            "id": "139",
+            "value_type": "MULTI_SELECT",
+            "name": "Urine appearance",
+            "value": [
+              "cloudy"
+            ]
+          },
+          "error_type": "SUB",
+          "comparison_index": 12
+        }
+      ],
+      "predicted_observations": [
+        {
+          "observation": {
+            "id": "112",
+            "name": "Skin turgor",
+            "value_type": "SINGLE_SELECT",
+            "value": "Tented"
+          },
+          "error_type": "COR",
+          "comparison_index": 0,
+          "provenance": {
+            "audit_status": "recorded",
+            "audit": [
+              {
+                "id": "112",
+                "name": "Skin turgor",
+                "status": "emitted",
+                "reason": null,
+                "decisions": [
+                  {
+                    "question_id": "obs_112_status",
+                    "type": "choice",
+                    "choice": "supported",
+                    "confidence": 1.0,
+                    "probabilities": {
+                      "ambiguous": 0.0,
+                      "supported": 1.0,
+                      "conflicting": 0.0,
+                      "not_stated": 0.0
+                    }
+                  },
+                  {
+                    "question_id": "obs_112_value",
+                    "type": "choice",
+                    "choice": "value_0",
+                    "confidence": 1.0,
+                    "probabilities": {
+                      "conflicting": 0.0,
+                      "value_0": 1.0,
+                      "ambiguous": 0.0,
+                      "not_stated": 0.0,
+                      "value_1": 0.0
+                    }
+                  }
+                ],
+                "evidence": []
+              }
+            ],
+            "requests": [
+              {
+                "question_ids": [
+                  "obs_100_status",
+                  "obs_101_status",
+                  "obs_102_status",
+                  "obs_103_status",
+                  "obs_104_status",
+                  "obs_105_status",
+                  "obs_106_status",
+                  "obs_107_status",
+                  "obs_108_status",
+                  "obs_109_status",
+                  "obs_110_status",
+                  "obs_111_status",
+                  "obs_112_status",
+                  "obs_113_status",
+                  "obs_114_status",
+                  "obs_115_status",
+                  "obs_116_status",
+                  "obs_117_status",
+                  "obs_118_status",
+                  "obs_119_status",
+                  "obs_120_status",
+                  "obs_121_status",
+                  "obs_122_status",
+                  "obs_123_status",
+                  "obs_124_status",
+                  "obs_125_status"
+                ],
+                "questions_hash": "638aca57a0b2643fee458acfa2b22a3d93e4a6c317181e2e4932851add4401bb",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 18295,
+                  "output_tokens": 1431
+                },
+                "request_id": "req_01a0c03d8766743a812b35e546d55b3d"
+              },
+              {
+                "question_ids": [
+                  "obs_7_value",
+                  "obs_24_value",
+                  "obs_37_value",
+                  "obs_77_value",
+                  "obs_94_value",
+                  "obs_98_value",
+                  "obs_99_value",
+                  "obs_112_value",
+                  "obs_130_value",
+                  "obs_139_member_0",
+                  "obs_139_member_1",
+                  "obs_139_member_2",
+                  "obs_139_member_3",
+                  "obs_139_member_4",
+                  "obs_177_member_0",
+                  "obs_177_member_1",
+                  "obs_177_member_2",
+                  "obs_177_member_3"
+                ],
+                "questions_hash": "c660532da648467ed0eb571d6520adbb2ec680f943b4a16e3304238dfcda6c71",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 15317,
+                  "output_tokens": 905
+                },
+                "request_id": "req_01a0c03d8b6671a799e57d9f3c29f7c4"
+              }
+            ],
+            "metadata": {
+              "prompt_version": "direct-jev-v1",
+              "state_hash": "57b7f2e8f4bd5fc11afc5a18936bb892cd81c32ca36eeade4811b0f0fdfd1257",
+              "schema_hash": "f5b37c15942baaed376725e4bf8826c87fa316d55de7868e0c576db787f5b62b",
+              "settings": {
+                "choice_confidence": 0.8,
+                "support_probability": 0.8,
+                "reject_probability": 0.2,
+                "batch_size": 32,
+                "max_request_bytes": 60000,
+                "max_state_question_bytes": 30000
+              },
+              "concept_count": 162,
+              "candidate_policy": "transcript-only scalars and hierarchical clause/contiguous-span selection",
+              "actual_models": [
+                "jev-1.13.0"
+              ]
+            }
+          }
+        },
+        {
+          "observation": {
+            "id": "94",
+            "name": "Nailbed color",
+            "value_type": "SINGLE_SELECT",
+            "value": "pale"
+          },
+          "error_type": "COR",
+          "comparison_index": 1,
+          "provenance": {
+            "audit_status": "recorded",
+            "audit": [
+              {
+                "id": "94",
+                "name": "Nailbed color",
+                "status": "emitted",
+                "reason": null,
+                "decisions": [
+                  {
+                    "question_id": "obs_94_status",
+                    "type": "choice",
+                    "choice": "supported",
+                    "confidence": 1.0,
+                    "probabilities": {
+                      "not_stated": 0.0,
+                      "supported": 1.0,
+                      "ambiguous": 0.0,
+                      "conflicting": 0.0
+                    }
+                  },
+                  {
+                    "question_id": "obs_94_value",
+                    "type": "choice",
+                    "choice": "value_2",
+                    "confidence": 1.0,
+                    "probabilities": {
+                      "conflicting": 0.0,
+                      "value_0": 0.0,
+                      "not_stated": 0.0,
+                      "value_4": 0.0,
+                      "value_3": 0.0,
+                      "value_2": 1.0,
+                      "ambiguous": 0.0,
+                      "value_5": 0.0,
+                      "value_1": 0.0
+                    }
+                  }
+                ],
+                "evidence": []
+              }
+            ],
+            "requests": [
+              {
+                "question_ids": [
+                  "obs_73_status",
+                  "obs_74_status",
+                  "obs_75_status",
+                  "obs_76_status",
+                  "obs_77_status",
+                  "obs_78_status",
+                  "obs_79_status",
+                  "obs_80_status",
+                  "obs_81_status",
+                  "obs_82_status",
+                  "obs_83_status",
+                  "obs_84_status",
+                  "obs_85_status",
+                  "obs_86_status",
+                  "obs_87_status",
+                  "obs_88_status",
+                  "obs_89_status",
+                  "obs_90_status",
+                  "obs_92_status",
+                  "obs_93_status",
+                  "obs_94_status",
+                  "obs_95_status",
+                  "obs_96_status",
+                  "obs_97_status",
+                  "obs_98_status",
+                  "obs_99_status"
+                ],
+                "questions_hash": "8d515b8b55a67ae6a8de682efb537961b4efb54f17f45ddae557ce7eeaad7254",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 18320,
+                  "output_tokens": 1397
+                },
+                "request_id": "req_01a0c03d86517eecbd36cd9b2b10cde1"
+              },
+              {
+                "question_ids": [
+                  "obs_7_value",
+                  "obs_24_value",
+                  "obs_37_value",
+                  "obs_77_value",
+                  "obs_94_value",
+                  "obs_98_value",
+                  "obs_99_value",
+                  "obs_112_value",
+                  "obs_130_value",
+                  "obs_139_member_0",
+                  "obs_139_member_1",
+                  "obs_139_member_2",
+                  "obs_139_member_3",
+                  "obs_139_member_4",
+                  "obs_177_member_0",
+                  "obs_177_member_1",
+                  "obs_177_member_2",
+                  "obs_177_member_3"
+                ],
+                "questions_hash": "c660532da648467ed0eb571d6520adbb2ec680f943b4a16e3304238dfcda6c71",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 15317,
+                  "output_tokens": 905
+                },
+                "request_id": "req_01a0c03d8b6671a799e57d9f3c29f7c4"
+              }
+            ],
+            "metadata": {
+              "prompt_version": "direct-jev-v1",
+              "state_hash": "57b7f2e8f4bd5fc11afc5a18936bb892cd81c32ca36eeade4811b0f0fdfd1257",
+              "schema_hash": "f5b37c15942baaed376725e4bf8826c87fa316d55de7868e0c576db787f5b62b",
+              "settings": {
+                "choice_confidence": 0.8,
+                "support_probability": 0.8,
+                "reject_probability": 0.2,
+                "batch_size": 32,
+                "max_request_bytes": 60000,
+                "max_state_question_bytes": 30000
+              },
+              "concept_count": 162,
+              "candidate_policy": "transcript-only scalars and hierarchical clause/contiguous-span selection",
+              "actual_models": [
+                "jev-1.13.0"
+              ]
+            }
+          }
+        },
+        {
+          "observation": {
+            "id": "24",
+            "name": "Temperature source",
+            "value_type": "SINGLE_SELECT",
+            "value": "tympanic"
+          },
+          "error_type": "COR",
+          "comparison_index": 2,
+          "provenance": {
+            "audit_status": "recorded",
+            "audit": [
+              {
+                "id": "24",
+                "name": "Temperature source",
+                "status": "emitted",
+                "reason": null,
+                "decisions": [
+                  {
+                    "question_id": "obs_24_status",
+                    "type": "choice",
+                    "choice": "supported",
+                    "confidence": 1.0,
+                    "probabilities": {
+                      "conflicting": 0.0,
+                      "supported": 1.0,
+                      "not_stated": 0.0,
+                      "ambiguous": 0.0
+                    }
+                  },
+                  {
+                    "question_id": "obs_24_value",
+                    "type": "choice",
+                    "choice": "value_1",
+                    "confidence": 1.0,
+                    "probabilities": {
+                      "conflicting": 0.0,
+                      "value_0": 0.0,
+                      "ambiguous": 0.0,
+                      "not_stated": 0.0,
+                      "value_1": 1.0
+                    }
+                  }
+                ],
+                "evidence": []
+              }
+            ],
+            "requests": [
+              {
+                "question_ids": [
+                  "obs_0_status",
+                  "obs_2_status",
+                  "obs_3_status",
+                  "obs_4_status",
+                  "obs_6_status",
+                  "obs_7_status",
+                  "obs_9_status",
+                  "obs_10_status",
+                  "obs_11_status",
+                  "obs_12_status",
+                  "obs_13_status",
+                  "obs_15_status",
+                  "obs_17_status",
+                  "obs_18_status",
+                  "obs_19_status",
+                  "obs_20_status",
+                  "obs_21_status",
+                  "obs_22_status",
+                  "obs_24_status",
+                  "obs_25_status",
+                  "obs_30_status",
+                  "obs_32_status",
+                  "obs_33_status",
+                  "obs_34_status",
+                  "obs_35_status",
+                  "obs_36_status"
+                ],
+                "questions_hash": "87d5cc32a39f8671149a227aa89caf6fd7900e63748d626c5a39a42122b97ab7",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 18170,
+                  "output_tokens": 1392
+                },
+                "request_id": "req_01a0c03d838c702685a379b32fd186c8"
+              },
+              {
+                "question_ids": [
+                  "obs_7_value",
+                  "obs_24_value",
+                  "obs_37_value",
+                  "obs_77_value",
+                  "obs_94_value",
+                  "obs_98_value",
+                  "obs_99_value",
+                  "obs_112_value",
+                  "obs_130_value",
+                  "obs_139_member_0",
+                  "obs_139_member_1",
+                  "obs_139_member_2",
+                  "obs_139_member_3",
+                  "obs_139_member_4",
+                  "obs_177_member_0",
+                  "obs_177_member_1",
+                  "obs_177_member_2",
+                  "obs_177_member_3"
+                ],
+                "questions_hash": "c660532da648467ed0eb571d6520adbb2ec680f943b4a16e3304238dfcda6c71",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 15317,
+                  "output_tokens": 905
+                },
+                "request_id": "req_01a0c03d8b6671a799e57d9f3c29f7c4"
+              }
+            ],
+            "metadata": {
+              "prompt_version": "direct-jev-v1",
+              "state_hash": "57b7f2e8f4bd5fc11afc5a18936bb892cd81c32ca36eeade4811b0f0fdfd1257",
+              "schema_hash": "f5b37c15942baaed376725e4bf8826c87fa316d55de7868e0c576db787f5b62b",
+              "settings": {
+                "choice_confidence": 0.8,
+                "support_probability": 0.8,
+                "reject_probability": 0.2,
+                "batch_size": 32,
+                "max_request_bytes": 60000,
+                "max_state_question_bytes": 30000
+              },
+              "concept_count": 162,
+              "candidate_policy": "transcript-only scalars and hierarchical clause/contiguous-span selection",
+              "actual_models": [
+                "jev-1.13.0"
+              ]
+            }
+          }
+        },
+        {
+          "observation": {
+            "id": "37",
+            "name": "Motor strength",
+            "value_type": "SINGLE_SELECT",
+            "value": "Generalized weakness"
+          },
+          "error_type": "COR",
+          "comparison_index": 3,
+          "provenance": {
+            "audit_status": "recorded",
+            "audit": [
+              {
+                "id": "37",
+                "name": "Motor strength",
+                "status": "emitted",
+                "reason": null,
+                "decisions": [
+                  {
+                    "question_id": "obs_37_status",
+                    "type": "choice",
+                    "choice": "supported",
+                    "confidence": 0.99,
+                    "probabilities": {
+                      "conflicting": 0.0,
+                      "ambiguous": 0.0,
+                      "not_stated": 0.0,
+                      "supported": 1.0
+                    }
+                  },
+                  {
+                    "question_id": "obs_37_value",
+                    "type": "choice",
+                    "choice": "value_3",
+                    "confidence": 1.0,
+                    "probabilities": {
+                      "conflicting": 0.0,
+                      "value_0": 0.0,
+                      "not_stated": 0.0,
+                      "value_4": 0.0,
+                      "value_3": 1.0,
+                      "value_2": 0.0,
+                      "ambiguous": 0.0,
+                      "value_5": 0.0,
+                      "value_1": 0.0
+                    }
+                  }
+                ],
+                "evidence": []
+              }
+            ],
+            "requests": [
+              {
+                "question_ids": [
+                  "obs_37_status",
+                  "obs_38_status",
+                  "obs_39_status",
+                  "obs_40_status",
+                  "obs_41_status",
+                  "obs_42_status",
+                  "obs_43_status",
+                  "obs_45_status",
+                  "obs_48_status",
+                  "obs_50_status",
+                  "obs_51_status",
+                  "obs_52_status",
+                  "obs_54_status",
+                  "obs_55_status",
+                  "obs_56_status",
+                  "obs_58_status",
+                  "obs_60_status",
+                  "obs_61_status",
+                  "obs_62_status",
+                  "obs_63_status",
+                  "obs_64_status",
+                  "obs_65_status",
+                  "obs_67_status",
+                  "obs_68_status",
+                  "obs_71_status",
+                  "obs_72_status"
+                ],
+                "questions_hash": "d9c1126529eda7659c0bfb9e1adb8427b5cb8097af5022b003da192bb9cdb610",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 18310,
+                  "output_tokens": 1405
+                },
+                "request_id": "req_01a0c03d851c7330993f88438bc792fa"
+              },
+              {
+                "question_ids": [
+                  "obs_7_value",
+                  "obs_24_value",
+                  "obs_37_value",
+                  "obs_77_value",
+                  "obs_94_value",
+                  "obs_98_value",
+                  "obs_99_value",
+                  "obs_112_value",
+                  "obs_130_value",
+                  "obs_139_member_0",
+                  "obs_139_member_1",
+                  "obs_139_member_2",
+                  "obs_139_member_3",
+                  "obs_139_member_4",
+                  "obs_177_member_0",
+                  "obs_177_member_1",
+                  "obs_177_member_2",
+                  "obs_177_member_3"
+                ],
+                "questions_hash": "c660532da648467ed0eb571d6520adbb2ec680f943b4a16e3304238dfcda6c71",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 15317,
+                  "output_tokens": 905
+                },
+                "request_id": "req_01a0c03d8b6671a799e57d9f3c29f7c4"
+              }
+            ],
+            "metadata": {
+              "prompt_version": "direct-jev-v1",
+              "state_hash": "57b7f2e8f4bd5fc11afc5a18936bb892cd81c32ca36eeade4811b0f0fdfd1257",
+              "schema_hash": "f5b37c15942baaed376725e4bf8826c87fa316d55de7868e0c576db787f5b62b",
+              "settings": {
+                "choice_confidence": 0.8,
+                "support_probability": 0.8,
+                "reject_probability": 0.2,
+                "batch_size": 32,
+                "max_request_bytes": 60000,
+                "max_state_question_bytes": 30000
+              },
+              "concept_count": 162,
+              "candidate_policy": "transcript-only scalars and hierarchical clause/contiguous-span selection",
+              "actual_models": [
+                "jev-1.13.0"
+              ]
+            }
+          }
+        },
+        {
+          "observation": {
+            "id": "73",
+            "name": "Urine output",
+            "value_type": "NUMERIC",
+            "value": 150
+          },
+          "error_type": "COR",
+          "comparison_index": 4,
+          "provenance": {
+            "audit_status": "recorded",
+            "audit": [
+              {
+                "id": "73",
+                "name": "Urine output",
+                "status": "emitted",
+                "reason": null,
+                "decisions": [
+                  {
+                    "question_id": "obs_73_status",
+                    "type": "choice",
+                    "choice": "supported",
+                    "confidence": 1.0,
+                    "probabilities": {
+                      "not_stated": 0.0,
+                      "supported": 1.0,
+                      "ambiguous": 0.0,
+                      "conflicting": 0.0
+                    }
+                  },
+                  {
+                    "question_id": "obs_73_number_0",
+                    "type": "choice",
+                    "choice": "candidate_1",
+                    "confidence": 0.97,
+                    "probabilities": {
+                      "not_stated": 0.01,
+                      "candidate_1": 0.98,
+                      "candidate_0": 0.0,
+                      "ambiguous": 0.01,
+                      "conflicting": 0.0
+                    }
+                  }
+                ],
+                "evidence": [
+                  {
+                    "start": 643,
+                    "end": 646,
+                    "text": "150",
+                    "value": 150,
+                    "kind": "number"
+                  }
+                ]
+              }
+            ],
+            "requests": [
+              {
+                "question_ids": [
+                  "obs_73_status",
+                  "obs_74_status",
+                  "obs_75_status",
+                  "obs_76_status",
+                  "obs_77_status",
+                  "obs_78_status",
+                  "obs_79_status",
+                  "obs_80_status",
+                  "obs_81_status",
+                  "obs_82_status",
+                  "obs_83_status",
+                  "obs_84_status",
+                  "obs_85_status",
+                  "obs_86_status",
+                  "obs_87_status",
+                  "obs_88_status",
+                  "obs_89_status",
+                  "obs_90_status",
+                  "obs_92_status",
+                  "obs_93_status",
+                  "obs_94_status",
+                  "obs_95_status",
+                  "obs_96_status",
+                  "obs_97_status",
+                  "obs_98_status",
+                  "obs_99_status"
+                ],
+                "questions_hash": "8d515b8b55a67ae6a8de682efb537961b4efb54f17f45ddae557ce7eeaad7254",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 18320,
+                  "output_tokens": 1397
+                },
+                "request_id": "req_01a0c03d86517eecbd36cd9b2b10cde1"
+              },
+              {
+                "question_ids": [
+                  "obs_73_number_0"
+                ],
+                "questions_hash": "4e292a7dadebe2b299a604ff21bbdcbe24b3890521b760c5601960f4274083dd",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 10083,
+                  "output_tokens": 70
+                },
+                "request_id": "req_01a0c03d8c5b7dd1aabb998b70d9895e"
+              }
+            ],
+            "metadata": {
+              "prompt_version": "direct-jev-v1",
+              "state_hash": "57b7f2e8f4bd5fc11afc5a18936bb892cd81c32ca36eeade4811b0f0fdfd1257",
+              "schema_hash": "f5b37c15942baaed376725e4bf8826c87fa316d55de7868e0c576db787f5b62b",
+              "settings": {
+                "choice_confidence": 0.8,
+                "support_probability": 0.8,
+                "reject_probability": 0.2,
+                "batch_size": 32,
+                "max_request_bytes": 60000,
+                "max_state_question_bytes": 30000
+              },
+              "concept_count": 162,
+              "candidate_policy": "transcript-only scalars and hierarchical clause/contiguous-span selection",
+              "actual_models": [
+                "jev-1.13.0"
+              ]
+            }
+          }
+        },
+        {
+          "observation": {
+            "id": "130",
+            "name": "Cognitive status",
+            "value_type": "SINGLE_SELECT",
+            "value": "Alert with general confusion and forgetfulness"
+          },
+          "error_type": "COR",
+          "comparison_index": 5,
+          "provenance": {
+            "audit_status": "recorded",
+            "audit": [
+              {
+                "id": "130",
+                "name": "Cognitive status",
+                "status": "emitted",
+                "reason": null,
+                "decisions": [
+                  {
+                    "question_id": "obs_130_status",
+                    "type": "choice",
+                    "choice": "supported",
+                    "confidence": 0.99,
+                    "probabilities": {
+                      "conflicting": 0.0,
+                      "supported": 1.0,
+                      "not_stated": 0.0,
+                      "ambiguous": 0.0
+                    }
+                  },
+                  {
+                    "question_id": "obs_130_value",
+                    "type": "choice",
+                    "choice": "value_1",
+                    "confidence": 1.0,
+                    "probabilities": {
+                      "conflicting": 0.0,
+                      "value_0": 0.0,
+                      "not_stated": 0.0,
+                      "value_4": 0.0,
+                      "value_3": 0.0,
+                      "value_2": 0.0,
+                      "ambiguous": 0.0,
+                      "value_5": 0.0,
+                      "value_1": 1.0
+                    }
+                  }
+                ],
+                "evidence": []
+              }
+            ],
+            "requests": [
+              {
+                "question_ids": [
+                  "obs_126_status",
+                  "obs_128_status",
+                  "obs_129_status",
+                  "obs_130_status",
+                  "obs_132_status",
+                  "obs_133_status",
+                  "obs_134_status",
+                  "obs_135_status",
+                  "obs_136_status",
+                  "obs_137_status",
+                  "obs_138_status",
+                  "obs_139_status",
+                  "obs_140_status",
+                  "obs_141_status",
+                  "obs_142_status",
+                  "obs_143_status",
+                  "obs_144_status",
+                  "obs_145_status",
+                  "obs_146_status",
+                  "obs_147_status",
+                  "obs_148_status",
+                  "obs_149_status",
+                  "obs_150_status",
+                  "obs_151_status",
+                  "obs_152_status",
+                  "obs_154_status"
+                ],
+                "questions_hash": "d84ad65c2f422a126a59bc117abc01d1cecbe789d435c01024619618931a3a8d",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 18403,
+                  "output_tokens": 1429
+                },
+                "request_id": "req_01a0c03d88a87146bb533704caabc892"
+              },
+              {
+                "question_ids": [
+                  "obs_7_value",
+                  "obs_24_value",
+                  "obs_37_value",
+                  "obs_77_value",
+                  "obs_94_value",
+                  "obs_98_value",
+                  "obs_99_value",
+                  "obs_112_value",
+                  "obs_130_value",
+                  "obs_139_member_0",
+                  "obs_139_member_1",
+                  "obs_139_member_2",
+                  "obs_139_member_3",
+                  "obs_139_member_4",
+                  "obs_177_member_0",
+                  "obs_177_member_1",
+                  "obs_177_member_2",
+                  "obs_177_member_3"
+                ],
+                "questions_hash": "c660532da648467ed0eb571d6520adbb2ec680f943b4a16e3304238dfcda6c71",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 15317,
+                  "output_tokens": 905
+                },
+                "request_id": "req_01a0c03d8b6671a799e57d9f3c29f7c4"
+              }
+            ],
+            "metadata": {
+              "prompt_version": "direct-jev-v1",
+              "state_hash": "57b7f2e8f4bd5fc11afc5a18936bb892cd81c32ca36eeade4811b0f0fdfd1257",
+              "schema_hash": "f5b37c15942baaed376725e4bf8826c87fa316d55de7868e0c576db787f5b62b",
+              "settings": {
+                "choice_confidence": 0.8,
+                "support_probability": 0.8,
+                "reject_probability": 0.2,
+                "batch_size": 32,
+                "max_request_bytes": 60000,
+                "max_state_question_bytes": 30000
+              },
+              "concept_count": 162,
+              "candidate_policy": "transcript-only scalars and hierarchical clause/contiguous-span selection",
+              "actual_models": [
+                "jev-1.13.0"
+              ]
+            }
+          }
+        },
+        {
+          "observation": {
+            "id": "177",
+            "name": "Urinary symptoms",
+            "value_type": "MULTI_SELECT",
+            "value": [
+              "difficulty urinating",
+              "urgency"
+            ]
+          },
+          "error_type": "COR",
+          "comparison_index": 6,
+          "provenance": {
+            "audit_status": "recorded",
+            "audit": [
+              {
+                "id": "177",
+                "name": "Urinary symptoms",
+                "status": "emitted",
+                "reason": null,
+                "decisions": [
+                  {
+                    "question_id": "obs_177_status",
+                    "type": "choice",
+                    "choice": "supported",
+                    "confidence": 0.99,
+                    "probabilities": {
+                      "supported": 1.0,
+                      "conflicting": 0.0,
+                      "not_stated": 0.0,
+                      "ambiguous": 0.0
+                    }
+                  },
+                  {
+                    "question_id": "obs_177_member_0",
+                    "type": "noul",
+                    "noul": 0.98
+                  },
+                  {
+                    "question_id": "obs_177_member_1",
+                    "type": "noul",
+                    "noul": 0.98
+                  },
+                  {
+                    "question_id": "obs_177_member_2",
+                    "type": "noul",
+                    "noul": 0.05
+                  },
+                  {
+                    "question_id": "obs_177_member_3",
+                    "type": "noul",
+                    "noul": 0.03
+                  }
+                ],
+                "evidence": []
+              }
+            ],
+            "requests": [
+              {
+                "question_ids": [
+                  "obs_157_status",
+                  "obs_158_status",
+                  "obs_159_status",
+                  "obs_161_status",
+                  "obs_163_status",
+                  "obs_164_status",
+                  "obs_165_status",
+                  "obs_166_status",
+                  "obs_168_status",
+                  "obs_170_status",
+                  "obs_171_status",
+                  "obs_172_status",
+                  "obs_173_status",
+                  "obs_174_status",
+                  "obs_175_status",
+                  "obs_176_status",
+                  "obs_177_status",
+                  "obs_178_status",
+                  "obs_179_status",
+                  "obs_180_status",
+                  "obs_181_status",
+                  "obs_182_status",
+                  "obs_183_status",
+                  "obs_184_status",
+                  "obs_185_status",
+                  "obs_186_status"
+                ],
+                "questions_hash": "9a6f544b9eae337cd29f8faf40fdd0f20e75957edfc462d746d90ad3d50e6c65",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 18310,
+                  "output_tokens": 1429
+                },
+                "request_id": "req_01a0c03d89997104a30204cdeaffcc34"
+              },
+              {
+                "question_ids": [
+                  "obs_7_value",
+                  "obs_24_value",
+                  "obs_37_value",
+                  "obs_77_value",
+                  "obs_94_value",
+                  "obs_98_value",
+                  "obs_99_value",
+                  "obs_112_value",
+                  "obs_130_value",
+                  "obs_139_member_0",
+                  "obs_139_member_1",
+                  "obs_139_member_2",
+                  "obs_139_member_3",
+                  "obs_139_member_4",
+                  "obs_177_member_0",
+                  "obs_177_member_1",
+                  "obs_177_member_2",
+                  "obs_177_member_3"
+                ],
+                "questions_hash": "c660532da648467ed0eb571d6520adbb2ec680f943b4a16e3304238dfcda6c71",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 15317,
+                  "output_tokens": 905
+                },
+                "request_id": "req_01a0c03d8b6671a799e57d9f3c29f7c4"
+              }
+            ],
+            "metadata": {
+              "prompt_version": "direct-jev-v1",
+              "state_hash": "57b7f2e8f4bd5fc11afc5a18936bb892cd81c32ca36eeade4811b0f0fdfd1257",
+              "schema_hash": "f5b37c15942baaed376725e4bf8826c87fa316d55de7868e0c576db787f5b62b",
+              "settings": {
+                "choice_confidence": 0.8,
+                "support_probability": 0.8,
+                "reject_probability": 0.2,
+                "batch_size": 32,
+                "max_request_bytes": 60000,
+                "max_state_question_bytes": 30000
+              },
+              "concept_count": 162,
+              "candidate_policy": "transcript-only scalars and hierarchical clause/contiguous-span selection",
+              "actual_models": [
+                "jev-1.13.0"
+              ]
+            }
+          }
+        },
+        {
+          "observation": {
+            "id": "98",
+            "name": "Intravenous therapy",
+            "value_type": "SINGLE_SELECT",
+            "value": "Yes"
+          },
+          "error_type": "COR",
+          "comparison_index": 7,
+          "provenance": {
+            "audit_status": "recorded",
+            "audit": [
+              {
+                "id": "98",
+                "name": "Intravenous therapy",
+                "status": "emitted",
+                "reason": null,
+                "decisions": [
+                  {
+                    "question_id": "obs_98_status",
+                    "type": "choice",
+                    "choice": "supported",
+                    "confidence": 0.99,
+                    "probabilities": {
+                      "not_stated": 0.01,
+                      "supported": 0.99,
+                      "ambiguous": 0.0,
+                      "conflicting": 0.0
+                    }
+                  },
+                  {
+                    "question_id": "obs_98_value",
+                    "type": "choice",
+                    "choice": "value_0",
+                    "confidence": 0.99,
+                    "probabilities": {
+                      "conflicting": 0.0,
+                      "value_0": 1.0,
+                      "ambiguous": 0.0,
+                      "not_stated": 0.0,
+                      "value_1": 0.0
+                    }
+                  }
+                ],
+                "evidence": []
+              }
+            ],
+            "requests": [
+              {
+                "question_ids": [
+                  "obs_73_status",
+                  "obs_74_status",
+                  "obs_75_status",
+                  "obs_76_status",
+                  "obs_77_status",
+                  "obs_78_status",
+                  "obs_79_status",
+                  "obs_80_status",
+                  "obs_81_status",
+                  "obs_82_status",
+                  "obs_83_status",
+                  "obs_84_status",
+                  "obs_85_status",
+                  "obs_86_status",
+                  "obs_87_status",
+                  "obs_88_status",
+                  "obs_89_status",
+                  "obs_90_status",
+                  "obs_92_status",
+                  "obs_93_status",
+                  "obs_94_status",
+                  "obs_95_status",
+                  "obs_96_status",
+                  "obs_97_status",
+                  "obs_98_status",
+                  "obs_99_status"
+                ],
+                "questions_hash": "8d515b8b55a67ae6a8de682efb537961b4efb54f17f45ddae557ce7eeaad7254",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 18320,
+                  "output_tokens": 1397
+                },
+                "request_id": "req_01a0c03d86517eecbd36cd9b2b10cde1"
+              },
+              {
+                "question_ids": [
+                  "obs_7_value",
+                  "obs_24_value",
+                  "obs_37_value",
+                  "obs_77_value",
+                  "obs_94_value",
+                  "obs_98_value",
+                  "obs_99_value",
+                  "obs_112_value",
+                  "obs_130_value",
+                  "obs_139_member_0",
+                  "obs_139_member_1",
+                  "obs_139_member_2",
+                  "obs_139_member_3",
+                  "obs_139_member_4",
+                  "obs_177_member_0",
+                  "obs_177_member_1",
+                  "obs_177_member_2",
+                  "obs_177_member_3"
+                ],
+                "questions_hash": "c660532da648467ed0eb571d6520adbb2ec680f943b4a16e3304238dfcda6c71",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 15317,
+                  "output_tokens": 905
+                },
+                "request_id": "req_01a0c03d8b6671a799e57d9f3c29f7c4"
+              }
+            ],
+            "metadata": {
+              "prompt_version": "direct-jev-v1",
+              "state_hash": "57b7f2e8f4bd5fc11afc5a18936bb892cd81c32ca36eeade4811b0f0fdfd1257",
+              "schema_hash": "f5b37c15942baaed376725e4bf8826c87fa316d55de7868e0c576db787f5b62b",
+              "settings": {
+                "choice_confidence": 0.8,
+                "support_probability": 0.8,
+                "reject_probability": 0.2,
+                "batch_size": 32,
+                "max_request_bytes": 60000,
+                "max_state_question_bytes": 30000
+              },
+              "concept_count": 162,
+              "candidate_policy": "transcript-only scalars and hierarchical clause/contiguous-span selection",
+              "actual_models": [
+                "jev-1.13.0"
+              ]
+            }
+          }
+        },
+        {
+          "observation": {
+            "id": "99",
+            "name": "Urine odor",
+            "value_type": "SINGLE_SELECT",
+            "value": "foul"
+          },
+          "error_type": "COR",
+          "comparison_index": 8,
+          "provenance": {
+            "audit_status": "recorded",
+            "audit": [
+              {
+                "id": "99",
+                "name": "Urine odor",
+                "status": "emitted",
+                "reason": null,
+                "decisions": [
+                  {
+                    "question_id": "obs_99_status",
+                    "type": "choice",
+                    "choice": "supported",
+                    "confidence": 1.0,
+                    "probabilities": {
+                      "not_stated": 0.0,
+                      "supported": 1.0,
+                      "ambiguous": 0.0,
+                      "conflicting": 0.0
+                    }
+                  },
+                  {
+                    "question_id": "obs_99_value",
+                    "type": "choice",
+                    "choice": "value_0",
+                    "confidence": 1.0,
+                    "probabilities": {
+                      "conflicting": 0.0,
+                      "value_0": 1.0,
+                      "ambiguous": 0.0,
+                      "not_stated": 0.0,
+                      "value_1": 0.0
+                    }
+                  }
+                ],
+                "evidence": []
+              }
+            ],
+            "requests": [
+              {
+                "question_ids": [
+                  "obs_73_status",
+                  "obs_74_status",
+                  "obs_75_status",
+                  "obs_76_status",
+                  "obs_77_status",
+                  "obs_78_status",
+                  "obs_79_status",
+                  "obs_80_status",
+                  "obs_81_status",
+                  "obs_82_status",
+                  "obs_83_status",
+                  "obs_84_status",
+                  "obs_85_status",
+                  "obs_86_status",
+                  "obs_87_status",
+                  "obs_88_status",
+                  "obs_89_status",
+                  "obs_90_status",
+                  "obs_92_status",
+                  "obs_93_status",
+                  "obs_94_status",
+                  "obs_95_status",
+                  "obs_96_status",
+                  "obs_97_status",
+                  "obs_98_status",
+                  "obs_99_status"
+                ],
+                "questions_hash": "8d515b8b55a67ae6a8de682efb537961b4efb54f17f45ddae557ce7eeaad7254",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 18320,
+                  "output_tokens": 1397
+                },
+                "request_id": "req_01a0c03d86517eecbd36cd9b2b10cde1"
+              },
+              {
+                "question_ids": [
+                  "obs_7_value",
+                  "obs_24_value",
+                  "obs_37_value",
+                  "obs_77_value",
+                  "obs_94_value",
+                  "obs_98_value",
+                  "obs_99_value",
+                  "obs_112_value",
+                  "obs_130_value",
+                  "obs_139_member_0",
+                  "obs_139_member_1",
+                  "obs_139_member_2",
+                  "obs_139_member_3",
+                  "obs_139_member_4",
+                  "obs_177_member_0",
+                  "obs_177_member_1",
+                  "obs_177_member_2",
+                  "obs_177_member_3"
+                ],
+                "questions_hash": "c660532da648467ed0eb571d6520adbb2ec680f943b4a16e3304238dfcda6c71",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 15317,
+                  "output_tokens": 905
+                },
+                "request_id": "req_01a0c03d8b6671a799e57d9f3c29f7c4"
+              }
+            ],
+            "metadata": {
+              "prompt_version": "direct-jev-v1",
+              "state_hash": "57b7f2e8f4bd5fc11afc5a18936bb892cd81c32ca36eeade4811b0f0fdfd1257",
+              "schema_hash": "f5b37c15942baaed376725e4bf8826c87fa316d55de7868e0c576db787f5b62b",
+              "settings": {
+                "choice_confidence": 0.8,
+                "support_probability": 0.8,
+                "reject_probability": 0.2,
+                "batch_size": 32,
+                "max_request_bytes": 60000,
+                "max_state_question_bytes": 30000
+              },
+              "concept_count": 162,
+              "candidate_policy": "transcript-only scalars and hierarchical clause/contiguous-span selection",
+              "actual_models": [
+                "jev-1.13.0"
+              ]
+            }
+          }
+        },
+        {
+          "observation": {
+            "id": "7",
+            "name": "Oral mucosa status",
+            "value_type": "SINGLE_SELECT",
+            "value": "Dry"
+          },
+          "error_type": "COR",
+          "comparison_index": 9,
+          "provenance": {
+            "audit_status": "recorded",
+            "audit": [
+              {
+                "id": "7",
+                "name": "Oral mucosa status",
+                "status": "emitted",
+                "reason": null,
+                "decisions": [
+                  {
+                    "question_id": "obs_7_status",
+                    "type": "choice",
+                    "choice": "supported",
+                    "confidence": 1.0,
+                    "probabilities": {
+                      "conflicting": 0.0,
+                      "supported": 1.0,
+                      "not_stated": 0.0,
+                      "ambiguous": 0.0
+                    }
+                  },
+                  {
+                    "question_id": "obs_7_value",
+                    "type": "choice",
+                    "choice": "value_1",
+                    "confidence": 1.0,
+                    "probabilities": {
+                      "conflicting": 0.0,
+                      "value_0": 0.0,
+                      "ambiguous": 0.0,
+                      "not_stated": 0.0,
+                      "value_1": 1.0
+                    }
+                  }
+                ],
+                "evidence": []
+              }
+            ],
+            "requests": [
+              {
+                "question_ids": [
+                  "obs_0_status",
+                  "obs_2_status",
+                  "obs_3_status",
+                  "obs_4_status",
+                  "obs_6_status",
+                  "obs_7_status",
+                  "obs_9_status",
+                  "obs_10_status",
+                  "obs_11_status",
+                  "obs_12_status",
+                  "obs_13_status",
+                  "obs_15_status",
+                  "obs_17_status",
+                  "obs_18_status",
+                  "obs_19_status",
+                  "obs_20_status",
+                  "obs_21_status",
+                  "obs_22_status",
+                  "obs_24_status",
+                  "obs_25_status",
+                  "obs_30_status",
+                  "obs_32_status",
+                  "obs_33_status",
+                  "obs_34_status",
+                  "obs_35_status",
+                  "obs_36_status"
+                ],
+                "questions_hash": "87d5cc32a39f8671149a227aa89caf6fd7900e63748d626c5a39a42122b97ab7",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 18170,
+                  "output_tokens": 1392
+                },
+                "request_id": "req_01a0c03d838c702685a379b32fd186c8"
+              },
+              {
+                "question_ids": [
+                  "obs_7_value",
+                  "obs_24_value",
+                  "obs_37_value",
+                  "obs_77_value",
+                  "obs_94_value",
+                  "obs_98_value",
+                  "obs_99_value",
+                  "obs_112_value",
+                  "obs_130_value",
+                  "obs_139_member_0",
+                  "obs_139_member_1",
+                  "obs_139_member_2",
+                  "obs_139_member_3",
+                  "obs_139_member_4",
+                  "obs_177_member_0",
+                  "obs_177_member_1",
+                  "obs_177_member_2",
+                  "obs_177_member_3"
+                ],
+                "questions_hash": "c660532da648467ed0eb571d6520adbb2ec680f943b4a16e3304238dfcda6c71",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 15317,
+                  "output_tokens": 905
+                },
+                "request_id": "req_01a0c03d8b6671a799e57d9f3c29f7c4"
+              }
+            ],
+            "metadata": {
+              "prompt_version": "direct-jev-v1",
+              "state_hash": "57b7f2e8f4bd5fc11afc5a18936bb892cd81c32ca36eeade4811b0f0fdfd1257",
+              "schema_hash": "f5b37c15942baaed376725e4bf8826c87fa316d55de7868e0c576db787f5b62b",
+              "settings": {
+                "choice_confidence": 0.8,
+                "support_probability": 0.8,
+                "reject_probability": 0.2,
+                "batch_size": 32,
+                "max_request_bytes": 60000,
+                "max_state_question_bytes": 30000
+              },
+              "concept_count": 162,
+              "candidate_policy": "transcript-only scalars and hierarchical clause/contiguous-span selection",
+              "actual_models": [
+                "jev-1.13.0"
+              ]
+            }
+          }
+        },
+        {
+          "observation": {
+            "id": "77",
+            "name": "Memory status",
+            "value_type": "SINGLE_SELECT",
+            "value": "Impaired"
+          },
+          "error_type": "INS",
+          "comparison_index": 11,
+          "provenance": {
+            "audit_status": "recorded",
+            "audit": [
+              {
+                "id": "77",
+                "name": "Memory status",
+                "status": "emitted",
+                "reason": null,
+                "decisions": [
+                  {
+                    "question_id": "obs_77_status",
+                    "type": "choice",
+                    "choice": "supported",
+                    "confidence": 0.9,
+                    "probabilities": {
+                      "not_stated": 0.07,
+                      "supported": 0.92,
+                      "ambiguous": 0.01,
+                      "conflicting": 0.0
+                    }
+                  },
+                  {
+                    "question_id": "obs_77_value",
+                    "type": "choice",
+                    "choice": "value_1",
+                    "confidence": 0.98,
+                    "probabilities": {
+                      "conflicting": 0.0,
+                      "value_0": 0.0,
+                      "ambiguous": 0.0,
+                      "not_stated": 0.01,
+                      "value_1": 0.99
+                    }
+                  }
+                ],
+                "evidence": []
+              }
+            ],
+            "requests": [
+              {
+                "question_ids": [
+                  "obs_73_status",
+                  "obs_74_status",
+                  "obs_75_status",
+                  "obs_76_status",
+                  "obs_77_status",
+                  "obs_78_status",
+                  "obs_79_status",
+                  "obs_80_status",
+                  "obs_81_status",
+                  "obs_82_status",
+                  "obs_83_status",
+                  "obs_84_status",
+                  "obs_85_status",
+                  "obs_86_status",
+                  "obs_87_status",
+                  "obs_88_status",
+                  "obs_89_status",
+                  "obs_90_status",
+                  "obs_92_status",
+                  "obs_93_status",
+                  "obs_94_status",
+                  "obs_95_status",
+                  "obs_96_status",
+                  "obs_97_status",
+                  "obs_98_status",
+                  "obs_99_status"
+                ],
+                "questions_hash": "8d515b8b55a67ae6a8de682efb537961b4efb54f17f45ddae557ce7eeaad7254",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 18320,
+                  "output_tokens": 1397
+                },
+                "request_id": "req_01a0c03d86517eecbd36cd9b2b10cde1"
+              },
+              {
+                "question_ids": [
+                  "obs_7_value",
+                  "obs_24_value",
+                  "obs_37_value",
+                  "obs_77_value",
+                  "obs_94_value",
+                  "obs_98_value",
+                  "obs_99_value",
+                  "obs_112_value",
+                  "obs_130_value",
+                  "obs_139_member_0",
+                  "obs_139_member_1",
+                  "obs_139_member_2",
+                  "obs_139_member_3",
+                  "obs_139_member_4",
+                  "obs_177_member_0",
+                  "obs_177_member_1",
+                  "obs_177_member_2",
+                  "obs_177_member_3"
+                ],
+                "questions_hash": "c660532da648467ed0eb571d6520adbb2ec680f943b4a16e3304238dfcda6c71",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 15317,
+                  "output_tokens": 905
+                },
+                "request_id": "req_01a0c03d8b6671a799e57d9f3c29f7c4"
+              }
+            ],
+            "metadata": {
+              "prompt_version": "direct-jev-v1",
+              "state_hash": "57b7f2e8f4bd5fc11afc5a18936bb892cd81c32ca36eeade4811b0f0fdfd1257",
+              "schema_hash": "f5b37c15942baaed376725e4bf8826c87fa316d55de7868e0c576db787f5b62b",
+              "settings": {
+                "choice_confidence": 0.8,
+                "support_probability": 0.8,
+                "reject_probability": 0.2,
+                "batch_size": 32,
+                "max_request_bytes": 60000,
+                "max_state_question_bytes": 30000
+              },
+              "concept_count": 162,
+              "candidate_policy": "transcript-only scalars and hierarchical clause/contiguous-span selection",
+              "actual_models": [
+                "jev-1.13.0"
+              ]
+            }
+          }
+        },
+        {
+          "observation": {
+            "id": "139",
+            "name": "Urine appearance",
+            "value_type": "MULTI_SELECT",
+            "value": [
+              "cloudy",
+              "dark"
+            ]
+          },
+          "error_type": "SUB",
+          "comparison_index": 12,
+          "provenance": {
+            "audit_status": "recorded",
+            "audit": [
+              {
+                "id": "139",
+                "name": "Urine appearance",
+                "status": "emitted",
+                "reason": null,
+                "decisions": [
+                  {
+                    "question_id": "obs_139_status",
+                    "type": "choice",
+                    "choice": "supported",
+                    "confidence": 1.0,
+                    "probabilities": {
+                      "conflicting": 0.0,
+                      "supported": 1.0,
+                      "not_stated": 0.0,
+                      "ambiguous": 0.0
+                    }
+                  },
+                  {
+                    "question_id": "obs_139_member_0",
+                    "type": "noul",
+                    "noul": 0.98
+                  },
+                  {
+                    "question_id": "obs_139_member_1",
+                    "type": "noul",
+                    "noul": 0.98
+                  },
+                  {
+                    "question_id": "obs_139_member_2",
+                    "type": "noul",
+                    "noul": 0.05
+                  },
+                  {
+                    "question_id": "obs_139_member_3",
+                    "type": "noul",
+                    "noul": 0.03
+                  },
+                  {
+                    "question_id": "obs_139_member_4",
+                    "type": "noul",
+                    "noul": 0.04
+                  }
+                ],
+                "evidence": []
+              }
+            ],
+            "requests": [
+              {
+                "question_ids": [
+                  "obs_126_status",
+                  "obs_128_status",
+                  "obs_129_status",
+                  "obs_130_status",
+                  "obs_132_status",
+                  "obs_133_status",
+                  "obs_134_status",
+                  "obs_135_status",
+                  "obs_136_status",
+                  "obs_137_status",
+                  "obs_138_status",
+                  "obs_139_status",
+                  "obs_140_status",
+                  "obs_141_status",
+                  "obs_142_status",
+                  "obs_143_status",
+                  "obs_144_status",
+                  "obs_145_status",
+                  "obs_146_status",
+                  "obs_147_status",
+                  "obs_148_status",
+                  "obs_149_status",
+                  "obs_150_status",
+                  "obs_151_status",
+                  "obs_152_status",
+                  "obs_154_status"
+                ],
+                "questions_hash": "d84ad65c2f422a126a59bc117abc01d1cecbe789d435c01024619618931a3a8d",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 18403,
+                  "output_tokens": 1429
+                },
+                "request_id": "req_01a0c03d88a87146bb533704caabc892"
+              },
+              {
+                "question_ids": [
+                  "obs_7_value",
+                  "obs_24_value",
+                  "obs_37_value",
+                  "obs_77_value",
+                  "obs_94_value",
+                  "obs_98_value",
+                  "obs_99_value",
+                  "obs_112_value",
+                  "obs_130_value",
+                  "obs_139_member_0",
+                  "obs_139_member_1",
+                  "obs_139_member_2",
+                  "obs_139_member_3",
+                  "obs_139_member_4",
+                  "obs_177_member_0",
+                  "obs_177_member_1",
+                  "obs_177_member_2",
+                  "obs_177_member_3"
+                ],
+                "questions_hash": "c660532da648467ed0eb571d6520adbb2ec680f943b4a16e3304238dfcda6c71",
+                "status": "returned",
+                "model": "jev-1.13.0",
+                "usage": {
+                  "input_tokens": 15317,
+                  "output_tokens": 905
+                },
+                "request_id": "req_01a0c03d8b6671a799e57d9f3c29f7c4"
+              }
+            ],
+            "metadata": {
+              "prompt_version": "direct-jev-v1",
+              "state_hash": "57b7f2e8f4bd5fc11afc5a18936bb892cd81c32ca36eeade4811b0f0fdfd1257",
+              "schema_hash": "f5b37c15942baaed376725e4bf8826c87fa316d55de7868e0c576db787f5b62b",
+              "settings": {
+                "choice_confidence": 0.8,
+                "support_probability": 0.8,
+                "reject_probability": 0.2,
+                "batch_size": 32,
+                "max_request_bytes": 60000,
+                "max_state_question_bytes": 30000
+              },
+              "concept_count": 162,
+              "candidate_policy": "transcript-only scalars and hierarchical clause/contiguous-span selection",
+              "actual_models": [
+                "jev-1.13.0"
+              ]
+            }
+          }
+        }
+      ],
+      "comparisons": [
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "112",
+            "value_type": "SINGLE_SELECT",
+            "name": "Skin turgor",
+            "value": "Tented"
+          },
+          "predicted_observation": {
+            "id": "112",
+            "name": "Skin turgor",
+            "value_type": "SINGLE_SELECT",
+            "value": "Tented"
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "94",
+            "value_type": "SINGLE_SELECT",
+            "name": "Nailbed color",
+            "value": "pale"
+          },
+          "predicted_observation": {
+            "id": "94",
+            "name": "Nailbed color",
+            "value_type": "SINGLE_SELECT",
+            "value": "pale"
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "24",
+            "value_type": "SINGLE_SELECT",
+            "name": "Temperature source",
+            "value": "tympanic"
+          },
+          "predicted_observation": {
+            "id": "24",
+            "name": "Temperature source",
+            "value_type": "SINGLE_SELECT",
+            "value": "tympanic"
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "37",
+            "value_type": "SINGLE_SELECT",
+            "name": "Motor strength",
+            "value": "Generalized weakness"
+          },
+          "predicted_observation": {
+            "id": "37",
+            "name": "Motor strength",
+            "value_type": "SINGLE_SELECT",
+            "value": "Generalized weakness"
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "73",
+            "value_type": "NUMERIC",
+            "name": "Urine output",
+            "value": 150
+          },
+          "predicted_observation": {
+            "id": "73",
+            "name": "Urine output",
+            "value_type": "NUMERIC",
+            "value": 150
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "130",
+            "value_type": "SINGLE_SELECT",
+            "name": "Cognitive status",
+            "value": "Alert with general confusion and forgetfulness"
+          },
+          "predicted_observation": {
+            "id": "130",
+            "name": "Cognitive status",
+            "value_type": "SINGLE_SELECT",
+            "value": "Alert with general confusion and forgetfulness"
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "177",
+            "value_type": "MULTI_SELECT",
+            "name": "Urinary symptoms",
+            "value": [
+              "urgency",
+              "difficulty urinating"
+            ]
+          },
+          "predicted_observation": {
+            "id": "177",
+            "name": "Urinary symptoms",
+            "value_type": "MULTI_SELECT",
+            "value": [
+              "difficulty urinating",
+              "urgency"
+            ]
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "98",
+            "value_type": "SINGLE_SELECT",
+            "name": "Intravenous therapy",
+            "value": "Yes"
+          },
+          "predicted_observation": {
+            "id": "98",
+            "name": "Intravenous therapy",
+            "value_type": "SINGLE_SELECT",
+            "value": "Yes"
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "99",
+            "value_type": "SINGLE_SELECT",
+            "name": "Urine odor",
+            "value": "foul"
+          },
+          "predicted_observation": {
+            "id": "99",
+            "name": "Urine odor",
+            "value_type": "SINGLE_SELECT",
+            "value": "foul"
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "7",
+            "value_type": "SINGLE_SELECT",
+            "name": "Oral mucosa status",
+            "value": "Dry"
+          },
+          "predicted_observation": {
+            "id": "7",
+            "name": "Oral mucosa status",
+            "value_type": "SINGLE_SELECT",
+            "value": "Dry"
+          }
+        },
+        {
+          "error_type": "DEL",
+          "expected_observation": {
+            "id": "183",
+            "value_type": "SINGLE_SELECT",
+            "name": "Urine output unit",
+            "value": "cc"
+          },
+          "predicted_observation": null
+        },
+        {
+          "error_type": "INS",
+          "expected_observation": null,
+          "predicted_observation": {
+            "id": "77",
+            "name": "Memory status",
+            "value_type": "SINGLE_SELECT",
+            "value": "Impaired"
+          }
+        },
+        {
+          "error_type": "SUB",
+          "expected_observation": {
+            "id": "139",
+            "value_type": "MULTI_SELECT",
+            "name": "Urine appearance",
+            "value": [
+              "cloudy"
+            ]
+          },
+          "predicted_observation": {
+            "id": "139",
+            "name": "Urine appearance",
+            "value_type": "MULTI_SELECT",
+            "value": [
+              "cloudy",
+              "dark"
+            ]
+          }
+        }
+      ],
+      "error_counts": {
+        "COR": 10,
+        "DEL": 1,
+        "INS": 1,
+        "SUB": 1
+      },
+      "skipped_expected_count": 0,
+      "precision": 0.8333333333333334,
+      "recall": 0.8333333333333334,
+      "f1": 0.8333333333333334,
+      "reference_changes": [],
+      "reference_issues": [],
+      "prediction_issues": [],
+      "failures": []
+    }
+  ],
+  "prediction_issues": [],
+  "micro_metrics": {
+    "available": true,
+    "transcript_count": 1,
+    "evaluated_transcript_count": 1,
+    "skipped_expected_count": 0,
+    "tp": 10,
+    "fp": 2,
+    "fn": 2,
+    "precision": 0.8333333333333334,
+    "recall": 0.8333333333333334,
+    "f1": 0.8333333333333334
+  }
+}
