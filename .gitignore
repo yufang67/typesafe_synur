@@ -12,3 +12,14 @@ data/
 
 # Dot-prefixed directories
 .*/
+
+# SYNUR experiment artifacts and local configuration
+__pycache__/
+*.py[cod]
+*.egg-info/
+results/
+.env
+.env.*
+!.env.example
+build/
+dist/

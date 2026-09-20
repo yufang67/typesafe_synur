@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "typesafe-synur"
+version = "0.1.0"
+description = "Direct JEV observation extraction experiments on local SYNUR data"
+requires-python = ">=3.11"
+dependencies = [
+    "typesafe-sdk==0.7.0",
+    "pydantic>=2.12,<3",
+]
+
+[project.optional-dependencies]
+notebook = [
+    "jupyterlab>=4.4,<5",
+    "ipykernel>=6.30,<8",
+]
+dev = [
+    "pytest>=8,<10",
+    "nbclient>=0.10,<0.11",
+    "ruff>=0.12,<1",
+    "pyright>=1.1.400,<2",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+
+[tool.ruff]
+target-version = "py311"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F", "I"]
+
+[tool.pyright]
+include = ["src", "scripts"]
+pythonVersion = "3.11"
+typeCheckingMode = "standard"
+venvPath = "."
+venv = ".venv"
