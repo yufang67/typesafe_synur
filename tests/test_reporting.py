@@ -4,7 +4,11 @@ from copy import deepcopy
 import pytest
 
 from synur.observations import SchemaRegistry
-from synur.reporting import build_transcript_report, save_transcript_report
+from synur.reporting import (
+    build_short_transcript_report,
+    build_transcript_report,
+    save_transcript_report,
+)
 
 
 @pytest.fixture
@@ -54,6 +58,7 @@ def test_report_tags_and_metrics_are_per_transcript(registry):
     assert report["enabled_value_types"] == ["SINGLE_SELECT", "MULTI_SELECT", "NUMERIC"]
     assert report["reference_view"] == "normalized"
     mixed, exact = report["transcripts"]
+    assert all("raw_expected_observations" not in entry for entry in report["transcripts"])
     assert mixed["transcript"] == rows[0]["transcript"]
     assert mixed["split"] == "dev"
     assert mixed["available"]
@@ -91,7 +96,7 @@ def test_report_tags_and_metrics_are_per_transcript(registry):
 
 
 @pytest.mark.parametrize("reference_view", ["raw", "normalized"])
-def test_report_preserves_original_labels_and_normalizations(registry, reference_view):
+def test_report_retains_selected_reference_view_and_normalizations(registry, reference_view):
     canonical = observation(registry, "3", 150)
     raw = {**canonical, "id": "003"}
     report = build_transcript_report(
@@ -99,7 +104,7 @@ def test_report_preserves_original_labels_and_normalizations(registry, reference
         reference_view=reference_view,
     )
     result = report["transcripts"][0]
-    assert result["raw_expected_observations"] == [raw]
+    assert "raw_expected_observations" not in result
     assert len(result["reference_changes"]) == 1
     if reference_view == "normalized":
         assert result["expected_observations"][0]["observation"] == canonical
@@ -182,7 +187,7 @@ def test_string_references_are_retained_as_skip_without_affecting_scores(
     assert all(item["observation"] == skipped for item in skips)
     assert all(entry["comparisons"][item["comparison_index"]]["error_type"] == "SKIP"
                for item in skips)
-    assert entry["raw_expected_observations"] == raw
+    assert "raw_expected_observations" not in entry
     assert entry["error_counts"] == {"COR": 1, "DEL": 0, "INS": 0, "SUB": 0}
     assert entry["precision"] == entry["recall"] == entry["f1"] == 1
     assert not entry["reference_issues"]
@@ -353,6 +358,55 @@ def test_invalid_duplicate_predictions_and_unrequested_rows_are_visible(registry
     assert any(issue["code"] == "unrequested_row" for issue in report["prediction_issues"])
 
 
+@pytest.mark.parametrize("reference_view", ["raw", "normalized"])
+def test_short_report_contains_only_requested_fields_and_preserves_metrics(registry, reference_view):
+    label = observation(registry, "3", 150)
+    skipped = {"id": "5", "name": "Note", "value_type": "STRING", "value": "Text"}
+    rows = [
+        source(row_id, [{**label, "id": "003"}, skipped])
+        for row_id in ("complete", "partial", "empty", "missing", "failed")
+    ]
+    predictions = [
+        prediction(registry, "complete", [label]),
+        prediction(registry, "partial", [observation(registry, "3", 100)], status="partial"),
+        prediction(registry, "empty", []),
+        prediction(registry, "failed", [], status="failed", failures=[{"error": "timeout"}]),
+    ]
+    report = build_transcript_report(rows, predictions, registry, reference_view=reference_view)
+    before = deepcopy(report)
+    short = build_short_transcript_report(report)
+    assert list(short) == ["transcripts", "micro_metrics"]
+    assert short["micro_metrics"] == report["micro_metrics"]
+    assert len(short["transcripts"]) == len(rows)
+    for entry, full in zip(short["transcripts"], report["transcripts"], strict=True):
+        assert list(entry) == ["id", "transcript", "comparisons", "metrics"]
+        assert entry["id"] == full["id"]
+        assert entry["transcript"] == full["transcript"]
+        assert entry["comparisons"] == full["comparisons"]
+        assert entry["metrics"] == {
+            name: full[name]
+            for name in (
+                "available", "error_counts", "skipped_expected_count", "precision", "recall", "f1"
+            )
+        }
+    for entry in short["transcripts"][-2:]:
+        assert entry["metrics"]["available"] is False
+        assert entry["metrics"]["error_counts"] is None
+        assert entry["metrics"]["f1"] is None
+    short["transcripts"][0]["comparisons"][0]["expected_observation"]["value"] = "changed"
+    short["transcripts"][0]["metrics"]["error_counts"]["COR"] = 99
+    short["micro_metrics"]["tp"] = 99
+    assert report == before
+
+
+def test_empty_short_report_retains_unavailable_micro_metrics(registry):
+    report = build_transcript_report([], [], registry)
+    short = build_short_transcript_report(report)
+    assert short == {"transcripts": [], "micro_metrics": report["micro_metrics"]}
+    assert short["micro_metrics"]["available"] is False
+    assert short["micro_metrics"]["f1"] is None
+
+
 def test_report_saves_valid_json_without_overwriting(registry, tmp_path):
     label = observation(registry, "1", "No")
     directory = tmp_path / "results" / "first"
@@ -366,14 +420,20 @@ def test_report_saves_valid_json_without_overwriting(registry, tmp_path):
     assert payload["transcripts"][0]["error_counts"]["COR"] == 1
     assert payload["metadata"] == {"requested_model": "fixture-not-jev"}
     assert payload["created_at"]
-    assert payload["format_version"] == 2
+    assert payload["format_version"] == 3
     assert list(payload)[-1] == "micro_metrics"
     assert payload["micro_metrics"]["precision"] == payload["micro_metrics"]["f1"] == 1
+    assert "raw_expected_observations" not in payload["transcripts"][0]
+    short_path = path.with_name("transcript_report_short.json")
+    short = json.loads(short_path.read_text(encoding="utf-8"))
+    assert short == build_short_transcript_report(payload)
     before = path.read_bytes()
+    short_before = short_path.read_bytes()
     with pytest.raises(FileExistsError):
         save_transcript_report(directory, rows, [], registry)
     assert path.read_bytes() == before
-    assert list(directory.iterdir()) == [path]
+    assert short_path.read_bytes() == short_before
+    assert set(directory.iterdir()) == {path, short_path}
 
 
 def test_invalid_report_inputs_fail_before_creating_files(registry, tmp_path):

@@ -200,6 +200,14 @@ def test_notebook_displays_transcript_labels_predictions_and_scores(capsys, tmp_
     assert exported["micro_metrics"]["precision"] == exported["micro_metrics"]["recall"] == 1
     assert exported["micro_metrics"]["skipped_expected_count"] == 1
     assert list(exported)[-1] == "micro_metrics"
+    assert "raw_expected_observations" not in exported["transcripts"][0]
+    short_path = namespace["report_path"].with_name("transcript_report_short.json")
+    short = json.loads(short_path.read_text(encoding="utf-8"))
+    assert str(short_path) in output
+    assert list(short["transcripts"][0]) == ["id", "transcript", "comparisons", "metrics"]
+    assert short["transcripts"][0]["comparisons"] == exported["transcripts"][0]["comparisons"]
+    assert short["transcripts"][0]["metrics"]["f1"] == 1
+    assert short["micro_metrics"] == exported["micro_metrics"]
 
 
 @pytest.mark.skipif(

@@ -197,14 +197,13 @@ def build_transcript_report(
             "error_counts": error_counts,
             "skipped_expected_count": len(skipped),
             **{name: score["observation"][name] for name in ("precision", "recall", "f1")},
-            "raw_expected_observations": deepcopy(row["observations"]),
             "reference_changes": evaluation["reference_changes"],
             "reference_issues": evaluation["reference_issues"],
             "prediction_issues": evaluation["prediction_issues"],
             "failures": deepcopy(record["failures"]) if record is not None else [],
         })
     return {
-        "format_version": 2,
+        "format_version": 3,
         "reference_view": reference_view,
         "enabled_value_types": aggregate["value_types"],
         "excluded_value_types": list(excluded_types),
@@ -231,6 +230,28 @@ def build_transcript_report(
     }
 
 
+def build_short_transcript_report(report: dict) -> dict:
+    """Keep comparisons and metrics from a full report without recalculating scores."""
+    return deepcopy({
+        "transcripts": [
+            {
+                "id": entry["id"],
+                "transcript": entry["transcript"],
+                "comparisons": entry["comparisons"],
+                "metrics": {
+                    name: entry[name]
+                    for name in (
+                        "available", "error_counts", "skipped_expected_count",
+                        "precision", "recall", "f1",
+                    )
+                },
+            }
+            for entry in report["transcripts"]
+        ],
+        "micro_metrics": report["micro_metrics"],
+    })
+
+
 def save_transcript_report(
     output_dir: Path,
     rows: list[dict],
@@ -240,22 +261,25 @@ def save_transcript_report(
     reference_view: Literal["raw", "normalized"] = "normalized",
     metadata: dict | None = None,
 ) -> Path:
-    """Write one JSON report to a new directory; never overwrite earlier reports."""
+    """Write full and short JSON reports to a new directory; return the full report path."""
     report = build_transcript_report(rows, predictions, registry, reference_view=reference_view)
-    payload = json.dumps(
-        {
+    reports = {
+        "transcript_report.json": {
             "created_at": datetime.now(timezone.utc).isoformat(),
             "metadata": metadata if metadata is not None else {},
             **report,
         },
-        indent=2,
-        ensure_ascii=False,
-        allow_nan=False,
-    )
+        "transcript_report_short.json": build_short_transcript_report(report),
+    }
+    payloads = {
+        name: json.dumps(content, indent=2, ensure_ascii=False, allow_nan=False)
+        for name, content in reports.items()
+    }
     output_dir = Path(output_dir)
     output_dir.mkdir(parents=True, exist_ok=False)
-    path = output_dir / "transcript_report.json"
-    temporary = path.with_suffix(".json.tmp")
-    temporary.write_text(payload + "\n", encoding="utf-8")
-    temporary.replace(path)
-    return path
+    for name, payload in payloads.items():
+        path = output_dir / name
+        temporary = path.with_suffix(".json.tmp")
+        temporary.write_text(payload + "\n", encoding="utf-8")
+        temporary.replace(path)
+    return output_dir / "transcript_report.json"
