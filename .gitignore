@@ -1,0 +1,14 @@
+# Temporary files and directories
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+tmp/
+temp/
+
+# Data directories
+data/
+
+# Dot-prefixed directories
+.*/
