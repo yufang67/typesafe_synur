@@ -1,0 +1,231 @@
+{
+  "transcripts": [
+    {
+      "id": "152",
+      "transcript": "[Clinician] Patient is a 72-year-old female, um, with a history of moderate cognitive decline. She presents as alert, but, uh, there's general confusion and forgetfulness noted. She—she's frequently forgetting to hydrate, which is a bit concerning.\n\n[Clinician] Upon examination, her skin turgor is tented, um, which suggests reduced fluid volume status. Her nailbeds, they're appearing, uh, pale, which might indicate possible hypovolemia. I took her temperature using the, um, tympanic method, and she reports, uh, persistent dry mouth. Physically, her oral mucosa is, um, dry as well.\n\n[Clinician] Uh, urine output is low, recorded at just 150 cc. The urine is, um, dark and cloudy, and it has a foul odor. She reports experiencing urinary symptoms, specifically, um, difficulty urinating and urgency.\n\n[Clinician] There's, uh, generalized weakness noted in her motor strength during the physical exam. This could, uh, further point to her state of dehydration.\n\n[Clinician] We've initiated intravenous therapy to, uh, restore her fluid levels. Uh, we'll be closely monitoring her urine output and cognitive status to assess her response to the treatment.",
+      "comparisons": [
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "112",
+            "value_type": "SINGLE_SELECT",
+            "name": "Skin turgor",
+            "value": "Tented"
+          },
+          "predicted_observation": {
+            "id": "112",
+            "name": "Skin turgor",
+            "value_type": "SINGLE_SELECT",
+            "value": "Tented"
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "94",
+            "value_type": "SINGLE_SELECT",
+            "name": "Nailbed color",
+            "value": "pale"
+          },
+          "predicted_observation": {
+            "id": "94",
+            "name": "Nailbed color",
+            "value_type": "SINGLE_SELECT",
+            "value": "pale"
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "24",
+            "value_type": "SINGLE_SELECT",
+            "name": "Temperature source",
+            "value": "tympanic"
+          },
+          "predicted_observation": {
+            "id": "24",
+            "name": "Temperature source",
+            "value_type": "SINGLE_SELECT",
+            "value": "tympanic"
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "37",
+            "value_type": "SINGLE_SELECT",
+            "name": "Motor strength",
+            "value": "Generalized weakness"
+          },
+          "predicted_observation": {
+            "id": "37",
+            "name": "Motor strength",
+            "value_type": "SINGLE_SELECT",
+            "value": "Generalized weakness"
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "73",
+            "value_type": "NUMERIC",
+            "name": "Urine output",
+            "value": 150
+          },
+          "predicted_observation": {
+            "id": "73",
+            "name": "Urine output",
+            "value_type": "NUMERIC",
+            "value": 150
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "130",
+            "value_type": "SINGLE_SELECT",
+            "name": "Cognitive status",
+            "value": "Alert with general confusion and forgetfulness"
+          },
+          "predicted_observation": {
+            "id": "130",
+            "name": "Cognitive status",
+            "value_type": "SINGLE_SELECT",
+            "value": "Alert with general confusion and forgetfulness"
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "177",
+            "value_type": "MULTI_SELECT",
+            "name": "Urinary symptoms",
+            "value": [
+              "urgency",
+              "difficulty urinating"
+            ]
+          },
+          "predicted_observation": {
+            "id": "177",
+            "name": "Urinary symptoms",
+            "value_type": "MULTI_SELECT",
+            "value": [
+              "difficulty urinating",
+              "urgency"
+            ]
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "98",
+            "value_type": "SINGLE_SELECT",
+            "name": "Intravenous therapy",
+            "value": "Yes"
+          },
+          "predicted_observation": {
+            "id": "98",
+            "name": "Intravenous therapy",
+            "value_type": "SINGLE_SELECT",
+            "value": "Yes"
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "99",
+            "value_type": "SINGLE_SELECT",
+            "name": "Urine odor",
+            "value": "foul"
+          },
+          "predicted_observation": {
+            "id": "99",
+            "name": "Urine odor",
+            "value_type": "SINGLE_SELECT",
+            "value": "foul"
+          }
+        },
+        {
+          "error_type": "COR",
+          "expected_observation": {
+            "id": "7",
+            "value_type": "SINGLE_SELECT",
+            "name": "Oral mucosa status",
+            "value": "Dry"
+          },
+          "predicted_observation": {
+            "id": "7",
+            "name": "Oral mucosa status",
+            "value_type": "SINGLE_SELECT",
+            "value": "Dry"
+          }
+        },
+        {
+          "error_type": "DEL",
+          "expected_observation": {
+            "id": "183",
+            "value_type": "SINGLE_SELECT",
+            "name": "Urine output unit",
+            "value": "cc"
+          },
+          "predicted_observation": null
+        },
+        {
+          "error_type": "INS",
+          "expected_observation": null,
+          "predicted_observation": {
+            "id": "77",
+            "name": "Memory status",
+            "value_type": "SINGLE_SELECT",
+            "value": "Impaired"
+          }
+        },
+        {
+          "error_type": "SUB",
+          "expected_observation": {
+            "id": "139",
+            "value_type": "MULTI_SELECT",
+            "name": "Urine appearance",
+            "value": [
+              "cloudy"
+            ]
+          },
+          "predicted_observation": {
+            "id": "139",
+            "name": "Urine appearance",
+            "value_type": "MULTI_SELECT",
+            "value": [
+              "cloudy",
+              "dark"
+            ]
+          }
+        }
+      ],
+      "metrics": {
+        "available": true,
+        "error_counts": {
+          "COR": 10,
+          "DEL": 1,
+          "INS": 1,
+          "SUB": 1
+        },
+        "skipped_expected_count": 0,
+        "precision": 0.8333333333333334,
+        "recall": 0.8333333333333334,
+        "f1": 0.8333333333333334
+      }
+    }
+  ],
+  "micro_metrics": {
+    "available": true,
+    "transcript_count": 1,
+    "evaluated_transcript_count": 1,
+    "skipped_expected_count": 0,
+    "tp": 10,
+    "fp": 2,
+    "fn": 2,
+    "precision": 0.8333333333333334,
+    "recall": 0.8333333333333334,
+    "f1": 0.8333333333333334
+  }
+}
