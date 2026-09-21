@@ -61,6 +61,8 @@ def test_notebook_filters_labels_and_evaluation_without_changing_source(row_id):
     namespace = {
         "load_dataset": lambda _: dataset,
         "DATA_DIR": ROOT,
+        "DATASET_PATH": None,
+        "SCHEMA_PATH": None,
         "SchemaRegistry": SchemaRegistry,
         "VALUE_TYPES": VALUE_TYPES,
         "ENABLED_VALUE_TYPES": enabled,
@@ -208,6 +210,13 @@ def test_notebook_displays_transcript_labels_predictions_and_scores(capsys, tmp_
     assert short["transcripts"][0]["comparisons"] == exported["transcripts"][0]["comparisons"]
     assert short["transcripts"][0]["metrics"]["f1"] == 1
     assert short["micro_metrics"] == exported["micro_metrics"]
+    namespace.update(SAVE_RESULTS=True, json=json)
+    exec(compile(cells["run-extraction"].source, str(NOTEBOOK), "exec"), namespace)
+    checkpoint = namespace["checkpoint_path"]
+    assert checkpoint.is_file()
+    assert [json.loads(line) for line in checkpoint.read_text(encoding="utf-8").splitlines()] == [
+        record,
+    ]
 
 
 @pytest.mark.skipif(
@@ -222,10 +231,19 @@ def test_notebook_executes_offline_without_model_credentials(monkeypatch):
     tree = ast.parse(configuration.source)
     for node in ast.walk(tree):
         if isinstance(node, ast.Assign) and any(
-            isinstance(target, ast.Name) and target.id in ("LIVE_CALLS", "SAVE_REPORT")
+            isinstance(target, ast.Name)
+            and target.id in ("LIVE_CALLS", "SAVE_REPORT", "SAVE_RESULTS")
             for target in node.targets
         ):
             node.value = ast.Constant(value=False)
+        elif isinstance(node, ast.Assign):
+            replacements = {
+                "DATASET_PATH": None, "SCHEMA_PATH": None,
+                "SPLIT": "mediqa_synur_dev", "ROW_ID": "152",
+            }
+            for target in node.targets:
+                if isinstance(target, ast.Name) and target.id in replacements:
+                    node.value = ast.Constant(value=replacements[target.id])
     configuration.source = ast.unparse(tree)
     guard = nbformat.v4.new_code_cell("""
 import getpass
