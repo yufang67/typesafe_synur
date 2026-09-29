@@ -3,7 +3,6 @@ import json
 from collections import Counter
 from copy import deepcopy
 from pathlib import Path
-from uuid import uuid4
 
 import nbformat
 import pytest
@@ -18,16 +17,111 @@ ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOK = ROOT / "notebooks" / "synur_observation_extraction.ipynb"
 
 
+@pytest.mark.parametrize("provider", ["typesafe", "pi-scorer"])
+def test_notebook_defaults_to_bundled_exports(monkeypatch, provider):
+    monkeypatch.chdir(ROOT)
+    monkeypatch.setenv("SYNUR_MODEL_PROVIDER", provider)
+    for name in ("TYPESAFE_MODEL", "TYPESAFE_DEFAULT_MODEL", "TYPESAFE_BASE_URL"):
+        monkeypatch.delenv(name, raising=False)
+    monkeypatch.delenv("SYNUR_DATASET_PATH", raising=False)
+    monkeypatch.delenv("SYNUR_SCHEMA_PATH", raising=False)
+    notebook = nbformat.read(NOTEBOOK, as_version=4)
+    cells = {cell.id: cell for cell in notebook.cells}
+    namespace = {}
+    exec(compile(cells["configuration"].source, str(NOTEBOOK), "exec"), namespace)
+    namespace["display"] = lambda value: None
+    exec(compile(cells["load-data"].source, str(NOTEBOOK), "exec"), namespace)
+    assert namespace["DATASET_PATH"] == ROOT / "data" / "synur" / "synur_dataset.v5.json"
+    assert namespace["SCHEMA_PATH"] == ROOT / "data" / "synur" / "synur_schema.v4.json"
+    assert namespace["dataset"].manifest["source_concept_count"] == 198
+    assert namespace["SPLIT"] == "local"
+    assert len(namespace["rows"]) == 422
+    assert len(namespace["registry"].concepts) == 166
+    assert namespace["PROVIDER"] == provider
+    assert namespace["MODEL"] == ("pi-scorer" if provider == "pi-scorer" else "jev-1.13.0")
+
+
 def test_notebook_credential_cell_has_no_saved_input_or_outputs():
     notebook = nbformat.read(NOTEBOOK, as_version=4)
     nbformat.validate(notebook)
     setup = next(cell for cell in notebook.cells if cell.id == "api-key-setup")
     assert setup.execution_count is None
     assert setup.outputs == []
-    assert "configure_api_key(enabled=LIVE_CALLS)" in setup.source
+    assert "configure_api_key(enabled=LIVE_CALLS, provider=PROVIDER)" in setup.source
     ids = [cell.id for cell in notebook.cells]
     assert ids.index("configuration") < ids.index("api-key-setup") < ids.index("run-extraction")
     assert ids.index("quality-report") < ids.index("run-extraction") < ids.index("evaluate-export")
+
+
+@pytest.mark.parametrize("provider", ["typesafe", "pi-scorer"])
+@pytest.mark.parametrize("dataset_kind", ["service", "snapshot"])
+def test_all_notebook_cells_offline_with_synthetic_data(
+    provider, dataset_kind, monkeypatch, capsys
+):
+    import getpass
+    import socket
+
+    import httpx2
+    import typesafe_sdk
+
+    def forbidden(*args, **kwargs):
+        pytest.fail("Offline notebook attempted credentials, a model client, or network access")
+
+    for name in ("TYPESAFE_API_KEY", "TYPESAFE_MODEL", "TYPESAFE_DEFAULT_MODEL", "TYPESAFE_BASE_URL"):
+        monkeypatch.delenv(name, raising=False)
+    monkeypatch.setenv("SYNUR_MODEL_PROVIDER", provider)
+    monkeypatch.setattr(getpass, "getpass", forbidden)
+    monkeypatch.setattr(socket.socket, "connect", forbidden)
+    monkeypatch.setattr(httpx2.Client, "send", forbidden)
+    monkeypatch.setattr(typesafe_sdk.TypeSafeClient, "system_one", forbidden)
+    monkeypatch.setattr("synur.jev.TypeSafeClient", forbidden)
+    schema = [
+        {"id": "1", "name": "Synthetic category", "value_type": "SINGLE_SELECT",
+         "value_enum": ["A", "B"]},
+        {"id": "2", "name": "Synthetic members", "value_type": "MULTI_SELECT",
+         "value_enum": ["X", "Y"]},
+        {"id": "3", "name": "Synthetic number", "value_type": "NUMERIC"},
+        {"id": "4", "name": "Excluded note", "value_type": "STRING"},
+    ]
+    split = "local" if dataset_kind == "service" else "mediqa_synur_dev"
+    dataset = LocalDataset(schema, {split: [{
+        "id": "synthetic", "transcript": "Synthetic category A, member X, number 42.",
+        "observations": [
+            {key: entry[key] for key in ("id", "name", "value_type")} | {"value": value}
+            for entry, value in zip(schema, ("A", ["X"], 42, "note"), strict=True)
+        ],
+    }]}, {})
+    monkeypatch.setattr("synur.dataset.load_dataset", lambda _: deepcopy(dataset))
+    monkeypatch.setattr("synur.service_dataset.load_service_dataset", lambda *_: deepcopy(dataset))
+    notebook = nbformat.read(NOTEBOOK, as_version=4)
+    configuration = next(cell for cell in notebook.cells if cell.id == "configuration")
+    tree = ast.parse(configuration.source)
+    for node in tree.body:
+        if isinstance(node, ast.Assign) and any(
+            isinstance(target, ast.Name)
+            and target.id in {"LIVE_CALLS", "SAVE_RESULTS", "SAVE_REPORT"}
+            for target in node.targets
+        ):
+            node.value = ast.Constant(value=False)
+        elif dataset_kind == "snapshot" and isinstance(node, ast.Assign):
+            replacements = {"DATASET_PATH": None, "SCHEMA_PATH": None, "SPLIT": split}
+            for target in node.targets:
+                if isinstance(target, ast.Name) and target.id in replacements:
+                    node.value = ast.Constant(value=replacements[target.id])
+    configuration.source = ast.unparse(tree)
+    namespace = {}
+    for cell in notebook.cells:
+        if cell.cell_type == "code":
+            exec(compile(cell.source, str(NOTEBOOK), "exec"), namespace)
+    assert namespace["PROVIDER"] == provider
+    assert namespace["MODEL"] == ("pi-scorer" if provider == "pi-scorer" else "jev-1.13.0")
+    assert namespace["predictions"] == []
+    assert namespace["request_preview"]["live_calls_made"] is False
+    assert namespace["request_preview"]["concept_count"] == 3
+    assert namespace["request_preview"]["numeric_candidates"][0]["value"] == 42
+    assert namespace["metrics"]["available"] is False
+    assert "report_path" not in namespace and "run_dir" not in namespace
+    assert "Live calls disabled; no API key requested." in capsys.readouterr().out
 
 
 @pytest.mark.parametrize("row_id", [None, "mixed", "disabled-only"])
@@ -61,6 +155,8 @@ def test_notebook_filters_labels_and_evaluation_without_changing_source(row_id):
     namespace = {
         "load_dataset": lambda _: dataset,
         "DATA_DIR": ROOT,
+        "DATASET_PATH": None,
+        "SCHEMA_PATH": None,
         "SchemaRegistry": SchemaRegistry,
         "VALUE_TYPES": VALUE_TYPES,
         "ENABLED_VALUE_TYPES": enabled,
@@ -135,7 +231,8 @@ def test_notebook_filters_labels_and_evaluation_without_changing_source(row_id):
             exec(compile(load.source, str(NOTEBOOK), "exec"), namespace)
 
 
-def test_notebook_displays_transcript_labels_predictions_and_scores(capsys, tmp_path):
+@pytest.mark.parametrize("provider", ["typesafe", "pi-scorer"])
+def test_notebook_displays_transcript_labels_predictions_and_scores(capsys, tmp_path, provider):
     notebook = nbformat.read(NOTEBOOK, as_version=4)
     cells = {cell.id: cell for cell in notebook.cells}
     registry = SchemaRegistry.from_entries(
@@ -150,10 +247,11 @@ def test_notebook_displays_transcript_labels_predictions_and_scores(capsys, tmp_
         "audit": [{"id": "1", "status": "emitted"}], "failures": [],
     }
     displayed = []
+    configured = []
 
     class FixtureAdapter:
         def __init__(self, **kwargs):
-            pass
+            configured.append(kwargs)
 
         def __enter__(self):
             return self
@@ -169,13 +267,18 @@ def test_notebook_displays_transcript_labels_predictions_and_scores(capsys, tmp_
         "normalize_references": normalize_references,
         "JevAdapter": FixtureAdapter, "LIVE_CALLS": True,
         "MODEL": "offline-fixture-not-jev", "SETTINGS": None,
+        "PROVIDER": provider, "BASE_URL": None,
         "extract": lambda *args, **kwargs: deepcopy(record),
         "evaluate": evaluate, "SAVE_RESULTS": False, "SAVE_REPORT": True,
-        "ROOT": tmp_path, "uuid4": uuid4, "save_transcript_report": save_transcript_report,
+        "ROOT": tmp_path, "RUN_ID": f"{provider}_2026-09-29_fixture",
+        "save_transcript_report": save_transcript_report,
         "dataset": LocalDataset([], {"dev": source_rows}, {}),
     }
     for cell_id in ("quality-report", "run-extraction", "evaluate-export"):
         exec(compile(cells[cell_id].source, str(NOTEBOOK), "exec"), namespace)
+    assert configured == [{
+        "enabled": True, "provider": provider, "model": "offline-fixture-not-jev", "base_url": None,
+    }]
     assert displayed[0] == rows[0]["observations"]
     assert displayed[1] == record["observations"]
     assert displayed[2]["normalized"] == {
@@ -189,6 +292,9 @@ def test_notebook_displays_transcript_labels_predictions_and_scores(capsys, tmp_
     assert output.index("Reference labels") < output.index("Model observations")
     assert output.index("Model observations") < output.index("Observation-level errors and scores")
     exported = json.loads(namespace["report_path"].read_text(encoding="utf-8"))
+    assert exported["metadata"]["provider"] == provider
+    assert namespace["report_path"].parent.name == f"report_{namespace['RUN_ID']}"
+    assert exported["metadata"]["run_id"] == namespace["RUN_ID"]
     assert exported["transcripts"][0]["transcript"] == rows[0]["transcript"]
     assert exported["transcripts"][0]["split"] == "dev"
     assert exported["transcripts"][0]["expected_observations"][0]["error_type"] == "COR"
@@ -208,6 +314,14 @@ def test_notebook_displays_transcript_labels_predictions_and_scores(capsys, tmp_
     assert short["transcripts"][0]["comparisons"] == exported["transcripts"][0]["comparisons"]
     assert short["transcripts"][0]["metrics"]["f1"] == 1
     assert short["micro_metrics"] == exported["micro_metrics"]
+    namespace.update(SAVE_RESULTS=True, json=json)
+    exec(compile(cells["run-extraction"].source, str(NOTEBOOK), "exec"), namespace)
+    checkpoint = namespace["checkpoint_path"]
+    assert checkpoint.is_file()
+    assert checkpoint.name == f"checkpoint_{namespace['RUN_ID']}.jsonl"
+    assert [json.loads(line) for line in checkpoint.read_text(encoding="utf-8").splitlines()] == [
+        record,
+    ]
 
 
 @pytest.mark.skipif(
@@ -222,10 +336,19 @@ def test_notebook_executes_offline_without_model_credentials(monkeypatch):
     tree = ast.parse(configuration.source)
     for node in ast.walk(tree):
         if isinstance(node, ast.Assign) and any(
-            isinstance(target, ast.Name) and target.id in ("LIVE_CALLS", "SAVE_REPORT")
+            isinstance(target, ast.Name)
+            and target.id in ("LIVE_CALLS", "SAVE_REPORT", "SAVE_RESULTS")
             for target in node.targets
         ):
             node.value = ast.Constant(value=False)
+        elif isinstance(node, ast.Assign):
+            replacements = {
+                "DATASET_PATH": None, "SCHEMA_PATH": None,
+                "SPLIT": "mediqa_synur_dev", "ROW_ID": "152",
+            }
+            for target in node.targets:
+                if isinstance(target, ast.Name) and target.id in replacements:
+                    node.value = ast.Constant(value=replacements[target.id])
     configuration.source = ast.unparse(tree)
     guard = nbformat.v4.new_code_cell("""
 import getpass
