@@ -1,5 +1,7 @@
 import json
+import re
 from dataclasses import replace
+from datetime import datetime
 
 import pytest
 from typesafe_sdk import Choice, ChoiceAnswer, NoulAnswer
@@ -13,7 +15,7 @@ from synur.candidates import (
     phrase_starts,
     text_candidates,
 )
-from synur.experiment import Settings, extract, preview, save_run
+from synur.experiment import Settings, extract, make_run_id, preview, save_run
 from synur.jev import JevAdapter, ModelCallError, ModelReply
 from synur.observations import SchemaRegistry
 from synur.questions import (
@@ -424,6 +426,27 @@ def test_run_exports_no_overwrite(tmp_path, registry):
     assert json.loads((target / "run.json").read_text())["prediction_records"] == 1
     with pytest.raises(FileExistsError):
         save_run(target, [], {}, {})
+
+
+def test_run_id_has_model_local_date_and_collision_suffix(monkeypatch):
+    class FixedClock:
+        @staticmethod
+        def now():
+            return datetime(2026, 9, 29, 10, 11, 12).astimezone()
+
+    monkeypatch.setattr("synur.experiment.datetime", FixedClock)
+    first = make_run_id("pi-scorer")
+    assert re.fullmatch(r"pi-scorer_2026-09-29_101112_[a-f0-9]{12}", first)
+    assert make_run_id("pi-scorer") != first
+    assert make_run_id("jev-1.13.0").startswith("jev-1.13.0_2026-09-29_")
+    assert make_run_id("../../custom:model\\v1").startswith("custom-model-v1_2026-09-29_")
+    assert len(make_run_id("a" * 200).split("_")[0]) == 80
+
+
+@pytest.mark.parametrize("model", ["", " ", "...", "---", "/\\:"])
+def test_run_id_rejects_empty_or_unnameable_model(model):
+    with pytest.raises(ValueError):
+        make_run_id(model)
 
 
 def test_configuration_validation():

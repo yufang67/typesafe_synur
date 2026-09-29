@@ -7,9 +7,11 @@ import importlib.metadata
 import json
 import math
 import platform
+import re
 from dataclasses import asdict, dataclass
 from datetime import datetime, timezone
 from pathlib import Path
+from uuid import uuid4
 
 from typesafe_sdk import Choice, ChoiceAnswer, NoulAnswer
 
@@ -33,6 +35,16 @@ from synur.questions import (
 )
 
 PROMPT_VERSION = "direct-jev-v1"
+
+
+def make_run_id(model: str) -> str:
+    """Name artifacts with the configured model, local start date/time, and a unique suffix."""
+    if not isinstance(model, str) or not model.strip():
+        raise ValueError("A nonempty model is required for artifact naming.")
+    slug = re.sub(r"[^A-Za-z0-9._-]+", "-", model.strip()).strip(".-_")[:80]
+    if not slug:
+        raise ValueError("The model must contain a filename-safe letter or digit.")
+    return f"{slug}_{datetime.now().astimezone():%Y-%m-%d_%H%M%S}_{uuid4().hex[:12]}"
 
 
 @dataclass(frozen=True)
@@ -217,6 +229,7 @@ def extract(
                     "model": reply.model,
                     "usage": reply.usage,
                     "request_id": reply.request_id,
+                    "provider": reply.provider,
                 }
             )
             unknown = set(reply.answers) - set(question_map)
@@ -395,6 +408,9 @@ def extract(
             "concept_count": len(registry.concepts),
             "candidate_policy": "transcript-only scalars and hierarchical clause/contiguous-span selection",
             "actual_models": sorted({item["model"] for item in requests if "model" in item}),
+            "actual_providers": sorted(
+                {item["provider"] for item in requests if item.get("provider") is not None}
+            ),
         },
     }
 

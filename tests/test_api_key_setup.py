@@ -11,6 +11,12 @@ from synur.jev import ModelCallError, configure_api_key
 NOTEBOOK = Path(__file__).resolve().parents[1] / "notebooks" / "synur_observation_extraction.ipynb"
 
 
+@pytest.fixture(params=["typesafe", "pi-scorer"], autouse=True)
+def provider(request, monkeypatch):
+    monkeypatch.setenv("SYNUR_MODEL_PROVIDER", request.param)
+    return request.param
+
+
 def test_disabled_does_not_prompt_or_change_environment(monkeypatch):
     monkeypatch.delenv("TYPESAFE_API_KEY", raising=False)
     monkeypatch.setattr(getpass, "getpass", lambda _: pytest.fail("Unexpected credential prompt"))
@@ -26,7 +32,7 @@ def test_reuses_environment_key_without_prompt(monkeypatch):
 
 
 @pytest.mark.parametrize("existing", [None, "", "   ", "REPLACE_WITH_YOUR_KEY"])
-def test_masked_prompt_populates_environment_without_output(monkeypatch, capsys, existing):
+def test_masked_prompt_populates_environment_without_output(monkeypatch, capsys, existing, provider):
     if existing is None:
         monkeypatch.delenv("TYPESAFE_API_KEY", raising=False)
     else:
@@ -39,7 +45,8 @@ def test_masked_prompt_populates_environment_without_output(monkeypatch, capsys,
 
     monkeypatch.setattr(getpass, "getpass", masked_input)
     assert configure_api_key(enabled=True) is None
-    assert calls == ["TypeSafe API key (hidden): "]
+    label = "TypeSafe" if provider == "typesafe" else "Pi Scorer"
+    assert calls == [f"{label} API key (hidden): "]
     assert os.environ["TYPESAFE_API_KEY"] == "synthetic-entered-credential"
     captured = capsys.readouterr()
     assert captured.out == captured.err == ""
@@ -70,12 +77,12 @@ def test_unavailable_masked_input_fails_without_echo_fallback(monkeypatch, error
     assert "TYPESAFE_API_KEY" not in os.environ
 
 
-def test_setup_cell_runs_without_exposing_entered_key(monkeypatch, capsys):
+def test_setup_cell_runs_without_exposing_entered_key(monkeypatch, capsys, provider):
     monkeypatch.delenv("TYPESAFE_API_KEY", raising=False)
     monkeypatch.setattr(getpass, "getpass", lambda _: "synthetic-cell-credential")
     notebook = nbformat.read(NOTEBOOK, as_version=4)
     cell = next(cell for cell in notebook.cells if cell.id == "api-key-setup")
-    namespace = {"LIVE_CALLS": True}
+    namespace = {"LIVE_CALLS": True, "PROVIDER": provider}
     exec(compile(cell.source, str(NOTEBOOK), "exec"), namespace)
     assert os.environ["TYPESAFE_API_KEY"] == "synthetic-cell-credential"
     captured = capsys.readouterr()

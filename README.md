@@ -4,7 +4,9 @@ A Python notebook experiment using **JEV directly** to classify/extract observat
 from clinical text against SYNUR's 193-concept source schema. The notebook currently
 enables **162 concepts across SINGLE_SELECT, MULTI_SELECT, and NUMERIC**.
 STRING prediction and scoring are disabled; original STRING references remain
-visible as `SKIP` in reports. JEV is the only inference model; this is not a
+visible as `SKIP` in reports. Select **external TypeSafe JEV (default)** or
+**internal Pi Scorer**, using the same typed System One SDK interface and
+extraction algorithm. One provider runs at a time; this is not a
 small-model / verifier / larger-model cascade.
 
 **Data is downloaded separately. The notebook reads local files only.** Model
@@ -29,6 +31,7 @@ held-out benchmark or a clinical performance claim. See [Recorded results](#reco
 | Optional STRING support | Engine supports hierarchical clause/token/span selection; 31 STRING concepts are disabled in the current experiment |
 | Offline inspection | Reference diagnostics, normalization audit, numeric candidates, request preview, fixture-driven extraction tests |
 | Reliability | Validated typed answers, bounded request batches, confidence-based review, explicit partial/failure states |
+| Providers | External TypeSafe JEV or internal Pi Scorer; shared environment-or-masked-key setup, explicit live gate |
 | Evaluation | Raw/normalized exact micro scores, concept/per-type scores, COR/DEL/INS/SUB alignment, audit and candidate coverage |
 | Reports | Full format-v3 JSON plus a short JSON with ID, transcript, comparisons, and metrics; no `raw_expected_observations` |
 | Run artifacts | Predictions, full audit/provenance, failures, metrics, dataset/model/settings metadata in new local directories |
@@ -100,8 +103,11 @@ for a future revision:
 | `ROW_ID` | `None` | Select by sample limit rather than exact ID |
 | `SAMPLE_LIMIT` | `101` | First 101 rows in source order, currently the entire dev split |
 | `ENABLED_VALUE_TYPES` | `('SINGLE_SELECT', 'MULTI_SELECT', 'NUMERIC')` | Exclude STRING from inference and scoring |
-| `MODEL` | `TYPESAFE_MODEL`, falling back to `'jev-1.13.0'` | Requested inference model |
-| `LIVE_CALLS` | `True` | Run JEV after API key setup |
+| `PROVIDER` | `SYNUR_MODEL_PROVIDER`, falling back to `'typesafe'` | Select `'typesafe'` or `'pi-scorer'` |
+| `MODEL` | `TYPESAFE_MODEL`, then `TYPESAFE_DEFAULT_MODEL`, then provider default | Default `'jev-1.13.0'` for TypeSafe; `'pi-scorer'` for Pi |
+| `BASE_URL` | `TYPESAFE_BASE_URL`, otherwise provider default | SDK base URL; Pi endpoint paths normalize to the host |
+| `RUN_ID` | Current configured model + local date/time + unique suffix | Shared naming for run and report directories |
+| `LIVE_CALLS` | `True` | Run the selected provider after API key setup |
 | `SAVE_RESULTS` | `True` | Export predictions, audit, failures, metrics, and run metadata |
 | `SAVE_REPORT` | `True` | Export full and short per-transcript reports |
 | `SETTINGS` | `Settings()` | Confidence and batching defaults documented below |
@@ -161,7 +167,7 @@ reference labels --------------------------> local evaluation
 | `src\synur\observations.py` | Schema registry, strict observation validation, separate auditable reference normalization |
 | `src\synur\candidates.py` | Transcript-only numeric and contiguous-text candidates, source offsets, candidate diagnostics |
 | `src\synur\questions.py` | Native state and Choice/Noul compilation, option hierarchy, request packing |
-| `src\synur\jev.py` | Explicit live-call gate, masked API key setup, TypeSafe SDK lifecycle and model-error translation |
+| `src\synur\jev.py` | Provider profiles, Pi URL normalization, live-call gate, masked key setup, shared SDK lifecycle and sanitized errors |
 | `src\synur\experiment.py` | Offline preview, extraction orchestration, thresholds, validation, audit and run export |
 | `src\synur\evaluation.py` | Row-local matching, exact scores, edit alignment, coverage and error diagnostics |
 | `src\synur\reporting.py` | Per-transcript report construction, recorded provenance, compact projection, JSON export |
@@ -266,7 +272,7 @@ maps and selections are validated before assembly.
 
 Audit records retain per-concept status/reason, decisions, available evidence
 text and offsets, and linked question IDs. Request records include question
-hashes, request IDs, returned model names, and available usage data. Extraction
+hashes, request IDs, returned model names, configured providers, and available usage data. Extraction
 metadata records `prompt_version`, state/schema hashes, settings, concept
 count, and candidate policy. These support investigation without inventing
 reasoning or claiming evidence the model did not select.
@@ -317,6 +323,7 @@ version. Only credentials and explicit opt-in are needed for a live experiment.
 ```powershell
 # Placeholder only: replace privately before starting the notebook kernel.
 $env:TYPESAFE_API_KEY = "REPLACE_WITH_YOUR_KEY"
+$env:SYNUR_MODEL_PROVIDER = "typesafe"
 $env:TYPESAFE_MODEL = "jev-1.13.0"
 # Optional authorized deployment override:
 # $env:TYPESAFE_BASE_URL = "https://api.typesafe.ai/"
@@ -344,6 +351,94 @@ fixtures, and fixture decisions are not presented as JEV performance.
 appropriately authorized data. Do not paste credentials into notebook cells.
 Avoid SDK body-level debug logging for clinical data; this project does not
 create external transcript-sharing/playground links.
+
+### Internal Pi Scorer
+
+The [Pi Scorer usage guide](https://eng.ms/docs/octopi/scoring-models/pi-scorer)
+specifies the same official `typesafe-sdk` and Jev System One contract. No extra
+client package or legacy PiLabs request format is used.
+
+**Endpoint distinction:** the supplied Azure ML URL
+`https://pi-scoring.centralus.inference.ml.azure.com/invocations` is accepted as
+Pi configuration, but normalized to
+`https://pi-scoring.centralus.inference.ml.azure.com`. The SDK then posts to the
+documented **`/v1/systemone`** route, not `/invocations` and not
+`/invocations/v1/systemone`. This normalization applies only to the Pi profile;
+external TypeSafe custom base paths are unchanged. An explicit Pi override may
+use a host-only URL, `/invocations`, or `/v1/systemone`; other paths are rejected.
+HTTPS is required, with no embedded credentials, query, or fragment.
+
+From this worktree, configure Pi and launch a **new** notebook kernel:
+
+```powershell
+$env:SYNUR_MODEL_PROVIDER = "pi-scorer"
+Remove-Item Env:TYPESAFE_MODEL -ErrorAction SilentlyContinue
+$env:TYPESAFE_DEFAULT_MODEL = "pi-scorer"
+$env:TYPESAFE_BASE_URL = "https://pi-scoring.centralus.inference.ml.azure.com"
+# If switching from an external key, discard it in this launch environment.
+# The notebook will ask for the Pi key through the same masked prompt.
+Remove-Item Env:TYPESAFE_API_KEY -ErrorAction SilentlyContinue
+.\.venv\Scripts\python.exe -m jupyterlab notebooks\synur_observation_extraction.ipynb
+```
+
+Pi's model and host defaults are supplied by the profile, so setting only
+`SYNUR_MODEL_PROVIDER=pi-scorer` is sufficient in an otherwise clean environment.
+`TYPESAFE_API_KEY` is deliberately shared: an existing non-placeholder key is
+reused regardless of provider, not checked for account access. Replace it
+privately or clear it before switching providers. Never put either key in
+notebook source, `.env.example`, a saved output, or a chat message.
+
+In the configuration cell, confirm `PROVIDER`, `MODEL`, and `BASE_URL`. For a
+small explicitly authorized live experiment, set `ROW_ID = '152'` and
+`LIVE_CALLS = True`, then run the masked key setup before extraction. The saved
+configuration still selects all 101 dev rows; provider selection does not
+change scope or implicitly authorize sending real patient text. For offline
+inspection set `LIVE_CALLS`, `SAVE_RESULTS`, and `SAVE_REPORT` to `False`.
+
+Model precedence is explicit `resolve_model_config(model=...)` or
+`JevAdapter(model=...)`, then existing `TYPESAFE_MODEL`, then the SDK-documented
+`TYPESAFE_DEFAULT_MODEL`, then the provider default. In particular, an old
+`TYPESAFE_MODEL=jev-1.13.0` **overrides the Pi default**. Blank overrides and
+unknown providers fail explicitly, with no fallback to another backend. When
+returning to external TypeSafe, select `typesafe`, clear the Pi base/model
+environment overrides, and replace the key in a fresh kernel.
+
+Direct Python entrypoints use the same profile and opt-in:
+
+```python
+from synur.jev import JevAdapter, configure_api_key
+
+configure_api_key(enabled=True, provider="pi-scorer")
+with JevAdapter(enabled=True, provider="pi-scorer") as adapter:
+    result = extract(transcript, registry, adapter)
+```
+
+Choice confidence and option probabilities remain separate **server-provided**
+fields; Noul remains the server's support probability. No confidence is
+synthesized, rescaled, or replaced with the selected option's probability.
+Missing/malformed answers or required model/usage objects fail explicitly;
+unreported token counts and request IDs remain `null`, not invented zeros or
+IDs. Reported model names, usage, and configured provider are retained in the
+audit and exports. Existing thresholds and question generation are unchanged;
+they are experimental heuristics, not a Pi accuracy or calibration claim.
+
+Pi contract and error handling are covered by synthetic mocked SDK requests,
+including the normalized route and offline notebook execution. **Live Pi
+access, deployment compatibility, and extraction quality have not been
+validated with a real key.** No patient transcript or credential was sent
+during this implementation.
+
+### Model/date artifact names
+
+Each execution of the configuration cell creates a fresh `RUN_ID`, such as
+`pi-scorer_2026-09-29_103045_3a8d941ce520`. The configured model is sanitized
+for filenames; the date/time is local to the machine at run start. The unique
+suffix prevents same-model, same-day runs from overwriting one another.
+Run artifacts are saved in `results\run_<RUN_ID>\`; full and short reports
+are saved in `results\report_<RUN_ID>\`. Both exports record the shared ID.
+Returned model names remain independently recorded in request provenance.
+Previous artifacts are preserved. Re-running an export cell with the same
+`RUN_ID` fails instead of overwriting; rerun configuration for a new experiment.
 
 ## Reference normalization and evaluation
 

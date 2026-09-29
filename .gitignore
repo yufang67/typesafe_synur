@@ -14,6 +14,7 @@ data/
 .*/
 
 # SYNUR experiment artifacts and local configuration
+resuts/
 __pycache__/
 *.py[cod]
 *.egg-info/
