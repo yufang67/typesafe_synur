@@ -10,7 +10,7 @@ by the service-export loader and recorded in the dataset manifest.
 JEV is the only inference model; this is not a
 small-model / verifier / larger-model cascade.
 
-**Data is downloaded separately. The notebook reads local files only.** Model
+**The v5 dataset and v4 schema are included in `data\synur\`; the notebook reads local files only.** Model
 credentials are not included. **The current saved notebook has `LIVE_CALLS = True`
 and selects all 422 service-export transcripts.** Review its configuration before running
 cells. For credential-free inspection, turn off both live calls and run-artifact
@@ -59,21 +59,27 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e ".[notebook,dev]"
 ```
 
-Download once, **outside Jupyter**:
+The current notebook uses the tracked `data\synur\synur_dataset.v5.json` and
+`data\synur\synur_schema.v4.json` files by default, so no download or external
+checkout is required. These are byte-for-byte copies of the inputs used for the
+recorded 422-transcript run. Git preserves their bytes without line-ending
+conversion; their hashes match the run manifest. Saved notebook outputs and run
+metadata retain the original input paths as historical provenance.
+
+For the original pinned snapshot only, download once, **outside Jupyter**:
 
 ```powershell
 .\.venv\Scripts\python.exe scripts\download_synur.py --output data\synur
 ```
 
-The download is only needed for the original pinned snapshot. The current notebook
-instead reads these existing local exports:
+To override the bundled files with other local exports, set both environment variables:
 
 ```powershell
-$env:SYNUR_DATASET_PATH = 'C:\repos\data-extraction-service-fxs\research\tests\data\SYNUR\synur_dataset.v5.json'
-$env:SYNUR_SCHEMA_PATH = 'C:\repos\data-extraction-service-fxs\research\tests\data\SYNUR\synur_schema.v4.json'
+$env:SYNUR_DATASET_PATH = 'C:\path\to\synur_dataset.v5.json'
+$env:SYNUR_SCHEMA_PATH = 'C:\path\to\synur_schema.v4.json'
 ```
 
-Those paths are also the saved notebook defaults. The explicit schema overrides
+The explicit schema overrides
 the dataset's embedded schema. Structured transcript turns are joined in source
 order with speaker labels; schema list values and expected observations are
 converted in memory without changing values or source files. The export's 422
@@ -91,7 +97,8 @@ The local `data\synur\` directory contains the original JSONL files, observation
 schema, upstream dataset card, and a revision/checksum manifest. Files are pinned
 to Hugging Face revision `c7f79af4dcc8e5fb175c40cef0592d85a76bf11c`.
 The setup script verifies cached files instead of silently trusting them.
-Dataset files and experiment results are git-ignored.
+Other files under `data\synur\` remain git-ignored; the two versioned exports and
+recorded experiment results are tracked.
 Loading also checks manifest completeness, byte and row counts, schema/row
 structure, duplicate JSON keys and row IDs, UTF-8 validity, and unsafe
 symlink/junction paths. Invalid snapshots fail explicitly; they are not silently
@@ -135,8 +142,8 @@ for a future revision:
 
 | Setting | Current value | Meaning |
 | --- | --- | --- |
-| `DATASET_PATH` | `SYNUR_DATASET_PATH`, falling back to the v5 path above | Explicit local service-export dataset |
-| `SCHEMA_PATH` | `SYNUR_SCHEMA_PATH`, falling back to the v4 path above | Authoritative schema, overriding the embedded schema |
+| `DATASET_PATH` | `SYNUR_DATASET_PATH`, falling back to `data\synur\synur_dataset.v5.json` under the project root | Explicit local service-export dataset |
+| `SCHEMA_PATH` | `SYNUR_SCHEMA_PATH`, falling back to `data\synur\synur_schema.v4.json` under the project root | Authoritative schema, overriding the embedded schema |
 | `SPLIT` | `'local'` | All service-export rows, without inferred split membership |
 | `ROW_ID` | `None` | Select by sample limit rather than exact ID |
 | `SAMPLE_LIMIT` | `422` | All 422 exported rows in source order |

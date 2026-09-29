@@ -1,0 +1,8911 @@
+{
+ "organizationId": "synur",
+ "observationSetId": "synur",
+ "observations": [
+  {
+   "observationId": "0",
+   "typeId": "SingleSelect",
+   "displayName": "Broset violence checklist - confusion",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Psych/Depression/Suicide Risk"
+   ],
+   "listValueSetId": "list_0",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Psych/Depression/Suicide Risk"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "1",
+   "typeId": "String",
+   "displayName": "Heart sounds",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Cardiac & Vascular"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Cardiac & Vascular"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "2",
+   "typeId": "SingleSelect",
+   "displayName": "Sensory perception",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Motor & Sensory"
+   ],
+   "listValueSetId": "list_2",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Motor & Sensory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "3",
+   "typeId": "MultiSelect",
+   "displayName": "Respiratory interventions",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory"
+   ],
+   "listValueSetId": "list_3",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "4",
+   "typeId": "SingleSelect",
+   "displayName": "Response latency",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "General Cognitive Assessment"
+   ],
+   "listValueSetId": "list_4",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "General Cognitive Assessment"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "5",
+   "typeId": "String",
+   "displayName": "Stoma appearance",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "6",
+   "typeId": "MultiSelect",
+   "displayName": "Weightbearing status",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Assistive & Compression Devices"
+   ],
+   "listValueSetId": "list_6",
+   "version": null,
+   "templates": [
+    "template_5"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Assistive & Compression Devices"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "7",
+   "typeId": "SingleSelect",
+   "displayName": "Oral mucosa status",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Daily Care"
+   ],
+   "listValueSetId": "list_7",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Daily Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "8",
+   "typeId": "String",
+   "displayName": "Body art",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Other Assessments"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Other Assessments"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "9",
+   "typeId": "SingleSelect",
+   "displayName": "Bedding change",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Daily Care"
+   ],
+   "listValueSetId": "list_9",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Daily Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "10",
+   "typeId": "Numeric",
+   "displayName": "Oxygen saturation",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Vitals & Basic Monitoring"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Vitals & Basic Monitoring"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "11",
+   "typeId": "Numeric",
+   "displayName": "Blood pressure",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Vitals & Basic Monitoring"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Vitals & Basic Monitoring"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "12",
+   "typeId": "SingleSelect",
+   "displayName": "Prosthetic use",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Equipment & Devices"
+   ],
+   "listValueSetId": "list_12",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Equipment & Devices"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "13",
+   "typeId": "MultiSelect",
+   "displayName": "Breathing pattern",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory"
+   ],
+   "listValueSetId": "list_13",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "14",
+   "typeId": "String",
+   "displayName": "Safety equipment",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Safety & Precautions"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Safety & Precautions"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "15",
+   "typeId": "SingleSelect",
+   "displayName": "Blood pressure location",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Vitals & Basic Monitoring"
+   ],
+   "listValueSetId": "list_15",
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Vitals & Basic Monitoring"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "16",
+   "typeId": "String",
+   "displayName": "Braden scale assessment",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Skin & Wound Care"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Skin & Wound Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "17",
+   "typeId": "SingleSelect",
+   "displayName": "Cardiac rhythm",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Cardiac & Vascular"
+   ],
+   "listValueSetId": "list_17",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Cardiac & Vascular"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "18",
+   "typeId": "Numeric",
+   "displayName": "Emesis volume",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "19",
+   "typeId": "Numeric",
+   "displayName": "Temperature",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Vitals & Basic Monitoring"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Vitals & Basic Monitoring"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "20",
+   "typeId": "SingleSelect",
+   "displayName": "Suprapubic tenderness",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "listValueSetId": "list_20",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "21",
+   "typeId": "SingleSelect",
+   "displayName": "Ambulatory aid",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Equipment & Devices"
+   ],
+   "listValueSetId": "list_21",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Equipment & Devices"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "22",
+   "typeId": "SingleSelect",
+   "displayName": "Emesis color",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "listValueSetId": "list_22",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "23",
+   "typeId": "String",
+   "displayName": "Muscle contractures",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Therapy"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_5"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "24",
+   "typeId": "SingleSelect",
+   "displayName": "Temperature source",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Vitals & Basic Monitoring"
+   ],
+   "listValueSetId": "list_24",
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Vitals & Basic Monitoring"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "25",
+   "typeId": "SingleSelect",
+   "displayName": "Nutrition status",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Oral Nutrition & Hydration"
+   ],
+   "listValueSetId": "list_25",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Oral Nutrition & Hydration"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "26",
+   "typeId": "String",
+   "displayName": "Delirium symptoms",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "General Cognitive Assessment"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "General Cognitive Assessment"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "27",
+   "typeId": "String",
+   "displayName": "Excoriated tissue",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Skin & Wound Care"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Skin & Wound Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "28",
+   "typeId": "String",
+   "displayName": "Speech content",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "General Cognitive Assessment"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "General Cognitive Assessment"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "29",
+   "typeId": "String",
+   "displayName": "Pain management",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Pain & Sedation"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Pain & Sedation"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "30",
+   "typeId": "SingleSelect",
+   "displayName": "Nausea",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "listValueSetId": "list_30",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "31",
+   "typeId": "String",
+   "displayName": "Secondary diagnosis",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Plan of Care"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_6"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Plan of Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "32",
+   "typeId": "SingleSelect",
+   "displayName": "Constipation episode",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "listValueSetId": "list_32",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "33",
+   "typeId": "Numeric",
+   "displayName": "Heart rate",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Vitals & Basic Monitoring"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Vitals & Basic Monitoring"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "34",
+   "typeId": "Numeric",
+   "displayName": "Pulse oximetry",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Vitals & Basic Monitoring"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Vitals & Basic Monitoring"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "35",
+   "typeId": "SingleSelect",
+   "displayName": "Urinary within defined limits",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - Renal/Bladder"
+   ],
+   "listValueSetId": "list_35",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - Renal/Bladder"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "36",
+   "typeId": "SingleSelect",
+   "displayName": "Gastrointestinal status",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "listValueSetId": "list_36",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "37",
+   "typeId": "SingleSelect",
+   "displayName": "Motor strength",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Motor & Sensory"
+   ],
+   "listValueSetId": "list_37",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Motor & Sensory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "38",
+   "typeId": "SingleSelect",
+   "displayName": "Use of accessory muscles",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory"
+   ],
+   "listValueSetId": "list_38",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "39",
+   "typeId": "SingleSelect",
+   "displayName": "Communication sensory",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "General Cognitive Assessment"
+   ],
+   "listValueSetId": "list_39",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "General Cognitive Assessment"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "40",
+   "typeId": "SingleSelect",
+   "displayName": "Orientation",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "General Cognitive Assessment"
+   ],
+   "listValueSetId": "list_40",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "General Cognitive Assessment"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "41",
+   "typeId": "SingleSelect",
+   "displayName": "Speech clarity",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "General Cognitive Assessment"
+   ],
+   "listValueSetId": "list_41",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "General Cognitive Assessment"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "42",
+   "typeId": "SingleSelect",
+   "displayName": "Toileting needs",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - Renal/Bladder"
+   ],
+   "listValueSetId": "list_42",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - Renal/Bladder"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "43",
+   "typeId": "SingleSelect",
+   "displayName": "Broset violence checklist - boisterous",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Psych/Depression/Suicide Risk"
+   ],
+   "listValueSetId": "list_43",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Psych/Depression/Suicide Risk"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "44",
+   "typeId": "String",
+   "displayName": "Voiding function",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - Renal/Bladder"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - Renal/Bladder"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "45",
+   "typeId": "SingleSelect",
+   "displayName": "Pitting edema",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Cardiac & Vascular"
+   ],
+   "listValueSetId": "list_45",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Cardiac & Vascular"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "46",
+   "typeId": "String",
+   "displayName": "CMS movement",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Motor & Sensory"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Motor & Sensory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "47",
+   "typeId": "String",
+   "displayName": "Tube feeding type",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Oral Nutrition & Hydration"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Oral Nutrition & Hydration"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "48",
+   "typeId": "SingleSelect",
+   "displayName": "Clinician notification",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Plan of Care"
+   ],
+   "listValueSetId": "list_48",
+   "version": null,
+   "templates": [
+    "template_6"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Plan of Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "49",
+   "typeId": "String",
+   "displayName": "Peripheral pulses",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Cardiac & Vascular"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Cardiac & Vascular"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "50",
+   "typeId": "Numeric",
+   "displayName": "Pain goal",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Pain & Sedation"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Pain & Sedation"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "51",
+   "typeId": "SingleSelect",
+   "displayName": "Pain severity",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Pain & Sedation"
+   ],
+   "listValueSetId": "list_51",
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Pain & Sedation"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "52",
+   "typeId": "SingleSelect",
+   "displayName": "Gas passage",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "listValueSetId": "list_52",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "53",
+   "typeId": "String",
+   "displayName": "Medications",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Pain & Sedation"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Pain & Sedation"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "54",
+   "typeId": "SingleSelect",
+   "displayName": "Gown change",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Daily Care"
+   ],
+   "listValueSetId": "list_54",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Daily Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "55",
+   "typeId": "Numeric",
+   "displayName": "Mean arterial pressure (MAP)",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Vitals & Basic Monitoring"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Vitals & Basic Monitoring"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "56",
+   "typeId": "SingleSelect",
+   "displayName": "Mental status",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "General Cognitive Assessment"
+   ],
+   "listValueSetId": "list_56",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "General Cognitive Assessment"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "57",
+   "typeId": "String",
+   "displayName": "Cough strength",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "58",
+   "typeId": "SingleSelect",
+   "displayName": "Capillary refill",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Cardiac & Vascular"
+   ],
+   "listValueSetId": "list_58",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Cardiac & Vascular"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "59",
+   "typeId": "String",
+   "displayName": "IV fluid type and rate",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Enteral/Parenteral Nutrition"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Enteral/Parenteral Nutrition"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "60",
+   "typeId": "SingleSelect",
+   "displayName": "Cranial nerve function",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Motor & Sensory"
+   ],
+   "listValueSetId": "list_60",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Motor & Sensory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "61",
+   "typeId": "SingleSelect",
+   "displayName": "Perineal edema",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "listValueSetId": "list_61",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "62",
+   "typeId": "SingleSelect",
+   "displayName": "Broset violence checklist - physically threatening",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Psych/Depression/Suicide Risk"
+   ],
+   "listValueSetId": "list_62",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Psych/Depression/Suicide Risk"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "63",
+   "typeId": "SingleSelect",
+   "displayName": "Chest expansion",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory"
+   ],
+   "listValueSetId": "list_63",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "64",
+   "typeId": "SingleSelect",
+   "displayName": "Transfer technique",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Therapy"
+   ],
+   "listValueSetId": "list_64",
+   "version": null,
+   "templates": [
+    "template_5"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "65",
+   "typeId": "SingleSelect",
+   "displayName": "Fluid restriction",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Oral Nutrition & Hydration"
+   ],
+   "listValueSetId": "list_65",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Oral Nutrition & Hydration"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "66",
+   "typeId": "String",
+   "displayName": "Wound location",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Skin & Wound Care"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Skin & Wound Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "67",
+   "typeId": "SingleSelect",
+   "displayName": "Dyspnea",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory"
+   ],
+   "listValueSetId": "list_67",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "68",
+   "typeId": "SingleSelect",
+   "displayName": "Feeding assistance",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Oral Nutrition & Hydration"
+   ],
+   "listValueSetId": "list_68",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Oral Nutrition & Hydration"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "69",
+   "typeId": "String",
+   "displayName": "Patient belongings",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Family/Caregiver & Spiritual Support"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_6"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Family/Caregiver & Spiritual Support"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "70",
+   "typeId": "String",
+   "displayName": "Food allergies",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Oral Nutrition & Hydration"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Oral Nutrition & Hydration"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "71",
+   "typeId": "SingleSelect",
+   "displayName": "Vomiting",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "listValueSetId": "list_71",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "72",
+   "typeId": "Numeric",
+   "displayName": "Respirations",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Vitals & Basic Monitoring"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Vitals & Basic Monitoring"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "73",
+   "typeId": "Numeric",
+   "displayName": "Urine output",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - Renal/Bladder"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - Renal/Bladder"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "74",
+   "typeId": "SingleSelect",
+   "displayName": "Blood pressure method",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Vitals & Basic Monitoring"
+   ],
+   "listValueSetId": "list_74",
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Vitals & Basic Monitoring"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "75",
+   "typeId": "Numeric",
+   "displayName": "Pupil size",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Motor & Sensory"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Motor & Sensory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "76",
+   "typeId": "SingleSelect",
+   "displayName": "Pupil response",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Motor & Sensory"
+   ],
+   "listValueSetId": "list_76",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Motor & Sensory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "77",
+   "typeId": "SingleSelect",
+   "displayName": "Memory status",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "General Cognitive Assessment"
+   ],
+   "listValueSetId": "list_77",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "General Cognitive Assessment"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "78",
+   "typeId": "SingleSelect",
+   "displayName": "History of falls",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Safety & Precautions"
+   ],
+   "listValueSetId": "list_78",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Safety & Precautions"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "79",
+   "typeId": "SingleSelect",
+   "displayName": "Feeding tube status",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Oral Nutrition & Hydration"
+   ],
+   "listValueSetId": "list_79",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Oral Nutrition & Hydration"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "80",
+   "typeId": "SingleSelect",
+   "displayName": "Volume status",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Oral Nutrition & Hydration"
+   ],
+   "listValueSetId": "list_80",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Oral Nutrition & Hydration"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "81",
+   "typeId": "SingleSelect",
+   "displayName": "Bed safety",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Safety & Precautions"
+   ],
+   "listValueSetId": "list_81",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Safety & Precautions"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "82",
+   "typeId": "SingleSelect",
+   "displayName": "Central line site condition",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Enteral/Parenteral Nutrition"
+   ],
+   "listValueSetId": "list_82",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Enteral/Parenteral Nutrition"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "83",
+   "typeId": "SingleSelect",
+   "displayName": "Facial droop",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Seizure/Stroke Screening"
+   ],
+   "listValueSetId": "list_83",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Seizure/Stroke Screening"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "84",
+   "typeId": "MultiSelect",
+   "displayName": "Abdomen exam",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "listValueSetId": "list_84",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "85",
+   "typeId": "SingleSelect",
+   "displayName": "Wound drainage",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Skin & Wound Care"
+   ],
+   "listValueSetId": "list_85",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Skin & Wound Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "86",
+   "typeId": "SingleSelect",
+   "displayName": "Assistance with personal hygiene",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Daily Care"
+   ],
+   "listValueSetId": "list_86",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Daily Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "87",
+   "typeId": "SingleSelect",
+   "displayName": "Positioning frequency",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Daily Care"
+   ],
+   "listValueSetId": "list_87",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Daily Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "88",
+   "typeId": "SingleSelect",
+   "displayName": "Urine color",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - Renal/Bladder"
+   ],
+   "listValueSetId": "list_88",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - Renal/Bladder"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "89",
+   "typeId": "SingleSelect",
+   "displayName": "Mobility",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Therapy"
+   ],
+   "listValueSetId": "list_89",
+   "version": null,
+   "templates": [
+    "template_5"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "90",
+   "typeId": "SingleSelect",
+   "displayName": "Glasgow coma score - best motor response",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Seizure/Stroke Screening"
+   ],
+   "listValueSetId": "list_90",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Seizure/Stroke Screening"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "91",
+   "typeId": "String",
+   "displayName": "PO intake",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Oral Nutrition & Hydration"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Oral Nutrition & Hydration"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "92",
+   "typeId": "Numeric",
+   "displayName": "Patient weight",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Vitals & Basic Monitoring"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Vitals & Basic Monitoring"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "93",
+   "typeId": "SingleSelect",
+   "displayName": "Oxygen delivery device",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory/Oxygen Therapy"
+   ],
+   "listValueSetId": "list_93",
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory/Oxygen Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "94",
+   "typeId": "SingleSelect",
+   "displayName": "Nailbed color",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Cardiac & Vascular"
+   ],
+   "listValueSetId": "list_94",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Cardiac & Vascular"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "95",
+   "typeId": "SingleSelect",
+   "displayName": "Peripheral IV site condition",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Enteral/Parenteral Nutrition"
+   ],
+   "listValueSetId": "list_95",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Enteral/Parenteral Nutrition"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "96",
+   "typeId": "SingleSelect",
+   "displayName": "Command following",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "General Cognitive Assessment"
+   ],
+   "listValueSetId": "list_96",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "General Cognitive Assessment"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "97",
+   "typeId": "SingleSelect",
+   "displayName": "Foreign object removal",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Safety & Precautions"
+   ],
+   "listValueSetId": "list_97",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Safety & Precautions"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "98",
+   "typeId": "SingleSelect",
+   "displayName": "Intravenous therapy",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Enteral/Parenteral Nutrition"
+   ],
+   "listValueSetId": "list_98",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Enteral/Parenteral Nutrition"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "99",
+   "typeId": "SingleSelect",
+   "displayName": "Urine odor",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - Renal/Bladder"
+   ],
+   "listValueSetId": "list_99",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - Renal/Bladder"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "100",
+   "typeId": "Numeric",
+   "displayName": "Drain output",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - Renal/Bladder"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - Renal/Bladder"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "101",
+   "typeId": "SingleSelect",
+   "displayName": "Broset violence checklist - verbally threatening",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Psych/Depression/Suicide Risk"
+   ],
+   "listValueSetId": "list_101",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Psych/Depression/Suicide Risk"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "102",
+   "typeId": "SingleSelect",
+   "displayName": "Joint swelling",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Therapy"
+   ],
+   "listValueSetId": "list_102",
+   "version": null,
+   "templates": [
+    "template_5"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "103",
+   "typeId": "SingleSelect",
+   "displayName": "Stool consistency",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "listValueSetId": "list_103",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "104",
+   "typeId": "SingleSelect",
+   "displayName": "Hiccups",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "listValueSetId": "list_104",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "105",
+   "typeId": "SingleSelect",
+   "displayName": "Catheter condition",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - Renal/Bladder"
+   ],
+   "listValueSetId": "list_105",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - Renal/Bladder"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "106",
+   "typeId": "SingleSelect",
+   "displayName": "Wound type",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Skin & Wound Care"
+   ],
+   "listValueSetId": "list_106",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Skin & Wound Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "107",
+   "typeId": "SingleSelect",
+   "displayName": "Fall risk identification",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Safety & Precautions"
+   ],
+   "listValueSetId": "list_107",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Safety & Precautions"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "108",
+   "typeId": "SingleSelect",
+   "displayName": "BMAT level",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Psych/Depression/Suicide Risk"
+   ],
+   "listValueSetId": "list_108",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Psych/Depression/Suicide Risk"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "109",
+   "typeId": "SingleSelect",
+   "displayName": "Assistance with toileting",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - Renal/Bladder"
+   ],
+   "listValueSetId": "list_109",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - Renal/Bladder"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "110",
+   "typeId": "SingleSelect",
+   "displayName": "Glasgow coma score - best verbal response",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Seizure/Stroke Screening"
+   ],
+   "listValueSetId": "list_110",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Seizure/Stroke Screening"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "111",
+   "typeId": "Numeric",
+   "displayName": "Fall risk total",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Safety & Precautions"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Safety & Precautions"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "112",
+   "typeId": "SingleSelect",
+   "displayName": "Skin turgor",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Skin & Wound Care"
+   ],
+   "listValueSetId": "list_112",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Skin & Wound Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "113",
+   "typeId": "SingleSelect",
+   "displayName": "Bed position",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Daily Care"
+   ],
+   "listValueSetId": "list_113",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Daily Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "114",
+   "typeId": "Numeric",
+   "displayName": "Caloric intake",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Oral Nutrition & Hydration"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Oral Nutrition & Hydration"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "115",
+   "typeId": "SingleSelect",
+   "displayName": "Broset violence checklist - irritability",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Psych/Depression/Suicide Risk"
+   ],
+   "listValueSetId": "list_115",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Psych/Depression/Suicide Risk"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "116",
+   "typeId": "SingleSelect",
+   "displayName": "Work of breathing",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory"
+   ],
+   "listValueSetId": "list_116",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "117",
+   "typeId": "SingleSelect",
+   "displayName": "Patient safety",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Safety & Precautions"
+   ],
+   "listValueSetId": "list_117",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Safety & Precautions"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "118",
+   "typeId": "SingleSelect",
+   "displayName": "Patient safety education",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Safety & Precautions"
+   ],
+   "listValueSetId": "list_118",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Safety & Precautions"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "119",
+   "typeId": "SingleSelect",
+   "displayName": "Extremity warmth",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Cardiac & Vascular"
+   ],
+   "listValueSetId": "list_119",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Cardiac & Vascular"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "120",
+   "typeId": "SingleSelect",
+   "displayName": "Fall risk assessment",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Safety & Precautions"
+   ],
+   "listValueSetId": "list_120",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Safety & Precautions"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "121",
+   "typeId": "SingleSelect",
+   "displayName": "Seizure activity",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Seizure/Stroke Screening"
+   ],
+   "listValueSetId": "list_121",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Seizure/Stroke Screening"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "122",
+   "typeId": "MultiSelect",
+   "displayName": "Dental status",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "HEENT (Head, Eye, Ear, Nose, Throat)"
+   ],
+   "listValueSetId": "list_122",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "HEENT (Head, Eye, Ear, Nose, Throat)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "123",
+   "typeId": "SingleSelect",
+   "displayName": "Friction and shear",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Skin & Wound Care"
+   ],
+   "listValueSetId": "list_123",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Skin & Wound Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "124",
+   "typeId": "SingleSelect",
+   "displayName": "General physical exam",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Plan of Care"
+   ],
+   "listValueSetId": "list_124",
+   "version": null,
+   "templates": [
+    "template_6"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Plan of Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "125",
+   "typeId": "MultiSelect",
+   "displayName": "Sensory symptoms",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Motor & Sensory"
+   ],
+   "listValueSetId": "list_125",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Motor & Sensory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "126",
+   "typeId": "Numeric",
+   "displayName": "Patient height",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Vitals & Basic Monitoring"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Vitals & Basic Monitoring"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "127",
+   "typeId": "String",
+   "displayName": "Patient education",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Plan of Care"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_6"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Plan of Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "128",
+   "typeId": "SingleSelect",
+   "displayName": "Bowel sounds",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "listValueSetId": "list_128",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "129",
+   "typeId": "SingleSelect",
+   "displayName": "Incontinence status",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - Renal/Bladder"
+   ],
+   "listValueSetId": "list_129",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - Renal/Bladder"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "130",
+   "typeId": "SingleSelect",
+   "displayName": "Cognitive status",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "General Cognitive Assessment"
+   ],
+   "listValueSetId": "list_130",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "General Cognitive Assessment"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "131",
+   "typeId": "String",
+   "displayName": "Gastrointestinal interventions",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "132",
+   "typeId": "SingleSelect",
+   "displayName": "Joint deformity",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Therapy"
+   ],
+   "listValueSetId": "list_132",
+   "version": null,
+   "templates": [
+    "template_5"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "133",
+   "typeId": "SingleSelect",
+   "displayName": "Dressing condition",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Skin & Wound Care"
+   ],
+   "listValueSetId": "list_133",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Skin & Wound Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "134",
+   "typeId": "SingleSelect",
+   "displayName": "Diarrhea episode",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "listValueSetId": "list_134",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "135",
+   "typeId": "SingleSelect",
+   "displayName": "Glasgow coma score - eye opening",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Seizure/Stroke Screening"
+   ],
+   "listValueSetId": "list_135",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Seizure/Stroke Screening"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "136",
+   "typeId": "SingleSelect",
+   "displayName": "Respiratory equipment",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory/Oxygen Therapy"
+   ],
+   "listValueSetId": "list_136",
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory/Oxygen Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "137",
+   "typeId": "SingleSelect",
+   "displayName": "Jugular venous distention (JVD)",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Cardiac & Vascular"
+   ],
+   "listValueSetId": "list_137",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Cardiac & Vascular"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "138",
+   "typeId": "Numeric",
+   "displayName": "Pulse",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Vitals & Basic Monitoring"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Vitals & Basic Monitoring"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "139",
+   "typeId": "MultiSelect",
+   "displayName": "Urine appearance",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - Renal/Bladder"
+   ],
+   "listValueSetId": "list_139",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - Renal/Bladder"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "140",
+   "typeId": "SingleSelect",
+   "displayName": "Nasal discharge",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "HEENT (Head, Eye, Ear, Nose, Throat)"
+   ],
+   "listValueSetId": "list_140",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "HEENT (Head, Eye, Ear, Nose, Throat)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "141",
+   "typeId": "SingleSelect",
+   "displayName": "Meal consumption",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Oral Nutrition & Hydration"
+   ],
+   "listValueSetId": "list_141",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Oral Nutrition & Hydration"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "142",
+   "typeId": "SingleSelect",
+   "displayName": "Orthotic device use",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Equipment & Devices"
+   ],
+   "listValueSetId": "list_142",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Equipment & Devices"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "143",
+   "typeId": "SingleSelect",
+   "displayName": "Moisture level",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Skin & Wound Care"
+   ],
+   "listValueSetId": "list_143",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Skin & Wound Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "144",
+   "typeId": "SingleSelect",
+   "displayName": "Urinary stone",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - Renal/Bladder"
+   ],
+   "listValueSetId": "list_144",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - Renal/Bladder"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "145",
+   "typeId": "SingleSelect",
+   "displayName": "Gait and transferring",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Therapy"
+   ],
+   "listValueSetId": "list_145",
+   "version": null,
+   "templates": [
+    "template_5"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "146",
+   "typeId": "SingleSelect",
+   "displayName": "Patient position",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Daily Care"
+   ],
+   "listValueSetId": "list_146",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Daily Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "147",
+   "typeId": "SingleSelect",
+   "displayName": "Swallowing function",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Oral Nutrition & Hydration"
+   ],
+   "listValueSetId": "list_147",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Oral Nutrition & Hydration"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "148",
+   "typeId": "MultiSelect",
+   "displayName": "Gastrointestinal symptoms",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "listValueSetId": "list_148",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "149",
+   "typeId": "MultiSelect",
+   "displayName": "Skin condition",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Skin & Wound Care"
+   ],
+   "listValueSetId": "list_149",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Skin & Wound Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "150",
+   "typeId": "SingleSelect",
+   "displayName": "Behavior",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "General Cognitive Assessment"
+   ],
+   "listValueSetId": "list_150",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "General Cognitive Assessment"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "151",
+   "typeId": "SingleSelect",
+   "displayName": "Edema",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Cardiac & Vascular"
+   ],
+   "listValueSetId": "list_151",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Cardiac & Vascular"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "152",
+   "typeId": "SingleSelect",
+   "displayName": "Nasogastric tube status",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Enteral/Parenteral Nutrition"
+   ],
+   "listValueSetId": "list_152",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Enteral/Parenteral Nutrition"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "153",
+   "typeId": "String",
+   "displayName": "Motor reflexes",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Motor & Sensory"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Motor & Sensory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "154",
+   "typeId": "SingleSelect",
+   "displayName": "Neck tenderness",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "HEENT (Head, Eye, Ear, Nose, Throat)"
+   ],
+   "listValueSetId": "list_154",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "HEENT (Head, Eye, Ear, Nose, Throat)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "155",
+   "typeId": "String",
+   "displayName": "Range of motion exercise",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Therapy"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_5"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "156",
+   "typeId": "String",
+   "displayName": "Ear examination",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "HEENT (Head, Eye, Ear, Nose, Throat)"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "HEENT (Head, Eye, Ear, Nose, Throat)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "157",
+   "typeId": "MultiSelect",
+   "displayName": "Bowel movement description",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "listValueSetId": "list_157",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - GI (Stool/Emesis)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "158",
+   "typeId": "SingleSelect",
+   "displayName": "Hearing aid",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "HEENT (Head, Eye, Ear, Nose, Throat)"
+   ],
+   "listValueSetId": "list_158",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "HEENT (Head, Eye, Ear, Nose, Throat)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "159",
+   "typeId": "SingleSelect",
+   "displayName": "Bed alarm status",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Safety & Precautions"
+   ],
+   "listValueSetId": "list_159",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Safety & Precautions"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "160",
+   "typeId": "String",
+   "displayName": "Vaginal discharge",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "GI/GU (Gastrointestinal & Genitourinary)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "161",
+   "typeId": "Numeric",
+   "displayName": "Fraction of inspired oxygen (FiO2)",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory/Oxygen Therapy"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory/Oxygen Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "162",
+   "typeId": "String",
+   "displayName": "Patient identification",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Safety & Precautions"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Safety & Precautions"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "163",
+   "typeId": "SingleSelect",
+   "displayName": "Broset violence checklist - attacking objects",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Psych/Depression/Suicide Risk"
+   ],
+   "listValueSetId": "list_163",
+   "version": null,
+   "templates": [
+    "template_3"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Psych/Depression/Suicide Risk"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "164",
+   "typeId": "SingleSelect",
+   "displayName": "Level of assistance",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Therapy"
+   ],
+   "listValueSetId": "list_164",
+   "version": null,
+   "templates": [
+    "template_5"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "165",
+   "typeId": "MultiSelect",
+   "displayName": "Breath sounds",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory"
+   ],
+   "listValueSetId": "list_165",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "166",
+   "typeId": "Numeric",
+   "displayName": "Oxygen flow rate",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory/Oxygen Therapy"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory/Oxygen Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "167",
+   "typeId": "String",
+   "displayName": "Pain description",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Pain & Sedation"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Pain & Sedation"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "168",
+   "typeId": "SingleSelect",
+   "displayName": "Heart rate source",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Vitals & Basic Monitoring"
+   ],
+   "listValueSetId": "list_168",
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Vitals & Basic Monitoring"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "169",
+   "typeId": "String",
+   "displayName": "Voice quality",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "HEENT (Head, Eye, Ear, Nose, Throat)"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "HEENT (Head, Eye, Ear, Nose, Throat)"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "170",
+   "typeId": "SingleSelect",
+   "displayName": "Cough description",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory"
+   ],
+   "listValueSetId": "list_170",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "171",
+   "typeId": "SingleSelect",
+   "displayName": "Repositioning",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Daily Care"
+   ],
+   "listValueSetId": "list_171",
+   "version": null,
+   "templates": [
+    "template_2"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Daily Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "172",
+   "typeId": "SingleSelect",
+   "displayName": "Suction equipment",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory/Oxygen Therapy"
+   ],
+   "listValueSetId": "list_172",
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory/Oxygen Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "173",
+   "typeId": "SingleSelect",
+   "displayName": "Tracheostomy status",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Respiratory/Oxygen Therapy"
+   ],
+   "listValueSetId": "list_173",
+   "version": null,
+   "templates": [
+    "template_1"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Respiratory/Oxygen Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "174",
+   "typeId": "Numeric",
+   "displayName": "Bladder scan volume",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - Renal/Bladder"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - Renal/Bladder"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "175",
+   "typeId": "SingleSelect",
+   "displayName": "Activity level",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Therapy"
+   ],
+   "listValueSetId": "list_175",
+   "version": null,
+   "templates": [
+    "template_5"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "176",
+   "typeId": "SingleSelect",
+   "displayName": "Pressure injury stage",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Skin & Wound Care"
+   ],
+   "listValueSetId": "list_176",
+   "version": null,
+   "templates": [
+    "template_4"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Skin & Wound Care"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "177",
+   "typeId": "MultiSelect",
+   "displayName": "Urinary symptoms",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Output - Renal/Bladder"
+   ],
+   "listValueSetId": "list_177",
+   "version": null,
+   "templates": [
+    "template_0"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Output - Renal/Bladder"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "178",
+   "typeId": "SingleSelect",
+   "displayName": "Oxygen saturation unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_178",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "179",
+   "typeId": "SingleSelect",
+   "displayName": "Temperature unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_179",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "180",
+   "typeId": "SingleSelect",
+   "displayName": "Heart rate unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_180",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "181",
+   "typeId": "SingleSelect",
+   "displayName": "Pulse oximetry unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_181",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "182",
+   "typeId": "SingleSelect",
+   "displayName": "Respirations unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_182",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "183",
+   "typeId": "SingleSelect",
+   "displayName": "Urine output unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_183",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "184",
+   "typeId": "SingleSelect",
+   "displayName": "Mean arterial pressure (MAP) unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_184",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "185",
+   "typeId": "SingleSelect",
+   "displayName": "PO intake unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_185",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "186",
+   "typeId": "SingleSelect",
+   "displayName": "Patient weight unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_186",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "187",
+   "typeId": "SingleSelect",
+   "displayName": "Fraction of inspired oxygen (FiO2) unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_187",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "188",
+   "typeId": "SingleSelect",
+   "displayName": "Meal consumption unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_188",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "189",
+   "typeId": "SingleSelect",
+   "displayName": "Oxygen flow rate unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_189",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "190",
+   "typeId": "SingleSelect",
+   "displayName": "Bladder scan volume unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_190",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "191",
+   "typeId": "SingleSelect",
+   "displayName": "Caloric intake unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_191",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "192",
+   "typeId": "SingleSelect",
+   "displayName": "Emesis volume unit",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Measurement Units"
+   ],
+   "listValueSetId": "list_192",
+   "version": null,
+   "templates": [
+    "template_7"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Measurement Units"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "lda-custom-addition-removal-obs",
+   "typeId": "SingleSelect",
+   "displayName": "internal LDA Action",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Arterial line",
+    "Foley catheter",
+    "PICC line",
+    "Wound - Sacrum",
+    "Wound",
+    "Line"
+   ],
+   "listValueSetId": "list_lda-custom-removal-obs",
+   "version": null,
+   "templates": [
+    "lda_template"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Line",
+    "Catheter",
+    "Wound"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": "keep_last",
+   "isPreviouslyDocumentedTemplateIds": [],
+   "ldaRowType": "property",
+   "ldaAction": "placement"
+  },
+  {
+   "observationId": "lda-101",
+   "typeId": "MultiSelect",
+   "displayName": "Site Condition",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Arterial line",
+    "Foley catheter",
+    "PICC line",
+    "Wound - Sacrum",
+    "Wound",
+    "Line"
+   ],
+   "listValueSetId": "list_lda-101",
+   "version": null,
+   "templates": [
+    "lda_template"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Line",
+    "Catheter",
+    "Wound"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": "keep_last",
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "lda-102",
+   "typeId": "MultiSelect",
+   "displayName": "Care Provided",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Arterial line",
+    "Foley catheter",
+    "PICC line",
+    "Wound - Sacrum",
+    "Wound",
+    "Line"
+   ],
+   "listValueSetId": "list_lda-102",
+   "version": null,
+   "templates": [
+    "lda_template"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Line",
+    "Catheter",
+    "Wound"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": "keep_last",
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "lda-103",
+   "typeId": "Date",
+   "displayName": "Removal Date",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Arterial line",
+    "Foley catheter",
+    "PICC line",
+    "Wound - Sacrum",
+    "Wound",
+    "Line"
+   ],
+   "listValueSetId": null,
+   "version": null,
+   "templates": [
+    "lda_template"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Line",
+    "Catheter",
+    "Wound"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": "keep_last",
+   "isPreviouslyDocumentedTemplateIds": []
+  },
+  {
+   "observationId": "193",
+   "typeId": "SingleSelect",
+   "displayName": "Activity Assistance Provided",
+   "displayNameSynonyms": [],
+   "topics": [],
+   "displayGroup": [
+    "Mobility & Therapy"
+   ],
+   "listValueSetId": "list_193",
+   "version": null,
+   "templates": [
+    "template_5"
+   ],
+   "cascadingParents": null,
+   "baseGroups": [
+    "Mobility & Therapy"
+   ],
+   "doScrutinyCheck": false,
+   "duplicateObservationsPolicy": null,
+   "isPreviouslyDocumentedTemplateIds": []
+  }
+ ],
+ "listValueSets": {
+  "list_0": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_2": {
+   "values": [
+    {
+     "displayName": "No impairment",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Slightly limited",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Intact",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_3": {
+   "values": [
+    {
+     "displayName": "raising head of bed",
+     "abbreviation": null
+    },
+    {
+     "displayName": "turn cough",
+     "abbreviation": null
+    },
+    {
+     "displayName": "deep breathe",
+     "abbreviation": null
+    },
+    {
+     "displayName": "incentive spirometer usage",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_4": {
+   "values": [
+    {
+     "displayName": "Delayed",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Normal",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_6": {
+   "values": [
+    {
+     "displayName": "weightbearing as tolerated to the right lower extremity",
+     "abbreviation": null
+    },
+    {
+     "displayName": "weightbearing as tolerated to the left lower extremity",
+     "abbreviation": null
+    },
+    {
+     "displayName": "non-weightbearing",
+     "abbreviation": null
+    },
+    {
+     "displayName": "partial weightbearing",
+     "abbreviation": null
+    },
+    {
+     "displayName": "full weightbearing",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_7": {
+   "values": [
+    {
+     "displayName": "Moist",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Dry",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_9": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_12": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_13": {
+   "values": [
+    {
+     "displayName": "nonlabored",
+     "abbreviation": null
+    },
+    {
+     "displayName": "shallow",
+     "abbreviation": null
+    },
+    {
+     "displayName": "labored",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_15": {
+   "values": [
+    {
+     "displayName": "left arm",
+     "abbreviation": null
+    },
+    {
+     "displayName": "right arm",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_17": {
+   "values": [
+    {
+     "displayName": "Normal sinus rhythm",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Atrial fibrillation",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_20": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_21": {
+   "values": [
+    {
+     "displayName": "walker",
+     "abbreviation": null
+    },
+    {
+     "displayName": "gait belt",
+     "abbreviation": null
+    },
+    {
+     "displayName": "furniture",
+     "abbreviation": null
+    },
+    {
+     "displayName": "antiembolism stockings",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_22": {
+   "values": [
+    {
+     "displayName": "dark green",
+     "abbreviation": null
+    },
+    {
+     "displayName": "green",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_24": {
+   "values": [
+    {
+     "displayName": "oral",
+     "abbreviation": null
+    },
+    {
+     "displayName": "tympanic",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_25": {
+   "values": [
+    {
+     "displayName": "adequate",
+     "abbreviation": null
+    },
+    {
+     "displayName": "inadequate",
+     "abbreviation": null
+    },
+    {
+     "displayName": "unknown",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_30": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_32": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_35": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_36": {
+   "values": [
+    {
+     "displayName": "within normal limits",
+     "abbreviation": null
+    },
+    {
+     "displayName": "distended",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_37": {
+   "values": [
+    {
+     "displayName": "Normal",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Weak",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Strong",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Generalized weakness",
+     "abbreviation": null
+    },
+    {
+     "displayName": "2 out of 5",
+     "abbreviation": null
+    },
+    {
+     "displayName": "5 out of 5",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_38": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_39": {
+   "values": [
+    {
+     "displayName": "Inappropriate communication 1",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Inappropriate communication is present but less severe",
+     "abbreviation": null
+    },
+    {
+     "displayName": "communication sensory 1",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_40": {
+   "values": [
+    {
+     "displayName": "oriented x1",
+     "abbreviation": null
+    },
+    {
+     "displayName": "oriented x2",
+     "abbreviation": null
+    },
+    {
+     "displayName": "oriented x3",
+     "abbreviation": null
+    },
+    {
+     "displayName": "oriented x4",
+     "abbreviation": null
+    },
+    {
+     "displayName": "disoriented",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_41": {
+   "values": [
+    {
+     "displayName": "clear",
+     "abbreviation": null
+    },
+    {
+     "displayName": "slurred",
+     "abbreviation": null
+    },
+    {
+     "displayName": "unable to speak",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_42": {
+   "values": [
+    {
+     "displayName": "1",
+     "abbreviation": null
+    },
+    {
+     "displayName": "2",
+     "abbreviation": null
+    },
+    {
+     "displayName": "3",
+     "abbreviation": null
+    },
+    {
+     "displayName": "4",
+     "abbreviation": null
+    },
+    {
+     "displayName": "5",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_43": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_45": {
+   "values": [
+    {
+     "displayName": "1+",
+     "abbreviation": null
+    },
+    {
+     "displayName": "2+",
+     "abbreviation": null
+    },
+    {
+     "displayName": "3+",
+     "abbreviation": null
+    },
+    {
+     "displayName": "4+",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_48": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_51": {
+   "values": [
+    {
+     "displayName": "0 out of 10",
+     "abbreviation": null
+    },
+    {
+     "displayName": "1 out of 10",
+     "abbreviation": null
+    },
+    {
+     "displayName": "2 out of 10",
+     "abbreviation": null
+    },
+    {
+     "displayName": "3 out of 10",
+     "abbreviation": null
+    },
+    {
+     "displayName": "4 out of 10",
+     "abbreviation": null
+    },
+    {
+     "displayName": "5 out of 10",
+     "abbreviation": null
+    },
+    {
+     "displayName": "6 out of 10",
+     "abbreviation": null
+    },
+    {
+     "displayName": "7 out of 10",
+     "abbreviation": null
+    },
+    {
+     "displayName": "8 out of 10",
+     "abbreviation": null
+    },
+    {
+     "displayName": "9 out of 10",
+     "abbreviation": null
+    },
+    {
+     "displayName": "10 out of 10",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_52": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_54": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_56": {
+   "values": [
+    {
+     "displayName": "15",
+     "abbreviation": null
+    },
+    {
+     "displayName": "forgets limitations",
+     "abbreviation": null
+    },
+    {
+     "displayName": "3",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_58": {
+   "values": [
+    {
+     "displayName": "less than 3 seconds",
+     "abbreviation": null
+    },
+    {
+     "displayName": "sluggish",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_60": {
+   "values": [
+    {
+     "displayName": "Normal",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Abnormal",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_61": {
+   "values": [
+    {
+     "displayName": "Present",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Absent",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_62": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_63": {
+   "values": [
+    {
+     "displayName": "equal",
+     "abbreviation": null
+    },
+    {
+     "displayName": "unequal",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_64": {
+   "values": [
+    {
+     "displayName": "Independent",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Assisted",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Dependent",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_65": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_67": {
+   "values": [
+    {
+     "displayName": "None",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Mild",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Moderate",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Severe",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_68": {
+   "values": [
+    {
+     "displayName": "No assistance required",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Partial assistance required",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Full assistance required",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_71": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_74": {
+   "values": [
+    {
+     "displayName": "automatic",
+     "abbreviation": null
+    },
+    {
+     "displayName": "arterial line",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_76": {
+   "values": [
+    {
+     "displayName": "Equal and reactive bilaterally",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Unequal",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Non-reactive",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Sluggish",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Fixed",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_77": {
+   "values": [
+    {
+     "displayName": "Intact",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Impaired",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_78": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_79": {
+   "values": [
+    {
+     "displayName": "Present",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Absent",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_80": {
+   "values": [
+    {
+     "displayName": "volume status 0",
+     "abbreviation": null
+    },
+    {
+     "displayName": "volume status 1",
+     "abbreviation": null
+    },
+    {
+     "displayName": "volume status 2",
+     "abbreviation": null
+    },
+    {
+     "displayName": "volume status 3",
+     "abbreviation": null
+    },
+    {
+     "displayName": "volume status 4",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_81": {
+   "values": [
+    {
+     "displayName": "Ensured",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Not Ensured",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_82": {
+   "values": [
+    {
+     "displayName": "Intact",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Redness",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Swelling",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Discharge",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_83": {
+   "values": [
+    {
+     "displayName": "right facial droop",
+     "abbreviation": null
+    },
+    {
+     "displayName": "left facial droop",
+     "abbreviation": null
+    },
+    {
+     "displayName": "no facial droop",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_84": {
+   "values": [
+    {
+     "displayName": "distended",
+     "abbreviation": null
+    },
+    {
+     "displayName": "nondistended",
+     "abbreviation": null
+    },
+    {
+     "displayName": "tender",
+     "abbreviation": null
+    },
+    {
+     "displayName": "nontender",
+     "abbreviation": null
+    },
+    {
+     "displayName": "soft",
+     "abbreviation": null
+    },
+    {
+     "displayName": "round",
+     "abbreviation": null
+    },
+    {
+     "displayName": "rounded",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_85": {
+   "values": [
+    {
+     "displayName": "None",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Serous",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Sanguineous",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Purulent",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_86": {
+   "values": [
+    {
+     "displayName": "Independent",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Assisted",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Dependent",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_87": {
+   "values": [
+    {
+     "displayName": "Every 2 hours",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Every 4 hours",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Every 6 hours",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_88": {
+   "values": [
+    {
+     "displayName": "yellow",
+     "abbreviation": null
+    },
+    {
+     "displayName": "straw",
+     "abbreviation": null
+    },
+    {
+     "displayName": "amber",
+     "abbreviation": null
+    },
+    {
+     "displayName": "dark orange",
+     "abbreviation": null
+    },
+    {
+     "displayName": "clear",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_89": {
+   "values": [
+    {
+     "displayName": "No limitation",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Slightly limited",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Mildly impaired",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Limited",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_90": {
+   "values": [
+    {
+     "displayName": "obeys commands",
+     "abbreviation": null
+    },
+    {
+     "displayName": "localizes pain",
+     "abbreviation": null
+    },
+    {
+     "displayName": "withdraws from pain",
+     "abbreviation": null
+    },
+    {
+     "displayName": "flexion to pain",
+     "abbreviation": null
+    },
+    {
+     "displayName": "extension to pain",
+     "abbreviation": null
+    },
+    {
+     "displayName": "no response",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_93": {
+   "values": [
+    {
+     "displayName": "nasal cannula",
+     "abbreviation": null
+    },
+    {
+     "displayName": "nonrebreather mask",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Venturi mask",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_94": {
+   "values": [
+    {
+     "displayName": "cyanotic",
+     "abbreviation": null
+    },
+    {
+     "displayName": "normal",
+     "abbreviation": null
+    },
+    {
+     "displayName": "pale",
+     "abbreviation": null
+    },
+    {
+     "displayName": "red",
+     "abbreviation": null
+    },
+    {
+     "displayName": "blue",
+     "abbreviation": null
+    },
+    {
+     "displayName": "yellow",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_95": {
+   "values": [
+    {
+     "displayName": "Intact",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Redness",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Swelling",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Pain",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_96": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_97": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_98": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_99": {
+   "values": [
+    {
+     "displayName": "foul",
+     "abbreviation": null
+    },
+    {
+     "displayName": "strong unpleasant",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_101": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_102": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_103": {
+   "values": [
+    {
+     "displayName": "Normal",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Loose",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Hard",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_104": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_105": {
+   "values": [
+    {
+     "displayName": "Intact",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Leaking",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Blocked",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_106": {
+   "values": [
+    {
+     "displayName": "Surgical",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Traumatic",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Pressure Ulcer",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_107": {
+   "values": [
+    {
+     "displayName": "High",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Medium",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Low",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_108": {
+   "values": [
+    {
+     "displayName": "level one",
+     "abbreviation": null
+    },
+    {
+     "displayName": "level two",
+     "abbreviation": null
+    },
+    {
+     "displayName": "level three",
+     "abbreviation": null
+    },
+    {
+     "displayName": "level four",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_109": {
+   "values": [
+    {
+     "displayName": "none",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_110": {
+   "values": [
+    {
+     "displayName": "oriented",
+     "abbreviation": null
+    },
+    {
+     "displayName": "confused",
+     "abbreviation": null
+    },
+    {
+     "displayName": "inappropriate words",
+     "abbreviation": null
+    },
+    {
+     "displayName": "incomprehensible sounds",
+     "abbreviation": null
+    },
+    {
+     "displayName": "none",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_112": {
+   "values": [
+    {
+     "displayName": "Tented",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Normal",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_113": {
+   "values": [
+    {
+     "displayName": "lowered",
+     "abbreviation": null
+    },
+    {
+     "displayName": "raised",
+     "abbreviation": null
+    },
+    {
+     "displayName": "flat",
+     "abbreviation": null
+    },
+    {
+     "displayName": "elevated",
+     "abbreviation": null
+    },
+    {
+     "displayName": "reclined",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_115": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_116": {
+   "values": [
+    {
+     "displayName": "Normal",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Increased",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_117": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_118": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_119": {
+   "values": [
+    {
+     "displayName": "Warm",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Cool",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_120": {
+   "values": [
+    {
+     "displayName": "Morse fall risk assessment",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Hester Davis fall risk assessment",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_121": {
+   "values": [
+    {
+     "displayName": "None",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Occasional",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Frequent",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_122": {
+   "values": [
+    {
+     "displayName": "Oral care performed",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Denture care",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Brushed teeth",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Missing teeth",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Decaying teeth",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Upper dentures",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Lower dentures",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_123": {
+   "values": [
+    {
+     "displayName": "No apparent problem",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Potential problem",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Problem",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_124": {
+   "values": [
+    {
+     "displayName": "within defined limits",
+     "abbreviation": null
+    },
+    {
+     "displayName": "within normal limits",
+     "abbreviation": null
+    },
+    {
+     "displayName": "WDL",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_125": {
+   "values": [
+    {
+     "displayName": "Numbness and tingling in upper extremities",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Numbness and tingling in lower extremities",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Right upper extremity numbness and tingling",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Left lower extremity numbness and tingling",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_128": {
+   "values": [
+    {
+     "displayName": "present in all quadrants",
+     "abbreviation": null
+    },
+    {
+     "displayName": "hyperactive in all quadrants",
+     "abbreviation": null
+    },
+    {
+     "displayName": "hypoactive in all quadrants",
+     "abbreviation": null
+    },
+    {
+     "displayName": "diminished in specific quadrants",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_129": {
+   "values": [
+    {
+     "displayName": "continent",
+     "abbreviation": null
+    },
+    {
+     "displayName": "incontinent",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_130": {
+   "values": [
+    {
+     "displayName": "Alert",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Alert with general confusion and forgetfulness",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Disoriented to time",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Forgetful at times",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Hallucinations present",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Hallucinations not present",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_132": {
+   "values": [
+    {
+     "displayName": "None",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Mild",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Severe",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_133": {
+   "values": [
+    {
+     "displayName": "Clean",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Soiled",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Wet",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_134": {
+   "values": [
+    {
+     "displayName": "None",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Occasional",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Frequent",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_135": {
+   "values": [
+    {
+     "displayName": "spontaneous",
+     "abbreviation": null
+    },
+    {
+     "displayName": "to speech",
+     "abbreviation": null
+    },
+    {
+     "displayName": "to pain",
+     "abbreviation": null
+    },
+    {
+     "displayName": "none",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_136": {
+   "values": [
+    {
+     "displayName": "incentive spirometer",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_137": {
+   "values": [
+    {
+     "displayName": "Absent",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Present",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_139": {
+   "values": [
+    {
+     "displayName": "cloudy",
+     "abbreviation": null
+    },
+    {
+     "displayName": "dark",
+     "abbreviation": null
+    },
+    {
+     "displayName": "yellow",
+     "abbreviation": null
+    },
+    {
+     "displayName": "clear",
+     "abbreviation": null
+    },
+    {
+     "displayName": "blood",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_140": {
+   "values": [
+    {
+     "displayName": "None",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Clear",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Purulent",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_141": {
+   "values": [
+    {
+     "displayName": "Full",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Partial",
+     "abbreviation": null
+    },
+    {
+     "displayName": "None",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_142": {
+   "values": [
+    {
+     "displayName": "Yes",
+     "abbreviation": null
+    },
+    {
+     "displayName": "No",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_143": {
+   "values": [
+    {
+     "displayName": "rarely moist",
+     "abbreviation": null
+    },
+    {
+     "displayName": "occasionally moist",
+     "abbreviation": null
+    },
+    {
+     "displayName": "four",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_144": {
+   "values": [
+    {
+     "displayName": "Present",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Absent",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_145": {
+   "values": [
+    {
+     "displayName": "Independent",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Assisted",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Dependent",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_146": {
+   "values": [
+    {
+     "displayName": "sitting",
+     "abbreviation": null
+    },
+    {
+     "displayName": "supine",
+     "abbreviation": null
+    },
+    {
+     "displayName": "lying",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_147": {
+   "values": [
+    {
+     "displayName": "Normal",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Painful",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Difficulty",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_148": {
+   "values": [
+    {
+     "displayName": "diarrhea",
+     "abbreviation": null
+    },
+    {
+     "displayName": "nausea",
+     "abbreviation": null
+    },
+    {
+     "displayName": "vomiting",
+     "abbreviation": null
+    },
+    {
+     "displayName": "constipation",
+     "abbreviation": null
+    },
+    {
+     "displayName": "no symptoms",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_149": {
+   "values": [
+    {
+     "displayName": "dry",
+     "abbreviation": null
+    },
+    {
+     "displayName": "flaky",
+     "abbreviation": null
+    },
+    {
+     "displayName": "red and blanchable",
+     "abbreviation": null
+    },
+    {
+     "displayName": "pale and clammy",
+     "abbreviation": null
+    },
+    {
+     "displayName": "pink",
+     "abbreviation": null
+    },
+    {
+     "displayName": "intact",
+     "abbreviation": null
+    },
+    {
+     "displayName": "elastic",
+     "abbreviation": null
+    },
+    {
+     "displayName": "warm",
+     "abbreviation": null
+    },
+    {
+     "displayName": "no discoloration",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_150": {
+   "values": [
+    {
+     "displayName": "Calm and cooperative",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Inappropriate behavior",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Agitated and combative",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Impulsive",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_151": {
+   "values": [
+    {
+     "displayName": "No edema",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Trace edema",
+     "abbreviation": null
+    },
+    {
+     "displayName": "+1 edema",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Generalized edema",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Bilateral pedal edema",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Bilateral pedal and ankle edema",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_152": {
+   "values": [
+    {
+     "displayName": "Inserted",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Not Inserted",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_154": {
+   "values": [
+    {
+     "displayName": "Tender",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Not Tender",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_157": {
+   "values": [
+    {
+     "displayName": "color: black",
+     "abbreviation": null
+    },
+    {
+     "displayName": "color: brown",
+     "abbreviation": null
+    },
+    {
+     "displayName": "color: green",
+     "abbreviation": null
+    },
+    {
+     "displayName": "consistency: loose",
+     "abbreviation": null
+    },
+    {
+     "displayName": "consistency: soft",
+     "abbreviation": null
+    },
+    {
+     "displayName": "consistency: formed",
+     "abbreviation": null
+    },
+    {
+     "displayName": "consistency: unformed",
+     "abbreviation": null
+    },
+    {
+     "displayName": "consistency: hard",
+     "abbreviation": null
+    },
+    {
+     "displayName": "amount: large",
+     "abbreviation": null
+    },
+    {
+     "displayName": "amount: medium",
+     "abbreviation": null
+    },
+    {
+     "displayName": "amount: copious",
+     "abbreviation": null
+    },
+    {
+     "displayName": "amount: unmeasured",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_158": {
+   "values": [
+    {
+     "displayName": "Using",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Not Using",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_159": {
+   "values": [
+    {
+     "displayName": "Activated",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Deactivated",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_163": {
+   "values": [
+    {
+     "displayName": "zero for attacking objects",
+     "abbreviation": null
+    },
+    {
+     "displayName": "one for attacking objects",
+     "abbreviation": null
+    },
+    {
+     "displayName": "two for attacking objects",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_164": {
+   "values": [
+    {
+     "displayName": "independent",
+     "abbreviation": null
+    },
+    {
+     "displayName": "moderate assist",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_165": {
+   "values": [
+    {
+     "displayName": "clear",
+     "abbreviation": null
+    },
+    {
+     "displayName": "diminished",
+     "abbreviation": null
+    },
+    {
+     "displayName": "wheezes",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_168": {
+   "values": [
+    {
+     "displayName": "monitor",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_170": {
+   "values": [
+    {
+     "displayName": "nonproductive cough",
+     "abbreviation": null
+    },
+    {
+     "displayName": "productive cough",
+     "abbreviation": null
+    },
+    {
+     "displayName": "no cough",
+     "abbreviation": null
+    },
+    {
+     "displayName": "dry cough",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_171": {
+   "values": [
+    {
+     "displayName": "Completed",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Not Completed",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_172": {
+   "values": [
+    {
+     "displayName": "Available",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Not Available",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_173": {
+   "values": [
+    {
+     "displayName": "Present",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Absent",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_175": {
+   "values": [
+    {
+     "displayName": "bed rest",
+     "abbreviation": null
+    },
+    {
+     "displayName": "walks occasionally",
+     "abbreviation": null
+    },
+    {
+     "displayName": "walking frequently",
+     "abbreviation": null
+    },
+    {
+     "displayName": "three",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_176": {
+   "values": [
+    {
+     "displayName": "Stage 1",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Stage 2",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Stage 3",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Stage 4",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Unstageable",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Deep tissue injury",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_177": {
+   "values": [
+    {
+     "displayName": "difficulty urinating",
+     "abbreviation": null
+    },
+    {
+     "displayName": "urgency",
+     "abbreviation": null
+    },
+    {
+     "displayName": "urine frequency",
+     "abbreviation": null
+    },
+    {
+     "displayName": "voids without difficulty",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_178": {
+   "values": [
+    {
+     "displayName": "%",
+     "abbreviation": null
+    },
+    {
+     "displayName": "fraction",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_179": {
+   "values": [
+    {
+     "displayName": "\u00b0C",
+     "abbreviation": null
+    },
+    {
+     "displayName": "\u00b0F",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_180": {
+   "values": [
+    {
+     "displayName": "bpm",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Hz",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_181": {
+   "values": [
+    {
+     "displayName": "%",
+     "abbreviation": null
+    },
+    {
+     "displayName": "fraction",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_182": {
+   "values": [
+    {
+     "displayName": "breaths per minute",
+     "abbreviation": null
+    },
+    {
+     "displayName": "cycles per second",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_183": {
+   "values": [
+    {
+     "displayName": "mL",
+     "abbreviation": null
+    },
+    {
+     "displayName": "L",
+     "abbreviation": null
+    },
+    {
+     "displayName": "cc",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_184": {
+   "values": [
+    {
+     "displayName": "mmHg",
+     "abbreviation": null
+    },
+    {
+     "displayName": "kPa",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_185": {
+   "values": [
+    {
+     "displayName": "mL",
+     "abbreviation": null
+    },
+    {
+     "displayName": "L",
+     "abbreviation": null
+    },
+    {
+     "displayName": "cc",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_186": {
+   "values": [
+    {
+     "displayName": "kg",
+     "abbreviation": null
+    },
+    {
+     "displayName": "lb",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_187": {
+   "values": [
+    {
+     "displayName": "%",
+     "abbreviation": null
+    },
+    {
+     "displayName": "decimal",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_188": {
+   "values": [
+    {
+     "displayName": "%",
+     "abbreviation": null
+    },
+    {
+     "displayName": "fraction",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_189": {
+   "values": [
+    {
+     "displayName": "L/min",
+     "abbreviation": null
+    },
+    {
+     "displayName": "mL/min",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_190": {
+   "values": [
+    {
+     "displayName": "mL",
+     "abbreviation": null
+    },
+    {
+     "displayName": "L",
+     "abbreviation": null
+    },
+    {
+     "displayName": "cc",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_191": {
+   "values": [
+    {
+     "displayName": "kcal",
+     "abbreviation": null
+    },
+    {
+     "displayName": "cal",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_192": {
+   "values": [
+    {
+     "displayName": "mL",
+     "abbreviation": null
+    },
+    {
+     "displayName": "L",
+     "abbreviation": null
+    },
+    {
+     "displayName": "cc",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_lda-custom-removal-obs": {
+   "values": [
+    {
+     "displayName": "removed",
+     "abbreviation": null
+    },
+    {
+     "displayName": "updated",
+     "abbreviation": null
+    },
+    {
+     "displayName": "added",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_lda-101": {
+   "values": [
+    {
+     "displayName": "Intact",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Redness",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Drainage",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Infection",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_lda-102": {
+   "values": [
+    {
+     "displayName": "Dressing changed",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Site cleaned",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Flushed",
+     "abbreviation": null
+    },
+    {
+     "displayName": "Repositioned",
+     "abbreviation": null
+    }
+   ]
+  },
+  "list_193": {
+   "values": [
+    {
+     "displayName": "independent",
+     "abbreviation": null
+    },
+    {
+     "displayName": "assistance, 1 person",
+     "abbreviation": null
+    },
+    {
+     "displayName": "assistance, 2 person",
+     "abbreviation": null
+    },
+    {
+     "displayName": "total assist",
+     "abbreviation": null
+    }
+   ]
+  }
+ },
+ "rules": null,
+ "templates": [
+  {
+   "id": "template_0",
+   "name": "Intake & Output (I&O)"
+  },
+  {
+   "id": "template_1",
+   "name": "Vital Signs & Monitoring"
+  },
+  {
+   "id": "template_2",
+   "name": "Nursing Care & Safety"
+  },
+  {
+   "id": "template_3",
+   "name": "Neurological & Cognitive"
+  },
+  {
+   "id": "template_4",
+   "name": "Body Systems Assessment"
+  },
+  {
+   "id": "template_5",
+   "name": "Therapy & Activity"
+  },
+  {
+   "id": "template_6",
+   "name": "Care Planning & Communication"
+  },
+  {
+   "id": "template_7",
+   "name": "Units & Metadata"
+  },
+  {
+   "id": "lda_template",
+   "name": "LDA"
+  }
+ ],
+ "groups": [
+  {
+   "id": "group_0",
+   "name": "Oral Nutrition & Hydration",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_1",
+   "name": "Enteral/Parenteral Nutrition",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_2",
+   "name": "Output - Renal/Bladder",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_3",
+   "name": "Output - GI (Stool/Emesis)",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_5",
+   "name": "Vitals & Basic Monitoring",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_6",
+   "name": "Respiratory/Oxygen Therapy",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_7",
+   "name": "Pain & Sedation",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_8",
+   "name": "Mobility & Daily Care",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_9",
+   "name": "Safety & Precautions",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_10",
+   "name": "Equipment & Devices",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_11",
+   "name": "General Cognitive Assessment",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_12",
+   "name": "Motor & Sensory",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_13",
+   "name": "Seizure/Stroke Screening",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_14",
+   "name": "Psych/Depression/Suicide Risk",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_15",
+   "name": "HEENT (Head, Eye, Ear, Nose, Throat)",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_16",
+   "name": "Cardiac & Vascular",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_17",
+   "name": "Respiratory",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_18",
+   "name": "GI/GU (Gastrointestinal & Genitourinary)",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_19",
+   "name": "Skin & Wound Care",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_20",
+   "name": "Mobility & Therapy",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_21",
+   "name": "Assistive & Compression Devices",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_22",
+   "name": "Plan of Care",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_23",
+   "name": "Family/Caregiver & Spiritual Support",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_25",
+   "name": "Measurement Units",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "group_26",
+   "name": "Other Assessments",
+   "baseDisplayName": null,
+   "isExistingInstance": false,
+   "isInstantiable": false
+  },
+  {
+   "id": "lda-group-art",
+   "name": "Arterial line",
+   "baseDisplayName": "Line",
+   "isExistingInstance": true,
+   "isInstantiable": false,
+   "subType": "lda",
+   "custom": {}
+  },
+  {
+   "id": "lda-group-foley",
+   "name": "Foley catheter",
+   "baseDisplayName": "Catheter",
+   "isExistingInstance": true,
+   "isInstantiable": false,
+   "subType": "lda",
+   "custom": {}
+  },
+  {
+   "id": "lda-group-picc",
+   "name": "PICC line",
+   "baseDisplayName": "Line",
+   "isExistingInstance": true,
+   "isInstantiable": false,
+   "subType": "lda",
+   "custom": {}
+  },
+  {
+   "id": "lda-group-wound-sacrum",
+   "name": "Wound - Sacrum",
+   "baseDisplayName": "Wound",
+   "isExistingInstance": true,
+   "isInstantiable": false,
+   "subType": "lda",
+   "custom": {}
+  },
+  {
+   "id": "lda-group-wound",
+   "name": "Wound",
+   "baseDisplayName": "Wound",
+   "isExistingInstance": false,
+   "isInstantiable": true,
+   "subType": "lda",
+   "custom": {}
+  },
+  {
+   "id": "lda-group-line",
+   "name": "Line",
+   "baseDisplayName": "Line",
+   "isExistingInstance": false,
+   "isInstantiable": true,
+   "subType": "lda",
+   "custom": {}
+  }
+ ],
+ "tree": [
+  {
+   "id": 0,
+   "type": "root",
+   "externalId": null,
+   "children": [
+    1,
+    46,
+    75,
+    101,
+    137,
+    187,
+    200,
+    208,
+    227
+   ]
+  },
+  {
+   "id": 1,
+   "type": "template",
+   "externalId": "template_0",
+   "children": [
+    2,
+    14,
+    20,
+    35
+   ]
+  },
+  {
+   "id": 2,
+   "type": "group",
+   "externalId": "group_0",
+   "children": [
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+   ]
+  },
+  {
+   "id": 3,
+   "type": "observation",
+   "externalId": "25",
+   "children": []
+  },
+  {
+   "id": 4,
+   "type": "observation",
+   "externalId": "47",
+   "children": []
+  },
+  {
+   "id": 5,
+   "type": "observation",
+   "externalId": "65",
+   "children": []
+  },
+  {
+   "id": 6,
+   "type": "observation",
+   "externalId": "68",
+   "children": []
+  },
+  {
+   "id": 7,
+   "type": "observation",
+   "externalId": "70",
+   "children": []
+  },
+  {
+   "id": 8,
+   "type": "observation",
+   "externalId": "79",
+   "children": []
+  },
+  {
+   "id": 9,
+   "type": "observation",
+   "externalId": "80",
+   "children": []
+  },
+  {
+   "id": 10,
+   "type": "observation",
+   "externalId": "91",
+   "children": []
+  },
+  {
+   "id": 11,
+   "type": "observation",
+   "externalId": "114",
+   "children": []
+  },
+  {
+   "id": 12,
+   "type": "observation",
+   "externalId": "141",
+   "children": []
+  },
+  {
+   "id": 13,
+   "type": "observation",
+   "externalId": "147",
+   "children": []
+  },
+  {
+   "id": 14,
+   "type": "group",
+   "externalId": "group_1",
+   "children": [
+    15,
+    16,
+    17,
+    18,
+    19
+   ]
+  },
+  {
+   "id": 15,
+   "type": "observation",
+   "externalId": "59",
+   "children": []
+  },
+  {
+   "id": 16,
+   "type": "observation",
+   "externalId": "82",
+   "children": []
+  },
+  {
+   "id": 17,
+   "type": "observation",
+   "externalId": "95",
+   "children": []
+  },
+  {
+   "id": 18,
+   "type": "observation",
+   "externalId": "98",
+   "children": []
+  },
+  {
+   "id": 19,
+   "type": "observation",
+   "externalId": "152",
+   "children": []
+  },
+  {
+   "id": 20,
+   "type": "group",
+   "externalId": "group_2",
+   "children": [
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34
+   ]
+  },
+  {
+   "id": 21,
+   "type": "observation",
+   "externalId": "35",
+   "children": []
+  },
+  {
+   "id": 22,
+   "type": "observation",
+   "externalId": "42",
+   "children": []
+  },
+  {
+   "id": 23,
+   "type": "observation",
+   "externalId": "44",
+   "children": []
+  },
+  {
+   "id": 24,
+   "type": "observation",
+   "externalId": "73",
+   "children": []
+  },
+  {
+   "id": 25,
+   "type": "observation",
+   "externalId": "88",
+   "children": []
+  },
+  {
+   "id": 26,
+   "type": "observation",
+   "externalId": "99",
+   "children": []
+  },
+  {
+   "id": 27,
+   "type": "observation",
+   "externalId": "100",
+   "children": []
+  },
+  {
+   "id": 28,
+   "type": "observation",
+   "externalId": "105",
+   "children": []
+  },
+  {
+   "id": 29,
+   "type": "observation",
+   "externalId": "109",
+   "children": []
+  },
+  {
+   "id": 30,
+   "type": "observation",
+   "externalId": "129",
+   "children": []
+  },
+  {
+   "id": 31,
+   "type": "observation",
+   "externalId": "139",
+   "children": []
+  },
+  {
+   "id": 32,
+   "type": "observation",
+   "externalId": "144",
+   "children": []
+  },
+  {
+   "id": 33,
+   "type": "observation",
+   "externalId": "174",
+   "children": []
+  },
+  {
+   "id": 34,
+   "type": "observation",
+   "externalId": "177",
+   "children": []
+  },
+  {
+   "id": 35,
+   "type": "group",
+   "externalId": "group_3",
+   "children": [
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45
+   ]
+  },
+  {
+   "id": 36,
+   "type": "observation",
+   "externalId": "18",
+   "children": []
+  },
+  {
+   "id": 37,
+   "type": "observation",
+   "externalId": "22",
+   "children": []
+  },
+  {
+   "id": 38,
+   "type": "observation",
+   "externalId": "30",
+   "children": []
+  },
+  {
+   "id": 39,
+   "type": "observation",
+   "externalId": "32",
+   "children": []
+  },
+  {
+   "id": 40,
+   "type": "observation",
+   "externalId": "52",
+   "children": []
+  },
+  {
+   "id": 41,
+   "type": "observation",
+   "externalId": "71",
+   "children": []
+  },
+  {
+   "id": 42,
+   "type": "observation",
+   "externalId": "103",
+   "children": []
+  },
+  {
+   "id": 43,
+   "type": "observation",
+   "externalId": "104",
+   "children": []
+  },
+  {
+   "id": 44,
+   "type": "observation",
+   "externalId": "134",
+   "children": []
+  },
+  {
+   "id": 45,
+   "type": "observation",
+   "externalId": "157",
+   "children": []
+  },
+  {
+   "id": 46,
+   "type": "template",
+   "externalId": "template_1",
+   "children": [
+    47,
+    62,
+    69
+   ]
+  },
+  {
+   "id": 47,
+   "type": "group",
+   "externalId": "group_5",
+   "children": [
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61
+   ]
+  },
+  {
+   "id": 48,
+   "type": "observation",
+   "externalId": "10",
+   "children": []
+  },
+  {
+   "id": 49,
+   "type": "observation",
+   "externalId": "11",
+   "children": []
+  },
+  {
+   "id": 50,
+   "type": "observation",
+   "externalId": "15",
+   "children": []
+  },
+  {
+   "id": 51,
+   "type": "observation",
+   "externalId": "19",
+   "children": []
+  },
+  {
+   "id": 52,
+   "type": "observation",
+   "externalId": "24",
+   "children": []
+  },
+  {
+   "id": 53,
+   "type": "observation",
+   "externalId": "33",
+   "children": []
+  },
+  {
+   "id": 54,
+   "type": "observation",
+   "externalId": "34",
+   "children": []
+  },
+  {
+   "id": 55,
+   "type": "observation",
+   "externalId": "55",
+   "children": []
+  },
+  {
+   "id": 56,
+   "type": "observation",
+   "externalId": "72",
+   "children": []
+  },
+  {
+   "id": 57,
+   "type": "observation",
+   "externalId": "74",
+   "children": []
+  },
+  {
+   "id": 58,
+   "type": "observation",
+   "externalId": "92",
+   "children": []
+  },
+  {
+   "id": 59,
+   "type": "observation",
+   "externalId": "126",
+   "children": []
+  },
+  {
+   "id": 60,
+   "type": "observation",
+   "externalId": "138",
+   "children": []
+  },
+  {
+   "id": 61,
+   "type": "observation",
+   "externalId": "168",
+   "children": []
+  },
+  {
+   "id": 62,
+   "type": "group",
+   "externalId": "group_6",
+   "children": [
+    63,
+    64,
+    65,
+    66,
+    67,
+    68
+   ]
+  },
+  {
+   "id": 63,
+   "type": "observation",
+   "externalId": "93",
+   "children": []
+  },
+  {
+   "id": 64,
+   "type": "observation",
+   "externalId": "136",
+   "children": []
+  },
+  {
+   "id": 65,
+   "type": "observation",
+   "externalId": "161",
+   "children": []
+  },
+  {
+   "id": 66,
+   "type": "observation",
+   "externalId": "166",
+   "children": []
+  },
+  {
+   "id": 67,
+   "type": "observation",
+   "externalId": "172",
+   "children": []
+  },
+  {
+   "id": 68,
+   "type": "observation",
+   "externalId": "173",
+   "children": []
+  },
+  {
+   "id": 69,
+   "type": "group",
+   "externalId": "group_7",
+   "children": [
+    70,
+    71,
+    72,
+    73,
+    74
+   ]
+  },
+  {
+   "id": 70,
+   "type": "observation",
+   "externalId": "29",
+   "children": []
+  },
+  {
+   "id": 71,
+   "type": "observation",
+   "externalId": "50",
+   "children": []
+  },
+  {
+   "id": 72,
+   "type": "observation",
+   "externalId": "51",
+   "children": []
+  },
+  {
+   "id": 73,
+   "type": "observation",
+   "externalId": "53",
+   "children": []
+  },
+  {
+   "id": 74,
+   "type": "observation",
+   "externalId": "167",
+   "children": []
+  },
+  {
+   "id": 75,
+   "type": "template",
+   "externalId": "template_2",
+   "children": [
+    76,
+    85,
+    97
+   ]
+  },
+  {
+   "id": 76,
+   "type": "group",
+   "externalId": "group_8",
+   "children": [
+    77,
+    78,
+    79,
+    80,
+    81,
+    82,
+    83,
+    84
+   ]
+  },
+  {
+   "id": 77,
+   "type": "observation",
+   "externalId": "7",
+   "children": []
+  },
+  {
+   "id": 78,
+   "type": "observation",
+   "externalId": "9",
+   "children": []
+  },
+  {
+   "id": 79,
+   "type": "observation",
+   "externalId": "54",
+   "children": []
+  },
+  {
+   "id": 80,
+   "type": "observation",
+   "externalId": "86",
+   "children": []
+  },
+  {
+   "id": 81,
+   "type": "observation",
+   "externalId": "87",
+   "children": []
+  },
+  {
+   "id": 82,
+   "type": "observation",
+   "externalId": "113",
+   "children": []
+  },
+  {
+   "id": 83,
+   "type": "observation",
+   "externalId": "146",
+   "children": []
+  },
+  {
+   "id": 84,
+   "type": "observation",
+   "externalId": "171",
+   "children": []
+  },
+  {
+   "id": 85,
+   "type": "group",
+   "externalId": "group_9",
+   "children": [
+    86,
+    87,
+    88,
+    89,
+    90,
+    91,
+    92,
+    93,
+    94,
+    95,
+    96
+   ]
+  },
+  {
+   "id": 86,
+   "type": "observation",
+   "externalId": "14",
+   "children": []
+  },
+  {
+   "id": 87,
+   "type": "observation",
+   "externalId": "78",
+   "children": []
+  },
+  {
+   "id": 88,
+   "type": "observation",
+   "externalId": "81",
+   "children": []
+  },
+  {
+   "id": 89,
+   "type": "observation",
+   "externalId": "97",
+   "children": []
+  },
+  {
+   "id": 90,
+   "type": "observation",
+   "externalId": "107",
+   "children": []
+  },
+  {
+   "id": 91,
+   "type": "observation",
+   "externalId": "111",
+   "children": []
+  },
+  {
+   "id": 92,
+   "type": "observation",
+   "externalId": "117",
+   "children": []
+  },
+  {
+   "id": 93,
+   "type": "observation",
+   "externalId": "118",
+   "children": []
+  },
+  {
+   "id": 94,
+   "type": "observation",
+   "externalId": "120",
+   "children": []
+  },
+  {
+   "id": 95,
+   "type": "observation",
+   "externalId": "159",
+   "children": []
+  },
+  {
+   "id": 96,
+   "type": "observation",
+   "externalId": "162",
+   "children": []
+  },
+  {
+   "id": 97,
+   "type": "group",
+   "externalId": "group_10",
+   "children": [
+    98,
+    99,
+    100
+   ]
+  },
+  {
+   "id": 98,
+   "type": "observation",
+   "externalId": "12",
+   "children": []
+  },
+  {
+   "id": 99,
+   "type": "observation",
+   "externalId": "21",
+   "children": []
+  },
+  {
+   "id": 100,
+   "type": "observation",
+   "externalId": "142",
+   "children": []
+  },
+  {
+   "id": 101,
+   "type": "template",
+   "externalId": "template_3",
+   "children": [
+    102,
+    114,
+    123,
+    129
+   ]
+  },
+  {
+   "id": 102,
+   "type": "group",
+   "externalId": "group_11",
+   "children": [
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113
+   ]
+  },
+  {
+   "id": 103,
+   "type": "observation",
+   "externalId": "4",
+   "children": []
+  },
+  {
+   "id": 104,
+   "type": "observation",
+   "externalId": "26",
+   "children": []
+  },
+  {
+   "id": 105,
+   "type": "observation",
+   "externalId": "28",
+   "children": []
+  },
+  {
+   "id": 106,
+   "type": "observation",
+   "externalId": "39",
+   "children": []
+  },
+  {
+   "id": 107,
+   "type": "observation",
+   "externalId": "40",
+   "children": []
+  },
+  {
+   "id": 108,
+   "type": "observation",
+   "externalId": "41",
+   "children": []
+  },
+  {
+   "id": 109,
+   "type": "observation",
+   "externalId": "56",
+   "children": []
+  },
+  {
+   "id": 110,
+   "type": "observation",
+   "externalId": "77",
+   "children": []
+  },
+  {
+   "id": 111,
+   "type": "observation",
+   "externalId": "96",
+   "children": []
+  },
+  {
+   "id": 112,
+   "type": "observation",
+   "externalId": "130",
+   "children": []
+  },
+  {
+   "id": 113,
+   "type": "observation",
+   "externalId": "150",
+   "children": []
+  },
+  {
+   "id": 114,
+   "type": "group",
+   "externalId": "group_12",
+   "children": [
+    115,
+    116,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122
+   ]
+  },
+  {
+   "id": 115,
+   "type": "observation",
+   "externalId": "2",
+   "children": []
+  },
+  {
+   "id": 116,
+   "type": "observation",
+   "externalId": "37",
+   "children": []
+  },
+  {
+   "id": 117,
+   "type": "observation",
+   "externalId": "46",
+   "children": []
+  },
+  {
+   "id": 118,
+   "type": "observation",
+   "externalId": "60",
+   "children": []
+  },
+  {
+   "id": 119,
+   "type": "observation",
+   "externalId": "75",
+   "children": []
+  },
+  {
+   "id": 120,
+   "type": "observation",
+   "externalId": "76",
+   "children": []
+  },
+  {
+   "id": 121,
+   "type": "observation",
+   "externalId": "125",
+   "children": []
+  },
+  {
+   "id": 122,
+   "type": "observation",
+   "externalId": "153",
+   "children": []
+  },
+  {
+   "id": 123,
+   "type": "group",
+   "externalId": "group_13",
+   "children": [
+    124,
+    125,
+    126,
+    127,
+    128
+   ]
+  },
+  {
+   "id": 124,
+   "type": "observation",
+   "externalId": "83",
+   "children": []
+  },
+  {
+   "id": 125,
+   "type": "observation",
+   "externalId": "90",
+   "children": []
+  },
+  {
+   "id": 126,
+   "type": "observation",
+   "externalId": "110",
+   "children": []
+  },
+  {
+   "id": 127,
+   "type": "observation",
+   "externalId": "121",
+   "children": []
+  },
+  {
+   "id": 128,
+   "type": "observation",
+   "externalId": "135",
+   "children": []
+  },
+  {
+   "id": 129,
+   "type": "group",
+   "externalId": "group_14",
+   "children": [
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136
+   ]
+  },
+  {
+   "id": 130,
+   "type": "observation",
+   "externalId": "0",
+   "children": []
+  },
+  {
+   "id": 131,
+   "type": "observation",
+   "externalId": "43",
+   "children": []
+  },
+  {
+   "id": 132,
+   "type": "observation",
+   "externalId": "62",
+   "children": []
+  },
+  {
+   "id": 133,
+   "type": "observation",
+   "externalId": "101",
+   "children": []
+  },
+  {
+   "id": 134,
+   "type": "observation",
+   "externalId": "108",
+   "children": []
+  },
+  {
+   "id": 135,
+   "type": "observation",
+   "externalId": "115",
+   "children": []
+  },
+  {
+   "id": 136,
+   "type": "observation",
+   "externalId": "163",
+   "children": []
+  },
+  {
+   "id": 137,
+   "type": "template",
+   "externalId": "template_4",
+   "children": [
+    138,
+    145,
+    155,
+    165,
+    175
+   ]
+  },
+  {
+   "id": 138,
+   "type": "group",
+   "externalId": "group_15",
+   "children": [
+    139,
+    140,
+    141,
+    142,
+    143,
+    144
+   ]
+  },
+  {
+   "id": 139,
+   "type": "observation",
+   "externalId": "122",
+   "children": []
+  },
+  {
+   "id": 140,
+   "type": "observation",
+   "externalId": "140",
+   "children": []
+  },
+  {
+   "id": 141,
+   "type": "observation",
+   "externalId": "154",
+   "children": []
+  },
+  {
+   "id": 142,
+   "type": "observation",
+   "externalId": "156",
+   "children": []
+  },
+  {
+   "id": 143,
+   "type": "observation",
+   "externalId": "158",
+   "children": []
+  },
+  {
+   "id": 144,
+   "type": "observation",
+   "externalId": "169",
+   "children": []
+  },
+  {
+   "id": 145,
+   "type": "group",
+   "externalId": "group_16",
+   "children": [
+    146,
+    147,
+    148,
+    149,
+    150,
+    151,
+    152,
+    153,
+    154
+   ]
+  },
+  {
+   "id": 146,
+   "type": "observation",
+   "externalId": "1",
+   "children": []
+  },
+  {
+   "id": 147,
+   "type": "observation",
+   "externalId": "17",
+   "children": []
+  },
+  {
+   "id": 148,
+   "type": "observation",
+   "externalId": "45",
+   "children": []
+  },
+  {
+   "id": 149,
+   "type": "observation",
+   "externalId": "49",
+   "children": []
+  },
+  {
+   "id": 150,
+   "type": "observation",
+   "externalId": "58",
+   "children": []
+  },
+  {
+   "id": 151,
+   "type": "observation",
+   "externalId": "94",
+   "children": []
+  },
+  {
+   "id": 152,
+   "type": "observation",
+   "externalId": "119",
+   "children": []
+  },
+  {
+   "id": 153,
+   "type": "observation",
+   "externalId": "137",
+   "children": []
+  },
+  {
+   "id": 154,
+   "type": "observation",
+   "externalId": "151",
+   "children": []
+  },
+  {
+   "id": 155,
+   "type": "group",
+   "externalId": "group_17",
+   "children": [
+    156,
+    157,
+    158,
+    159,
+    160,
+    161,
+    162,
+    163,
+    164
+   ]
+  },
+  {
+   "id": 156,
+   "type": "observation",
+   "externalId": "3",
+   "children": []
+  },
+  {
+   "id": 157,
+   "type": "observation",
+   "externalId": "13",
+   "children": []
+  },
+  {
+   "id": 158,
+   "type": "observation",
+   "externalId": "38",
+   "children": []
+  },
+  {
+   "id": 159,
+   "type": "observation",
+   "externalId": "57",
+   "children": []
+  },
+  {
+   "id": 160,
+   "type": "observation",
+   "externalId": "63",
+   "children": []
+  },
+  {
+   "id": 161,
+   "type": "observation",
+   "externalId": "67",
+   "children": []
+  },
+  {
+   "id": 162,
+   "type": "observation",
+   "externalId": "116",
+   "children": []
+  },
+  {
+   "id": 163,
+   "type": "observation",
+   "externalId": "165",
+   "children": []
+  },
+  {
+   "id": 164,
+   "type": "observation",
+   "externalId": "170",
+   "children": []
+  },
+  {
+   "id": 165,
+   "type": "group",
+   "externalId": "group_18",
+   "children": [
+    166,
+    167,
+    168,
+    169,
+    170,
+    171,
+    172,
+    173,
+    174
+   ]
+  },
+  {
+   "id": 166,
+   "type": "observation",
+   "externalId": "5",
+   "children": []
+  },
+  {
+   "id": 167,
+   "type": "observation",
+   "externalId": "20",
+   "children": []
+  },
+  {
+   "id": 168,
+   "type": "observation",
+   "externalId": "36",
+   "children": []
+  },
+  {
+   "id": 169,
+   "type": "observation",
+   "externalId": "61",
+   "children": []
+  },
+  {
+   "id": 170,
+   "type": "observation",
+   "externalId": "84",
+   "children": []
+  },
+  {
+   "id": 171,
+   "type": "observation",
+   "externalId": "128",
+   "children": []
+  },
+  {
+   "id": 172,
+   "type": "observation",
+   "externalId": "131",
+   "children": []
+  },
+  {
+   "id": 173,
+   "type": "observation",
+   "externalId": "148",
+   "children": []
+  },
+  {
+   "id": 174,
+   "type": "observation",
+   "externalId": "160",
+   "children": []
+  },
+  {
+   "id": 175,
+   "type": "group",
+   "externalId": "group_19",
+   "children": [
+    176,
+    177,
+    178,
+    179,
+    180,
+    181,
+    182,
+    183,
+    184,
+    185,
+    186
+   ]
+  },
+  {
+   "id": 176,
+   "type": "observation",
+   "externalId": "16",
+   "children": []
+  },
+  {
+   "id": 177,
+   "type": "observation",
+   "externalId": "27",
+   "children": []
+  },
+  {
+   "id": 178,
+   "type": "observation",
+   "externalId": "66",
+   "children": []
+  },
+  {
+   "id": 179,
+   "type": "observation",
+   "externalId": "85",
+   "children": []
+  },
+  {
+   "id": 180,
+   "type": "observation",
+   "externalId": "106",
+   "children": []
+  },
+  {
+   "id": 181,
+   "type": "observation",
+   "externalId": "112",
+   "children": []
+  },
+  {
+   "id": 182,
+   "type": "observation",
+   "externalId": "123",
+   "children": []
+  },
+  {
+   "id": 183,
+   "type": "observation",
+   "externalId": "133",
+   "children": []
+  },
+  {
+   "id": 184,
+   "type": "observation",
+   "externalId": "143",
+   "children": []
+  },
+  {
+   "id": 185,
+   "type": "observation",
+   "externalId": "149",
+   "children": []
+  },
+  {
+   "id": 186,
+   "type": "observation",
+   "externalId": "176",
+   "children": []
+  },
+  {
+   "id": 187,
+   "type": "template",
+   "externalId": "template_5",
+   "children": [
+    188,
+    198
+   ]
+  },
+  {
+   "id": 188,
+   "type": "group",
+   "externalId": "group_20",
+   "children": [
+    189,
+    190,
+    191,
+    192,
+    193,
+    194,
+    195,
+    196,
+    197,
+    258
+   ]
+  },
+  {
+   "id": 189,
+   "type": "observation",
+   "externalId": "23",
+   "children": []
+  },
+  {
+   "id": 190,
+   "type": "observation",
+   "externalId": "64",
+   "children": []
+  },
+  {
+   "id": 191,
+   "type": "observation",
+   "externalId": "89",
+   "children": []
+  },
+  {
+   "id": 192,
+   "type": "observation",
+   "externalId": "102",
+   "children": []
+  },
+  {
+   "id": 193,
+   "type": "observation",
+   "externalId": "132",
+   "children": []
+  },
+  {
+   "id": 194,
+   "type": "observation",
+   "externalId": "145",
+   "children": []
+  },
+  {
+   "id": 195,
+   "type": "observation",
+   "externalId": "155",
+   "children": []
+  },
+  {
+   "id": 196,
+   "type": "observation",
+   "externalId": "164",
+   "children": []
+  },
+  {
+   "id": 197,
+   "type": "observation",
+   "externalId": "175",
+   "children": []
+  },
+  {
+   "id": 198,
+   "type": "group",
+   "externalId": "group_21",
+   "children": [
+    199
+   ]
+  },
+  {
+   "id": 199,
+   "type": "observation",
+   "externalId": "6",
+   "children": []
+  },
+  {
+   "id": 200,
+   "type": "template",
+   "externalId": "template_6",
+   "children": [
+    201,
+    206
+   ]
+  },
+  {
+   "id": 201,
+   "type": "group",
+   "externalId": "group_22",
+   "children": [
+    202,
+    203,
+    204,
+    205
+   ]
+  },
+  {
+   "id": 202,
+   "type": "observation",
+   "externalId": "31",
+   "children": []
+  },
+  {
+   "id": 203,
+   "type": "observation",
+   "externalId": "48",
+   "children": []
+  },
+  {
+   "id": 204,
+   "type": "observation",
+   "externalId": "124",
+   "children": []
+  },
+  {
+   "id": 205,
+   "type": "observation",
+   "externalId": "127",
+   "children": []
+  },
+  {
+   "id": 206,
+   "type": "group",
+   "externalId": "group_23",
+   "children": [
+    207
+   ]
+  },
+  {
+   "id": 207,
+   "type": "observation",
+   "externalId": "69",
+   "children": []
+  },
+  {
+   "id": 208,
+   "type": "template",
+   "externalId": "template_7",
+   "children": [
+    209,
+    225
+   ]
+  },
+  {
+   "id": 209,
+   "type": "group",
+   "externalId": "group_25",
+   "children": [
+    210,
+    211,
+    212,
+    213,
+    214,
+    215,
+    216,
+    217,
+    218,
+    219,
+    220,
+    221,
+    222,
+    223,
+    224
+   ]
+  },
+  {
+   "id": 210,
+   "type": "observation",
+   "externalId": "178",
+   "children": []
+  },
+  {
+   "id": 211,
+   "type": "observation",
+   "externalId": "179",
+   "children": []
+  },
+  {
+   "id": 212,
+   "type": "observation",
+   "externalId": "180",
+   "children": []
+  },
+  {
+   "id": 213,
+   "type": "observation",
+   "externalId": "181",
+   "children": []
+  },
+  {
+   "id": 214,
+   "type": "observation",
+   "externalId": "182",
+   "children": []
+  },
+  {
+   "id": 215,
+   "type": "observation",
+   "externalId": "183",
+   "children": []
+  },
+  {
+   "id": 216,
+   "type": "observation",
+   "externalId": "184",
+   "children": []
+  },
+  {
+   "id": 217,
+   "type": "observation",
+   "externalId": "185",
+   "children": []
+  },
+  {
+   "id": 218,
+   "type": "observation",
+   "externalId": "186",
+   "children": []
+  },
+  {
+   "id": 219,
+   "type": "observation",
+   "externalId": "187",
+   "children": []
+  },
+  {
+   "id": 220,
+   "type": "observation",
+   "externalId": "188",
+   "children": []
+  },
+  {
+   "id": 221,
+   "type": "observation",
+   "externalId": "189",
+   "children": []
+  },
+  {
+   "id": 222,
+   "type": "observation",
+   "externalId": "190",
+   "children": []
+  },
+  {
+   "id": 223,
+   "type": "observation",
+   "externalId": "191",
+   "children": []
+  },
+  {
+   "id": 224,
+   "type": "observation",
+   "externalId": "192",
+   "children": []
+  },
+  {
+   "id": 225,
+   "type": "group",
+   "externalId": "group_26",
+   "children": [
+    226
+   ]
+  },
+  {
+   "id": 226,
+   "type": "observation",
+   "externalId": "8",
+   "children": []
+  },
+  {
+   "id": 227,
+   "type": "template",
+   "externalId": "lda_template",
+   "children": [
+    228,
+    233,
+    238,
+    243,
+    248,
+    253
+   ]
+  },
+  {
+   "id": 228,
+   "type": "group",
+   "externalId": "lda-group-art",
+   "children": [
+    229,
+    230,
+    231,
+    232
+   ]
+  },
+  {
+   "id": 233,
+   "type": "group",
+   "externalId": "lda-group-foley",
+   "children": [
+    234,
+    235,
+    236,
+    237
+   ]
+  },
+  {
+   "id": 238,
+   "type": "group",
+   "externalId": "lda-group-picc",
+   "children": [
+    239,
+    240,
+    241,
+    242
+   ]
+  },
+  {
+   "id": 243,
+   "type": "group",
+   "externalId": "lda-group-wound-sacrum",
+   "children": [
+    244,
+    245,
+    246,
+    247
+   ]
+  },
+  {
+   "id": 248,
+   "type": "group",
+   "externalId": "lda-group-wound",
+   "children": [
+    249,
+    250,
+    251,
+    252
+   ]
+  },
+  {
+   "id": 253,
+   "type": "group",
+   "externalId": "lda-group-line",
+   "children": [
+    254,
+    255,
+    256,
+    257
+   ]
+  },
+  {
+   "id": 229,
+   "type": "observation",
+   "externalId": "lda-custom-addition-removal-obs",
+   "children": []
+  },
+  {
+   "id": 230,
+   "type": "observation",
+   "externalId": "lda-101",
+   "children": []
+  },
+  {
+   "id": 231,
+   "type": "observation",
+   "externalId": "lda-102",
+   "children": []
+  },
+  {
+   "id": 232,
+   "type": "observation",
+   "externalId": "lda-103",
+   "children": []
+  },
+  {
+   "id": 234,
+   "type": "observation",
+   "externalId": "lda-custom-addition-removal-obs",
+   "children": []
+  },
+  {
+   "id": 235,
+   "type": "observation",
+   "externalId": "lda-101",
+   "children": []
+  },
+  {
+   "id": 236,
+   "type": "observation",
+   "externalId": "lda-102",
+   "children": []
+  },
+  {
+   "id": 237,
+   "type": "observation",
+   "externalId": "lda-103",
+   "children": []
+  },
+  {
+   "id": 239,
+   "type": "observation",
+   "externalId": "lda-custom-addition-removal-obs",
+   "children": []
+  },
+  {
+   "id": 240,
+   "type": "observation",
+   "externalId": "lda-101",
+   "children": []
+  },
+  {
+   "id": 241,
+   "type": "observation",
+   "externalId": "lda-102",
+   "children": []
+  },
+  {
+   "id": 242,
+   "type": "observation",
+   "externalId": "lda-103",
+   "children": []
+  },
+  {
+   "id": 244,
+   "type": "observation",
+   "externalId": "lda-custom-addition-removal-obs",
+   "children": []
+  },
+  {
+   "id": 245,
+   "type": "observation",
+   "externalId": "lda-101",
+   "children": []
+  },
+  {
+   "id": 246,
+   "type": "observation",
+   "externalId": "lda-102",
+   "children": []
+  },
+  {
+   "id": 247,
+   "type": "observation",
+   "externalId": "lda-103",
+   "children": []
+  },
+  {
+   "id": 249,
+   "type": "observation",
+   "externalId": "lda-custom-addition-removal-obs",
+   "children": []
+  },
+  {
+   "id": 250,
+   "type": "observation",
+   "externalId": "lda-101",
+   "children": []
+  },
+  {
+   "id": 251,
+   "type": "observation",
+   "externalId": "lda-102",
+   "children": []
+  },
+  {
+   "id": 252,
+   "type": "observation",
+   "externalId": "lda-103",
+   "children": []
+  },
+  {
+   "id": 254,
+   "type": "observation",
+   "externalId": "lda-custom-addition-removal-obs",
+   "children": []
+  },
+  {
+   "id": 255,
+   "type": "observation",
+   "externalId": "lda-101",
+   "children": []
+  },
+  {
+   "id": 256,
+   "type": "observation",
+   "externalId": "lda-102",
+   "children": []
+  },
+  {
+   "id": 257,
+   "type": "observation",
+   "externalId": "lda-103",
+   "children": []
+  },
+  {
+   "id": 258,
+   "type": "observation",
+   "externalId": "193",
+   "children": []
+  }
+ ]
+}

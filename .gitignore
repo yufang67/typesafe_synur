@@ -8,7 +8,11 @@ tmp/
 temp/
 
 # Data directories
-data/
+data/*
+!data/synur/
+data/synur/*
+!data/synur/synur_dataset.v5.json
+!data/synur/synur_schema.v4.json
 
 # Dot-prefixed directories
 .*/

@@ -18,6 +18,24 @@ ROOT = Path(__file__).resolve().parents[1]
 NOTEBOOK = ROOT / "notebooks" / "synur_observation_extraction.ipynb"
 
 
+def test_notebook_defaults_to_bundled_exports(monkeypatch):
+    monkeypatch.chdir(ROOT)
+    monkeypatch.delenv("SYNUR_DATASET_PATH", raising=False)
+    monkeypatch.delenv("SYNUR_SCHEMA_PATH", raising=False)
+    notebook = nbformat.read(NOTEBOOK, as_version=4)
+    cells = {cell.id: cell for cell in notebook.cells}
+    namespace = {}
+    exec(compile(cells["configuration"].source, str(NOTEBOOK), "exec"), namespace)
+    namespace["display"] = lambda value: None
+    exec(compile(cells["load-data"].source, str(NOTEBOOK), "exec"), namespace)
+    assert namespace["DATASET_PATH"] == ROOT / "data" / "synur" / "synur_dataset.v5.json"
+    assert namespace["SCHEMA_PATH"] == ROOT / "data" / "synur" / "synur_schema.v4.json"
+    assert namespace["dataset"].manifest["source_concept_count"] == 198
+    assert namespace["SPLIT"] == "local"
+    assert len(namespace["rows"]) == 422
+    assert len(namespace["registry"].concepts) == 166
+
+
 def test_notebook_credential_cell_has_no_saved_input_or_outputs():
     notebook = nbformat.read(NOTEBOOK, as_version=4)
     nbformat.validate(notebook)
