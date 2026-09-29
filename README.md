@@ -1,32 +1,49 @@
 # SYNUR observation extraction with JEV
 
 A Python notebook experiment using **JEV directly** to classify/extract observations
-from clinical text against SYNUR's 193-concept source schema. The notebook currently
-enables **162 concepts across SINGLE_SELECT, MULTI_SELECT, and NUMERIC**.
+from clinical text against a local SYNUR schema. The notebook currently uses
+the **v5 service-export dataset and v4 schema**, enabling **166 concepts across
+SINGLE_SELECT, MULTI_SELECT, and NUMERIC** from 198 source concepts.
 STRING prediction and scoring are disabled; original STRING references remain
-visible as `SKIP` in reports. Select **external TypeSafe JEV (default)** or
+visible as `SKIP` in reports. The unsupported Date concept is explicitly excluded
+by the service-export loader and recorded in the dataset manifest.
+Select **external TypeSafe JEV (default)** or
 **internal Pi Scorer**, using the same typed System One SDK interface and
 extraction algorithm. One provider runs at a time; this is not a
 small-model / verifier / larger-model cascade.
 
-**Data is downloaded separately. The notebook reads local files only.** Model
+**The v5 dataset and v4 schema are included in `data\synur\`; the notebook reads local files only.** Model
 credentials are not included. **The current saved notebook has `LIVE_CALLS = True`
-and selects all 101 dev transcripts.** Review its configuration before running
+and selects all 422 service-export transcripts.** Review its configuration before running
 cells. For credential-free inspection, turn off both live calls and run-artifact
 export as described below; dataset diagnostics, source candidates, the status-question
 plan, and example value questions do not require inference.
 
 ## Current status and features
 
-Snapshot: **2026-09-20**. The recorded full-dev run of `jev-1.13.0` has exact
+Recorded service-export run: **2026-09-21**, using `synur_dataset.v5.json` and the explicit
+`synur_schema.v4.json` with `jev-1.13.0`. All **422 transcripts** were processed:
+**416 complete, 6 partial, 0 failed or missing**. Exact observation micro
+**precision is 83.22%, recall 77.10%, and F1 80.05%**; raw and normalized scores
+are identical. The six partial records each contain a rejected model answer
+whose selected choice was not its highest-probability option. These errors remain
+visible in the audit rather than being silently repaired.
+
+Run metadata, predictions, metrics, audit, and failures are saved under
+`results\run_d9726017250f`; full and short transcript reports are under
+`results\report_c0406bb820c0`. Input SHA-256 hashes are recorded in the run manifest.
+This combined local collection is **not a held-out benchmark**.
+
+Historical snapshot: **2026-09-20**, using the original 193-concept schema,
+not the currently configured v5/v4 exports. The recorded full-dev run of `jev-1.13.0` has exact
 observation micro **precision 83.74%, recall 77.35%, and F1 80.42%**, with
 101/101 completed transcripts. These are local development-set results, not a
 held-out benchmark or a clinical performance claim. See [Recorded results](#recorded-results).
 
 | Area | Implemented behavior |
 | --- | --- |
-| Local data | Pinned download, manifest/checksum verification, split-local IDs, source files left unchanged |
-| Schema scope | Runtime type selection; 130 single-select, 12 multi-select, and 20 numeric concepts currently enabled |
+| Local data | Explicit service-export files with SHA-256 provenance, or verified pinned snapshots; source files left unchanged |
+| Schema scope | Runtime type selection; 132 single-select, 14 multi-select, and 20 numeric concepts currently enabled |
 | Extraction | Status-first JEV Choice questions, exact enum selection, per-member Noul decisions, source-grounded scalar selection |
 | Optional STRING support | Engine supports hierarchical clause/token/span selection; 31 STRING concepts are disabled in the current experiment |
 | Offline inspection | Reference diagnostics, normalization audit, numeric candidates, request preview, fixture-driven extraction tests |
@@ -45,17 +62,49 @@ python -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -e ".[notebook,dev]"
 ```
 
-Download once, **outside Jupyter**:
+The current notebook uses the tracked `data\synur\synur_dataset.v5.json` and
+`data\synur\synur_schema.v4.json` files by default, so no download or external
+checkout is required. These are byte-for-byte copies of the inputs used for the
+recorded 422-transcript run. Git preserves their bytes without line-ending
+conversion; their hashes match the run manifest. Saved notebook outputs and run
+metadata retain the original input paths as historical provenance.
+All saved notebook outputs are from the historical TypeSafe JEV run, not Pi.
+Provider selection and model-dated naming apply to future executions; changing
+the configuration does not relabel or regenerate those historical outputs.
+
+For the original pinned snapshot only, download once, **outside Jupyter**:
 
 ```powershell
 .\.venv\Scripts\python.exe scripts\download_synur.py --output data\synur
 ```
 
-The local `data\synur\` directory contains the original JSONL files, observation
+To override the bundled files with other local exports, set both environment variables:
+
+```powershell
+$env:SYNUR_DATASET_PATH = 'C:\path\to\synur_dataset.v5.json'
+$env:SYNUR_SCHEMA_PATH = 'C:\path\to\synur_schema.v4.json'
+```
+
+The explicit schema overrides
+the dataset's embedded schema. Structured transcript turns are joined in source
+order with speaker labels; schema list values and expected observations are
+converted in memory without changing values or source files. The export's 422
+unique IDs are retained in a single `local` collection: no train/dev/test split
+is inferred, so its scores must not be described as held-out results. Date schema
+entries and excluded reference counts are recorded in the manifest; any Date
+references are retained in each loaded row's `excluded_observations`, outside
+scoring and reports. Unknown types, malformed rows, and recordings that do not
+select all transcript turns fail explicitly.
+
+To return to the original snapshot, set `DATASET_PATH = SCHEMA_PATH = None`,
+`SPLIT = 'mediqa_synur_dev'`, and the desired `SAMPLE_LIMIT` in the notebook.
+
+After the optional snapshot download, `data\synur\` also contains the original JSONL files, observation
 schema, upstream dataset card, and a revision/checksum manifest. Files are pinned
 to Hugging Face revision `c7f79af4dcc8e5fb175c40cef0592d85a76bf11c`.
 The setup script verifies cached files instead of silently trusting them.
-Dataset files and experiment results are git-ignored.
+Other files under `data\synur\` remain git-ignored; the two versioned exports and
+recorded experiment results are tracked.
 Loading also checks manifest completeness, byte and row counts, schema/row
 structure, duplicate JSON keys and row IDs, UTF-8 validity, and unsafe
 symlink/junction paths. Invalid snapshots fail explicitly; they are not silently
@@ -80,9 +129,10 @@ Open the notebook:
 ```
 
 Use the project environment's Python kernel. Start Jupyter from the repository
-root or `notebooks` directory. Optional `SYNUR_DATA_DIR` selects another copy of the
-local dataset. Missing/corrupt local files produce an error; the notebook never
-downloads replacements.
+root or `notebooks` directory. `SYNUR_DATASET_PATH` and `SYNUR_SCHEMA_PATH` override
+the bundled service exports. Optional `SYNUR_DATA_DIR` selects another pinned
+snapshot when both service-export paths are set to `None`. Missing/corrupt local
+files produce an error; the notebook never downloads replacements.
 
 `ENABLED_VALUE_TYPES` in the configuration cell controls the experiment scope.
 The notebook selects the model schema and copies a matching in-memory label view
@@ -99,24 +149,32 @@ for a future revision:
 
 | Setting | Current value | Meaning |
 | --- | --- | --- |
-| `SPLIT` | `'mediqa_synur_dev'` | Development split |
+| `DATASET_PATH` | `SYNUR_DATASET_PATH`, falling back to `data\synur\synur_dataset.v5.json` under the project root | Explicit local service-export dataset |
+| `SCHEMA_PATH` | `SYNUR_SCHEMA_PATH`, falling back to `data\synur\synur_schema.v4.json` under the project root | Authoritative schema, overriding the embedded schema |
+| `SPLIT` | `'local'` | All service-export rows, without inferred split membership |
 | `ROW_ID` | `None` | Select by sample limit rather than exact ID |
-| `SAMPLE_LIMIT` | `101` | First 101 rows in source order, currently the entire dev split |
+| `SAMPLE_LIMIT` | `422` | All 422 exported rows in source order |
 | `ENABLED_VALUE_TYPES` | `('SINGLE_SELECT', 'MULTI_SELECT', 'NUMERIC')` | Exclude STRING from inference and scoring |
 | `PROVIDER` | `SYNUR_MODEL_PROVIDER`, falling back to `'typesafe'` | Select `'typesafe'` or `'pi-scorer'` |
 | `MODEL` | `TYPESAFE_MODEL`, then `TYPESAFE_DEFAULT_MODEL`, then provider default | Default `'jev-1.13.0'` for TypeSafe; `'pi-scorer'` for Pi |
 | `BASE_URL` | `TYPESAFE_BASE_URL`, otherwise provider default | SDK base URL; Pi endpoint paths normalize to the host |
-| `RUN_ID` | Current configured model + local date/time + unique suffix | Shared naming for run and report directories |
+| `RUN_ID` | Current configured model + local date/time + unique suffix | Shared naming for checkpoints, run directories, and report directories |
 | `LIVE_CALLS` | `True` | Run the selected provider after API key setup |
 | `SAVE_RESULTS` | `True` | Export predictions, audit, failures, metrics, and run metadata |
 | `SAVE_REPORT` | `True` | Export full and short per-transcript reports |
 | `SETTINGS` | `Settings()` | Confidence and batching defaults documented below |
 
+With live calls and `SAVE_RESULTS` enabled, each finished transcript is immediately
+saved to a new `results\checkpoint_<RUN_ID>.jsonl` audit file and progress is printed.
+This preserves completed records if a long run is interrupted; it does not
+automatically resume or replace the final run export.
+
 For a safe, small **offline walkthrough**, change the configuration before
 running all cells:
 
 ```python
-ROW_ID = '152'
+ROW_ID = None
+SAMPLE_LIMIT = 1
 LIVE_CALLS = False
 SAVE_RESULTS = False
 SAVE_REPORT = False
@@ -126,7 +184,7 @@ Disabling `SAVE_RESULTS` matters: that export intentionally raises when there
 are no predictions. `SAVE_REPORT` may instead be left on to save reports with
 explicitly unavailable model metrics; it makes no model calls.
 
-`ROW_ID = '152'` selects the exact split-local ID, **not the 152nd row**.
+`ROW_ID` selects an exact source ID, **not a positional row number**.
 A missing ID is an error, never a fallback to the first row. `ROW_ID = None`
 uses `SAMPLE_LIMIT`; there is no random sampling in this selection step.
 The walkthrough displays the transcript and filtered reference labels first,
@@ -164,6 +222,7 @@ reference labels --------------------------> local evaluation
 | --- | --- |
 | `scripts\download_synur.py` | Download allowlisted pinned files, verify persisted bytes, publish manifest last |
 | `src\synur\dataset.py` | Verify and load the local snapshot without network access |
+| `src\synur\service_dataset.py` | Convert explicit local dataset/schema exports and record checksums and Date exclusions |
 | `src\synur\observations.py` | Schema registry, strict observation validation, separate auditable reference normalization |
 | `src\synur\candidates.py` | Transcript-only numeric and contiguous-text candidates, source offsets, candidate diagnostics |
 | `src\synur\questions.py` | Native state and Choice/Noul compilation, option hierarchy, request packing |
